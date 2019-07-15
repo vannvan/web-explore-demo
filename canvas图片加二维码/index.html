@@ -15,12 +15,12 @@
 	  var cHeight = ctx.canvas.clientHeight
 	  console.log(cHeight)
 
-	  var codeImg = 'code.png';
+	  var codeImg = 'https://vannvan.github.io/web-explore-demo/images/code.png';
 	  let qImg = new Image();
 	  qImg.src = codeImg;
 
 	  var backimg = new Image();
-	  backimg.src = 'img1.jpg';
+	  backimg.src = 'https://vannvan.github.io/web-explore-demo/images/img1.jpg';
 	  backimg.onload = function() {
 	    ctx.drawImage(backimg, 0, 0);
 	    ctx.drawImage(qImg,cWidth-220,cHeight-220,100,100); // 在canvas 添加二维码
