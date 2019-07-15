@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+  <body onload="draw();">
+   <canvas id="canvas" width="900" height="600"></canvas>
+ </body>
+<script type="text/javascript">
+	function draw() {
+	  var ctx = document.getElementById('canvas').getContext('2d');
+	  var cWidth = ctx.canvas.clientWidth
+	  console.log(cWidth)
+	  var cHeight = ctx.canvas.clientHeight
+	  console.log(cHeight)
+
+	  var codeImg = 'code.png';
+	  let qImg = new Image();
+	  qImg.src = codeImg;
+
+	  var backimg = new Image();
+	  backimg.src = 'img1.jpg';
+	  backimg.onload = function() {
+	    ctx.drawImage(backimg, 0, 0);
+	    ctx.drawImage(qImg,cWidth-220,cHeight-220,100,100); // 在canvas 添加二维码
+	    ctx.fillStyle = "#f00"
+	    ctx.font = '48px serif';
+	    ctx.fillText('Hello world', 30, 50);
+	    // imgbox.src = ctx.toDataURL("image/jpeg", 1.0) // 输出图片
+	  };
+	}
+</script>
+</body>
+</html>
