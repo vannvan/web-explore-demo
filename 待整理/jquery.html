@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<body>
+<script type="text/javascript">
+	var url = 'http://172.16.222.230:8080/mobile/h5/leJoy.do?action=queryBaseData'
+	$.ajax({
+	  type: 'POST',
+	  url: url,
+	  data: {
+	  	MOBILEAPP_WRAPPER_DATA:JSON.stringify({
+	  		replyId:-1,
+	  		type:1
+	  	})
+	  },
+	  success: function(data){
+	  	console.log(data)
+	  }
+	});
+</script>
+</body>
+</html>

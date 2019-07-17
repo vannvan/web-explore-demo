@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>jQuery/CSS3 3D旋转盒子动画DEMO演示</title>
+<meta name="viewport" content="width=device-width" />
+<style type="text/css">
+	[v-clock]{display: none}
+	body { 
+		 background-color: #1D1D1D; 
+		 color:#fff;
+		}
+	.box {
+		height: 400px;
+		width: 400px;
+		margin: 100px auto;
+		position: relative;
+		transform: rotateX(0deg) rotateY(0deg);
+		transform-style: preserve-3d;
+		cursor: move;
+	}
+	
+	.box div {
+		position: absolute;
+		left: 0;
+		right: 0;
+		background-size: cover;
+		background-position: center;
+	}
+	.picbtn{
+		margin:  0 auto;
+		text-align: center;
+	}
+	body,input{font-family:sta cartman}
+</style>
+</head>
+
+<body>
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+	<div id="app" v-cloak>
+		<div class="picbtn">
+			<p>
+				选择上图
+				<input type="file" value="选择上图" accept="image/*" @change="uploadImg($event,1)">
+		
+				选择下图
+				<input type="file" value="选择下图" accept="image/*" @change="uploadImg($event,2)">
+			</p>
+			<p>
+				选择左图
+				<input type="file" value="选择左图" accept="image/*" @change="uploadImg($event,3)">
+	
+				选择右图
+				<input type="file" value="选择右图" accept="image/*" @change="uploadImg($event,4)">
+			</p>
+			<p>
+				选择前图
+				<input type="file" value="选择前图" accept="image/*" @change="uploadImg($event,5)">
+	
+				选择后图
+				<input type="file" value="选择后图" accept="image/*" @change="uploadImg($event,6)">
+			</p>
+		长<input type="number" id="length" value="" v-model="size.x" >
+		宽<input type="number" id="width" value="" v-model="size.y">
+		高<input type="number" id="height" value="" v-model="size.z">
+		</div>
+
+		
+
+
+		<div class="box" :style="{width:size.x+'px',height:size.z+'px'}">
+			<div id="top" :style="styleTop"></div>
+			<div id="bottom" :style="styleBottom"></div>
+			<div id="left" :style="styleLeft"></div>
+			<div id="right" :style="styleRight"></div>
+			<div id="pre" :style="stylePre"></div>
+			<div id="back" :style="styleBack"></div>
+		</div>
+	</div>
+
+<script src="jquery-1.11.3.min.js"></script>
+<script src="vue.min.js"></script>
+
+<script type="text/javascript">
+	let x = '400', y = '400', z = '250';
+	let vm = new Vue({
+		el:'#app',
+		data:{
+			size:{
+				x:x,
+				y:y,
+				z:z
+			},
+			styleLeft:{
+				backgroundImage: `url(1.png)`,
+				transform: '',
+				width:'',
+				height:''
+			},
+			styleRight:{
+				backgroundImage: `url(2.png)`,
+				transform: ``,
+				width:'',
+				height:''
+			},
+			styleTop:{
+				backgroundImage: `url(3.png)`,
+				transform: ``,
+				width:'',
+				height:''
+			},
+			styleBottom:{
+				backgroundImage: `url(4.png)`,
+				transform: ``,
+				width:'',
+				height:''
+			
+			},
+			stylePre:{
+				backgroundImage: `url(5.png)`,
+				transform: ``,
+				width:'',
+				height:''
+			},
+			styleBack:{
+				backgroundImage: `url(6.png)`,
+				transform: ``,
+				width:'',
+				height:''
+	
+			}
+
+		},
+		computed:{
+			preZ(){
+				return Math.floor(this.size.y/2) + 'px'
+			}, 
+			backZ(){
+				return Math.floor(this.size.y/2) + 'px'
+			}, 
+			leftZ(){
+				return Math.floor(this.size.y/2) + 'px'
+			}, 
+			rightZ(){
+				return Math.floor(this.size.x - this.size.y/2) + 'px'
+			}, 
+			topZ(){
+				return Math.floor(this.size.y/2) + 'px'
+			}, 
+			bottomZ(){
+				return Math.floor(this.size.z - this.size.y/2) + 'px'
+			}
+		},
+		created(){
+			this.creat()
+		},
+		watch:{
+			size:{
+				handler(){
+					this.creat()
+				},
+				deep:true
+			}
+		},
+		methods:{
+			creat(){
+				this.styleLeft.width = this.styleRight.width = this.size.y + 'px';
+				this.styleLeft.height = this.styleRight.height = this.size.z + 'px';
+				this.styleTop.width = this.styleBottom.width = this.size.x + 'px';
+				this.styleTop.height = this.styleBottom.height = this.size.y + 'px';
+				this.stylePre.width = this.styleBack.width = this.size.x + 'px';
+				this.stylePre.height = this.styleBack.height = this.size.z + 'px';
+
+				this.styleLeft.transform = `rotateY(-90deg) translateZ(${this.leftZ})`;
+				this.styleRight.transform = `rotateY(90deg) translateZ(${this.rightZ})`;
+				this.styleTop.transform = `rotateX(90deg) translateZ(${this.topZ})`;
+				this.styleBottom.transform = `rotateX(-90deg) translateZ(${this.bottomZ})`;
+				this.stylePre.transform = `translateZ(${this.preZ})`;
+				this.styleBack.transform = `rotateY(180deg) translateZ(${this.backZ})`;
+			},
+			uploadImg(event,n){
+			    var _name, _fileName, personsFile, _img;
+			    // console.log(event)
+			    _name = event.target.value;
+			
+			    // console.log(_name)
+			    _fileName = _name.substring(_name.lastIndexOf(".") + 1).toLowerCase();
+			    if (_fileName !== "png" && _fileName !== "jpg") {
+			        alert("上传图片格式不正确，请重新上传");
+			    } else {
+			    	let url = `url(${window.URL.createObjectURL(event.target.files[0])})`
+			    	
+			        switch(n)
+					{
+						case 1:
+						  this.styleTop.backgroundImage = url
+						  break;
+						case 2:
+						  this.styleBottom.backgroundImage = url
+						  break;
+						case 3:
+							this.styleLeft.backgroundImage = url
+							break;
+						case 4:
+							this.styleRight.backgroundImage = url
+							break;
+						case 5:
+						
+							this.stylePre.backgroundImage = url
+							break;
+						case 6:
+							this.styleBack.backgroundImage = url
+							break;
+						default:
+					  
+					}
+			    }
+			}
+		}
+	})
+
+
+</script>
+<script src="jquery-touchrotate.js"></script>
+<script type="text/javascript">
+	$('.box').touchrotate({
+		//初始3D旋转
+		rotateX: -15,
+		rotateY: 15,
+		//数值越小 , 旋转速度越快
+		speedX: 2,
+		speedY: 2,
+		// 旋转的倍数, 越大旋转的圈数越多
+		multipleX: 50,
+		multipleY: 50,
+		// 动画持续的时间, 单位是S
+		time: 2,
+		//模式 0:表示匀速运动 , 运动中途可以重新开始 , 1表示先加速后减速(动画过程中不可滑动,体验效果差)
+		model: 0
+	});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<style type="text/css">
+body{height: 1500px;background: #ccc}
+#box{height: auto;width: 100%;background: #f6f6f6;}
+.img-area{text-align: center;height: 600px;background: #ccc;margin-bottom: 30px;}
+
+</style>
+
+<body>
+
+<div id="box">
+	<div class="img-area">
+	      <img class="my-photo" alt="loading" data-src="http://axuebin.com/lazyload/img/img1.png">
+	</div>
+
+	<div class="img-area">
+	      <img class="my-photo" alt="loading" data-src="http://axuebin.com/lazyload/img/img2.png">
+	</div>
+
+
+	<div class="img-area">
+	      <img class="my-photo" alt="loading" data-src="http://axuebin.com/lazyload/img/img3.png">
+	</div>
+
+	<div class="img-area">
+	      <img class="my-photo" alt="loading" data-src="http://axuebin.com/lazyload/img/img4.png">
+	</div>
+
+	<div class="img-area">
+	      <img class="my-photo" alt="loading" data-src="http://axuebin.com/lazyload/img/img5.png">
+	</div>
+
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+// $(window).scroll(function() {
+// 	var imgpath = 'http://axuebin.com/lazyload/img/img1.png'
+//     // 获取的是浏览器可见区域高度（网页的可视区域的高度）（不滚动的情况下）
+//     var documentClientHeight = document.documentElement.clientHeight || window.innerHeight
+//     // 元素顶端到可见区域（网页）顶端的距离
+//     var htmlElementClientTop = document.querySelector('#box').getBoundingClientRect().top;
+//     // 网页指定元素进入可视区域
+//     if (documentClientHeight >= htmlElementClientTop) {
+//         // TODO 执行你要做的操作
+//         console.log(true)
+//         var str = `<img src="${imgpath}" />`
+//         $("#box").append(str)
+//     }else{
+//     	console.log(false)
+//     }
+    
+// });
+</script>
+
+
+<script type="text/javascript">
+	function isInSight(el) {
+	  const bound = el.getBoundingClientRect();
+	  const clientHeight = window.innerHeight;
+	  //如果只考虑向下滚动加载
+	  //const clientWidth=window.innerWeight;
+	  return bound.top <= clientHeight + 100;
+	}
+
+let index = 0;
+function checkImgs() {
+  const imgs = document.querySelectorAll('.my-photo');
+  for (let i = index; i < imgs.length; i++) {
+    if (isInSight(imgs[i])) {
+      loadImg(imgs[i]);
+      index = i;
+    }
+  }
+  // Array.from(imgs).forEach(el => {
+  //   if (isInSight(el)) {
+  //     loadImg(el);
+  //   }
+  // })
+}
+
+function loadImg(el) {
+  if (!el.src) {
+    const source = el.dataset.src;
+    el.src = source;
+    console.log(source)
+  }
+}
+
+function throttle(fn, mustRun = 500) {
+  const timer = null;
+  let previous = null;
+  return function() {
+    const now = new Date();
+    const context = this;
+    const args = arguments;
+    if (!previous) {
+      previous = now;
+    }
+    const remaining = now - previous;
+    if (mustRun && remaining >= mustRun) {
+      fn.apply(context, args);
+      previous = now;
+    }
+  }
+}
+
+</script>
+<script type="text/javascript">
+	window.onload=checkImgs;
+    window.onscroll = throttle(checkImgs);
+</script>
+</body>
+</html>

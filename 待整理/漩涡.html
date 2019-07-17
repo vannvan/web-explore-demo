@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旋涡</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+        }
+        .bol{
+            width: 400px;
+            height: 400px;
+            margin: 200px auto;
+            transition: all 3s;
+        }
+        .are{
+            width: 85%;
+            height: 85%;
+            border: 1px solid silver;
+            margin: 7.5%;
+            border-radius: 50%;
+            position: relative;
+            animation: xuanzhuan 5s linear infinite;
+        }
+        .bol:hover{
+            transform: scale(1.2); //悬停放大
+        }
+        .are:before{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            border: 4px solid ;
+            border-radius: 50%;
+            border-color: #3cb5ff transparent transparent transparent;
+            content: "";
+        }
+        .are:after{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            border: 4px solid ;
+            border-radius: 50%;
+            border-color: transparent transparent #ff6f70 transparent ;
+            content: "";
+        }
+        @keyframes xuanzhuan {
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bol">
+    <div class="are">
+        <div class="are">
+            <div class="are">
+                <div class="are">
+                    <div class="are">
+                        <div class="are">
+                            <div class="are">
+                                <div class="are">
+                                    <div class="are">
+                                        <div class="are">
+                                            <div class="are">
+                                                <div class="are">
+                                                    <div class="are">
+                                                        <div class="are"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

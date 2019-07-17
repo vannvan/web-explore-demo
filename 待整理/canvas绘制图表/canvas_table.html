@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas绘制表格</title>
+</head>
+<body style="padding: 100px;">
+  <canvas id="canvas" width="900" height="600" style="border:1px solid #000"></canvas>
+
+<script>
+     // 1. 获取标签
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    // 2.绘制表格
+    // 2.1 常量
+    var marginXY = 10;
+    var rows = canvas.height / marginXY,
+        cols = canvas.width / marginXY;
+    // 2.2 绘制横线
+    for (var i=1; i<rows; i++){
+        // 起点
+        ctx.moveTo(0, i*marginXY);
+        // 终点
+        ctx.lineTo(canvas.width, i*marginXY);
+    }
+
+    // 2.3 绘制竖线
+    for (var i=1; i<cols; i++){
+         // 起点
+         ctx.moveTo(i*marginXY, 0);
+         // 终点
+         ctx.lineTo(i*marginXY, canvas.height);
+    }
+
+    // 绘制
+    ctx.strokeStyle = '#ccc';
+    ctx.lineWidth = .5;
+    ctx.stroke();
+
+    // 3.绘制坐标
+    // 3.1 常量
+    var x0 = 100, y0 = 500;
+    var maxWidth = 500, maxHeight = 400;
+
+    // 3.2 绘制坐标
+    ctx.beginPath();
+    ctx.moveTo(x0, y0);
+    ctx.lineTo(x0 + maxWidth, y0);
+    ctx.lineTo(x0 + maxWidth - marginXY, y0 - marginXY);
+    ctx.moveTo(x0 + maxWidth - marginXY, y0 + marginXY); // 起点
+    ctx.lineTo(x0 + maxWidth, y0);
+
+    ctx.moveTo(x0, y0);
+    ctx.lineTo(x0, y0 - maxHeight);
+    ctx.lineTo(x0 - marginXY, y0 - maxHeight + marginXY);
+    ctx.moveTo(x0 + marginXY, y0 - maxHeight + marginXY); // 起点
+    ctx.lineTo(x0, y0 - maxHeight);
+
+    // 绘制
+    ctx.strokeStyle = 'blue';
+    ctx.stroke();
+
+    // 4.绘制折线
+    // 4.1 数据
+    var data = [20, 40, 30, 60, 30, 80, 20];
+
+    // 4.2 设置缩放比例
+    var w = maxWidth / data.length,
+        h = maxHeight / 100; // 1: 100
+
+    // 4.3 生成坐标点
+    var pointArr = [];
+    for(var i=0; i<data.length; i++){
+        pointArr.push({
+            x: x0 + (i+1) * w,
+            y: y0 - data[i] * h
+        });
+    }
+    console.log(pointArr);
+
+    // 4.4 绘制
+    ctx.beginPath();
+    ctx.moveTo(x0, y0);
+    for(var i=0; i<pointArr.length; i++){
+        ctx.lineTo(pointArr[i].x, pointArr[i].y);
+    }
+    ctx.strokeStyle = 'orange';
+    ctx.stroke();
+
+
+
+</script>
+</body>
+</html>

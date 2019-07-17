@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+.live{
+	width: 100px;height: 100px;position: fixed;top:0;bottom: 0;left:0;right: 0;margin:auto;
+}
+span{
+	position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    bottom: 0;
+    background: #65F2CD;
+    border-radius: 50%;
+    -webkit-animation: living 3s linear infinite;
+    /*z-index: -1;*/
+}
+ .live span:nth-child(2){
+            -webkit-animation-delay: 1.5s; /*第二个span动画延迟1.5秒*/
+        }
+ @keyframes living {
+            0%{
+                transform: scale(.1);
+                opacity: 0.5;  
+            }
+            50%{
+                transform: scale(1);  
+                opacity: 0;   /*圆形放大的同时，透明度逐渐减小为0*/
+            }
+            100%{
+                transform: scale(.1);
+                opacity: 0.5;
+            }
+        }
+</style>
+<body>
+	<div class="live">
+         <span></span>
+         <span></span>
+     </div>
+</body>
+</html>
