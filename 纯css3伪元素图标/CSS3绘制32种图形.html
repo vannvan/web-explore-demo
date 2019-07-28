@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3实现基本图形</title>
+  <style>
+   #Circle{
+     width:100px;
+     height:100px;
+     float: left;
+     background: #6fee1d;
+     -moz-border-radius: 50px;
+     -webkit-border-radius: 50px;
+     border-radius: 50px;
+   }
+   #Oval {
+     width: 200px;
+     height: 100px;
+     float: left;
+     background: #e9880c;
+     -webkit-border-radius: 100px / 50px;
+     -moz-border-radius: 100px / 50px;
+     border-radius: 100px / 50px;
+   }
+   #Triangle {
+     width: 0;
+     height: 0;
+     float: left;
+     border-bottom: 100px solid #fcf706;
+     border-left: 50px solid transparent;
+     border-right: 50px solid transparent;
+   }
+   #InvertedTriangle {
+     width: 0;
+     height: 0;
+     float: left;
+     border-top: 100px solid #30a3bf;
+     border-left: 50px solid transparent;
+     border-right: 50px solid transparent;
+   }
+   #LeftTriangle {
+     width: 0;
+     height: 0;
+     float: left;
+     border-top: 50px solid transparent;
+     border-right: 100px solid #466f20;
+     border-bottom: 50px solid transparent;
+   }
+   #RightTriangle {
+     width: 0;
+     height: 0;
+     float: left;
+     border-top: 50px solid transparent;
+     border-left: 100px solid #800820;
+     border-bottom: 50px solid transparent;
+   }
+   #Diamond {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background: #8e00ff;
+    /* Rotate */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    /* Rotate Origin */
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    margin: 40px 0 10px 240px;
+   }
+   #Trapezium {
+    height: 0;
+    width: 100px;
+    float: left;
+    border-bottom: 100px solid #dc2500;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+   }
+   #Rectangle {
+    height: 50px;
+    width: 100px;
+    float: left;
+    background: #afe05d;
+   }
+   #Square {
+    height: 100px;
+    width: 100px;
+    float: left;
+    background: #b02089;
+   }
+   #Ring {
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-color: white;
+    border-radius: 80px;
+    border:5px #ffd700 solid;
+   }
+   #Parallelogram {
+    width: 120px;
+    height: 80px;
+    float: left;
+    margin-left: 10px;
+    -webkit-transform: skew(30deg);
+    -moz-transform: skew(230deg);
+    -o-transform: skew(30deg);
+    transform: skew(30deg);
+    background-color: #2eda01;
+   }
+
+   #FiveStar {
+     width: 0;
+     height: 0;
+     float: left;
+     margin: 20px 20px;
+     color: #ff0012;
+     position: relative;
+     display: block;
+     border-right: 80px solid transparent;
+     border-bottom: 60px solid #ff0012;
+     border-left: 80px solid transparent;
+     -moz-transform: rotate(35deg);
+     -webkit-transform: rotate(35deg);
+     -ms-transform: rotate(35deg);
+     -o-transform: rotate(35deg);
+   }
+   #FiveStar:before {
+     height: 0;
+     width: 0;
+     content: '';
+     position: absolute;
+     display: block;
+     top: -35px;
+     left: -50px;
+     border-bottom: 60px solid #ff0012;
+     border-left: 20px solid transparent;
+     border-right: 20px solid transparent;
+     -webkit-transform: rotate(-35deg);
+     -moz-transform: rotate(-35deg);
+     -ms-transform: rotate(-35deg);
+     -o-transform: rotate(-35deg);
+   }
+   #FiveStar:after {
+     width: 0;
+     height: 0;
+     content: '';
+     position: absolute;
+     display: block;
+     top: 3px;
+     left: -85px;
+     color: #ff0012;
+     border-right: 80px solid transparent;
+     border-bottom: 60px solid #ff0012;
+     border-left: 80px solid transparent;
+     -webkit-transform: rotate(-70deg);
+     -moz-transform: rotate(-70deg);
+     -ms-transform: rotate(-70deg);
+     -o-transform: rotate(-70deg);
+   }
+
+   #SixStar{
+     width: 0;
+     height: 0;
+     float: left;
+     border-left: 50px solid transparent;
+     border-right: 50px solid transparent;
+     border-bottom: 100px solid #cfd810;
+     position: relative;
+    }
+    #SixStar:after{
+     width: 0;
+     height: 0;
+     content: "";
+     border-top: 100px solid #cfd810;
+     border-left: 50px solid transparent;
+     border-right: 50px solid transparent;
+     position: absolute;
+     top: 30px;
+     left: -50px;
+    }
+
+    #Pentagon{
+      width: 60px;
+      float: left;
+      position: relative;
+      border-width: 52px 20px 0;
+      border-style: solid;
+      border-color: #711ee2 transparent;
+    }
+    #Pentagon:before{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: -92px;
+      left: -20px;
+      border-width: 0 50px 40px;
+      border-style: solid;
+      border-color: transparent transparent #711ee2;
+    }
+
+    #Hexagon {
+      width: 100px;
+      height: 55px;
+      float: left;
+      background: #000001;
+      position: relative;
+      margin: 10px auto;
+    }
+    #Hexagon:before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: -25px;
+      left: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 25px solid #000001;
+   }
+   #Hexagon:after {
+     content: "";
+     width: 0;
+     height: 0;
+     position: absolute;
+     bottom: -25px;
+     left: 0;
+     border-left: 50px solid transparent;
+     border-right: 50px solid transparent;
+     border-top: 25px solid #000001;
+   }
+
+   #Octagon{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 10px 10px;
+    background-color: #66e006;
+    position: relative;
+   }
+   #Octagon:before{
+    width: 42px;
+    height: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    border-left: 29px solid #ffffff;
+    border-right: 29px solid #ffffff;
+    border-bottom: 29px solid #66e006;
+   }
+   #Octagon:after{
+    width: 42px;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    border-left: 29px solid #ffffff;
+    border-right: 29px solid #ffffff;
+    border-top: 29px solid #66e006;
+   }
+
+   #Heart {
+    float: left;
+    position: relative;
+   }
+   #Heart:before, #Heart:after {
+    content: "";
+    width: 70px;
+    height: 115px;
+    position: absolute;
+    background: red;
+    left: 70px;
+    top: 0;
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+  }
+  #Heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+   }
+
+   #Egg {
+    width: 100px;
+    height: 160px;
+    float: left;
+    background: #ffb028;
+    display: block;
+    -webkit-border-radius: 60px 60px 60px 60px / 100px 100px 68px 68px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+   }
+
+   #Infinity {
+    width: 220px;
+    height: 100px;
+    float: left;
+    position: relative;
+   }
+   #Infinity:before, #Infinity:after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 20px solid #008bb0;
+    -moz-border-radius: 50px 50px 0;
+    border-radius: 50px 50px 0 50px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+   }
+   #Infinity:after {
+    left: auto;
+    right: 0;
+    -moz-border-radius: 50px 50px 50px 0;
+    border-radius: 50px 50px 50px 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+   }
+
+   #CommentBubble {
+     width: 140px;
+     height: 100px;
+     margin: 30px 20px;
+     float: left;
+     background: #8867b9;
+     position: relative;
+     -moz-border-radius: 12px;
+     -webkit-border-radius: 12px;
+     border-radius: 12px;
+   }
+   #CommentBubble:before {
+     content: "";
+     width: 0;
+     height: 0;
+     right: 100%;
+     top: 38px;
+     position: absolute;
+     border-top: 13px solid transparent;
+     border-right: 26px solid #8867b9;
+     border-bottom: 13px solid transparent;
+   }
+
+   #Diamonds{
+     width: 50px;
+     height: 0;
+     float: left;
+     border-style: solid;
+     border-color: transparent transparent #9aff02 transparent;
+     border-width: 0 25px 25px 25px;
+     position: relative;
+     margin: 20px 0 50px 0;
+   }
+   #Diamonds:after{
+     width: 0;
+     height: 0;
+     top: 25px;
+     left: -25px;
+     border-style: solid;
+     border-color: #9aff02 transparent transparent transparent;
+     border-width: 70px 50px 0 50px;
+     position: absolute;
+     content: "";
+    }
+
+    #EightDiagrams{
+     width: 96px;
+     height: 48px;
+     margin: 20px 20px;
+     float: left;
+     background-color: #ffffff;
+     border-color: #000000;
+     border-style: solid;
+     border-width: 2px 2px 50px 2px;
+     border-radius: 100%;
+     position: relative;
+    }
+    #EightDiagrams:before {
+     width: 12px;
+     height: 12px;
+     top: 50%;
+     left: 0;
+     content: "";
+     position: absolute;
+     background-color: #ffffff;
+     border: 18px solid #000000;
+     border-radius: 100%;
+    }
+    #EightDiagrams:after {
+     width: 12px;
+     height: 12px;
+     top: 50%;
+     left: 50%;
+     background-color: #000000;
+     border: 18px solid #ffffff;
+     border-radius:100%;
+     content: "";
+     position: absolute;
+    }
+
+    #PacMan {
+     width: 0;
+     height: 0;
+     float: left;
+     border-right: 60px solid transparent;
+     border-left: 60px solid #300fed;
+     border-top: 60px solid #300fed;
+     border-bottom: 60px solid #300fed;
+     border-top-left-radius: 60px;
+     border-top-right-radius: 60px;
+     border-bottom-left-radius: 60px;
+     border-bottom-right-radius: 60px;
+    }
+
+    #Sector {
+      width:0;
+      height:0;
+      float: left;
+      background-color: #ffffff;
+      border-left: 70px solid transparent;
+      border-right: 70px solid transparent;
+      border-top: 100px solid #ab9ed1;
+      border-radius:50%;
+    }
+
+    #CrescentMoon{
+      width:80px;
+      height:80px;
+      float: left;
+      background-color: #ffffff;
+      border-radius:50%;
+      box-shadow: 15px 15px 0 0 #9600d2;
+    }
+
+    #TopLeftTriangle {
+      width: 0px;
+      height: 0px;
+      margin: 10px 10px;
+      float: left;
+      border-top: 100px solid #7efde1;
+      border-right: 100px solid transparent;
+    }
+    #TopRightTriangle {
+      width: 0px;
+      height: 0px;
+      margin: 10px 10px;
+      float: left;
+      border-top: 100px solid #400526;
+      border-left: 100px solid transparent;
+    }
+    #BottomLeftTriangle {
+     width: 0px;
+     height: 0px;
+     margin: 10px 10px;
+     float: left;
+     border-bottom: 100px solid #600ffe;
+     border-right: 100px solid transparent;
+    }
+    #BottomRightTriangle {
+     width: 0px;
+     height: 0px;
+     margin: 10px 10px;
+     float: left;
+     border-bottom: 100px solid #ff7578;
+     border-left: 100px solid transparent;
+    }
+
+    #Burst8 {
+     width: 80px;
+     height: 80px;
+     margin: 10px 10px;
+     float: left;
+     background-color: #cf7668;
+     position: relative;
+     transform:rotate(20deg);
+     -webkit-transform:rotate(20deg);
+     -ms-transform:rotate(20deg);
+     -moz-transform:rotate(20deg);
+     -o-transform:rotate(20deg);
+    }
+    #Burst8:before{
+     width: 80px;
+     height: 80px;
+     top: 0;
+     left: 0;
+     background-color: #cf7668;
+     position: absolute;
+     content: "";
+     transform:rotate(135deg);
+     -webkit-transform:rotate(135deg);
+     -ms-transform:rotate(135deg);
+     -moz-transform:rotate(135deg);
+     -o-transform:rotate(135deg);
+    }
+
+    #Burst12 {
+      width: 80px;
+      height: 80px;
+      margin: 20px 20px;
+      float: left;
+      background-color: #a8ff26;
+      position: relative;
+      text-align: center;
+    }
+    #Burst12:before, #Burst12:after{
+      width: 80px;
+      height: 80px;
+      top: 0;
+      left: 0;
+      background-color: #a8ff26;
+      position: absolute;
+      content: "";
+    }
+    #Burst12:before{
+      transform:rotate(30deg);
+      -webkit-transform:rotate(30deg);
+      -ms-transform:rotate(30deg);
+      -moz-transform:rotate(30deg);
+      -o-transform:rotate(30deg);
+    }
+    #Burst12:after{
+      transform:rotate(60deg);
+      -webkit-transform:rotate(60deg);
+      -ms-transform:rotate(60deg);
+      -moz-transform:rotate(60deg);
+      -o-transform:rotate(60deg);
+    }
+  </style>
+</head>
+<body>
+  <!-- 圆形：设置宽度和高度相等，border-radius属性为宽度或高度的一半 -->
+  <div id="Circle"></div>
+  <!-- 椭圆形：圆形的变体，高度设置为宽度的一半，border-radius属性为高度除以高度一半 -->
+  <div id="Oval"></div>
+  <!-- 三角形：宽度和高度设置为0，border设置左，右边透明，底边可见Solid -->
+  <div id="Triangle"></div>
+  <!-- 倒三角形：宽度和高度设置为0，border设置左，右边透明，顶边可见Solid -->
+  <div id="InvertedTriangle"></div>
+  <!-- 左三角形：宽度和高度设置为0，border设置上，下边透明，右边可见Solid -->
+  <div id="LeftTriangle"></div>
+  <!-- 右三角形：宽度和高度设置为0，border设置上，下边透明，左边可见Solid -->
+  <div id="RightTriangle"></div>
+  <!-- 菱形：使用transform和rotate相结合，使两个正反三角形上下显示 -->
+  <div id="Diamond"></div>
+  <!-- 梯形：三角形的变体，设置左右两条边相等，并且给它设置一个宽度 -->
+  <div id="Trapezium"></div>
+  <!-- 长方形：宽比高长 -->
+  <div id="Rectangle"></div>
+
+  <!-- 浮动Div换行 -->
+  <div style="clear:both">
+  <!-- 正方形：宽和高相等 -->
+  <div id="Square"></div>
+  <!-- 圆环：在圆形的基础上设置边界，边界颜色与圆形填充颜色不同 -->
+  <div id="Ring"></div>
+  <!-- 平行四边形：使用transform使长方形倾斜一个角度 -->
+  <div id="Parallelogram"></div>
+  <!-- 五角星：星形的实现方式比较复杂，主要是使用transform属性来旋转不同的边 -->
+  <div id="FiveStar"></div>
+  <!-- 六角星：使用transform属性来旋转不同的边 -->
+  <div id="SixStar"></div>
+  <!-- 五边形：可以采用三角形和梯形组合 -->
+  <div id="Pentagon"></div>
+  <!-- 六边形：在长方形上面和下面各放置一个三角形 -->
+  <div id="Hexagon"></div>
+  <!-- 八边形：在长方形上面和下面各放置一个梯形 -->
+  <div id="Octagon"></div>
+  <!-- 心形：心形的制作是非常复杂的，可以使用伪元素来制作，分别将伪元素旋转不同的角度，并修改transform-origin属性来设置元素的旋转中心点 -->
+  <div id="Heart"></div>
+
+  <!-- 浮动Div换行 -->
+  <div style="clear:both">
+  <!-- 蛋形：椭圆形的变体，高度比宽度稍大，设置正确的border-radius属性 -->
+  <div id="Egg"></div>
+  <!-- 无穷符号：通过border属性和设置伪元素的角度来实现 -->
+  <div id="Infinity"></div>
+  <!-- 消息提示框：一个圆角矩形加左边中间的一个小三角形 -->
+  <div id="CommentBubble"></div>
+  <!-- 钻石：上面一个梯形，下面一个三角形组成 -->
+  <div id="Diamonds"></div>
+  <!-- 八卦图：多个圆形的组合-->
+  <div id="EightDiagrams"></div>
+  <!-- 食豆人：设置border和border-top-left-radius，border-bottom-right-radius等属性-->
+  <div id="PacMan"></div>
+  <!-- 扇形：在三角形的基础上，让其中一边成弧形 -->
+  <div id="Sector"></div>
+  <!-- 月牙：由两条弧线组成的，每个弧线可以看成一个圆的一部分弧长，在圆的基础上让圆有一个阴影可以形成一个月牙 -->
+  <div id="CrescentMoon"></div>
+
+  <!-- 浮动Div换行 -->
+  <div style="clear:both">
+  <!-- 顶左直角三角形 -->
+  <div id="TopLeftTriangle"></div>
+  <!-- 顶右直角三角形 -->
+  <div id="TopRightTriangle"></div>
+  <!-- 底左直角三角形 -->
+  <div id="BottomLeftTriangle"></div>
+  <!-- 底右直角三角形 -->
+  <div id="BottomRightTriangle"></div>
+  <!-- 八角形 -->
+  <div id="Burst8"></div>
+  <!-- 十二角形 -->
+  <div id="Burst12"></div>
+</body>
+</html>
