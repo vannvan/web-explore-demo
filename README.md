@@ -7,3 +7,4 @@
 - [水平居中弹框](https://vannvan.github.io/web-explore-demo/水平居中弹框)
 - [jsutify两端对齐](https://vannvan.github.io/web-explore-demo/jsutify两端对齐)
 - [使原生按钮不可见](https://vannvan.github.io/web-explore-demo/使原生按钮不可见)
+- [相邻兄弟选择器](https://vannvan.github.io/web-explore-demo/相邻兄弟选择器)
