@@ -11,3 +11,4 @@
 - [多列等高布局](https://vannvan.github.io/web-explore-demo/多列等高布局)
 - [渐变实现饼图](https://vannvan.github.io/web-explore-demo/渐变实现饼图)
 - [固定背景图片](https://vannvan.github.io/web-explore-demo/固定背景图片)
+- [自定义复选框](https://vannvan.github.io/web-explore-demo/自定义复选框)
