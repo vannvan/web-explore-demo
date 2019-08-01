@@ -1,0 +1,44 @@
+<style>
+body{background-color:#ebebeb}
+div.outer{width:400px;
+    height:250px;    
+    padding:5px;
+    margin:100px auto;
+    position:relative;    
+}
+div.child{
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    background-color:#fff;
+    color:#000;
+    line-height:250px;
+    font-family:'Microsoft YaHei';
+    text-align:center;
+    z-index:2
+}
+div.outer::before,div.outer::after{content:'';
+            z-index:1;
+            width:50%;    
+            height:3px;        
+            position:absolute;
+            left:10px;
+            bottom:7px;
+            background-color:transparent;
+            box-shadow:5px 5px 10px rgba(0,0,0,0.5);
+            -webkit-transform:rotate(-3deg);
+            
+}
+div.outer::after{
+    left:auto;
+    right:10px;
+    -webkit-transform:rotate(3deg)
+}
+</style>
+<div class='outer'>
+   <div class='child '>
+      我是内容我是内容我是内容
+   </div>
+</div>
