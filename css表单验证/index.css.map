@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "CASI,mBAAS,EACP,aAAc,EAAE,EAAG,EACnB,KAAM,EAAE,MAAO,EAEf,0BAAS,EACP,MAAO,EAAE,IAAK,EAOlB,qBAAS,EACP,aAAc,EAAE,GAAI,EAEpB,4BAAS,EACP,MAAO,EAAE,OAAQ",
+"sources": ["index.scss"],
+"names": [],
+"file": "index.css"
+}

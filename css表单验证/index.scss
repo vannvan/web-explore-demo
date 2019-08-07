@@ -1,0 +1,30 @@
+/*
+* @Author: vannvan <https://github.com/vannvan>
+* @Date:   2019-08-07 09:02:52
+* @Last Modified by:   vannvan
+* @Last Modified time: 2019-08-07 09:02:55
+*/
+input {
+  // 验证通过时按钮的样式
+  &:valid {
+    &~button {
+      pointer-events: all;
+      cursor: pointer;
+
+      &::after {
+        content: "提交👍"
+      }
+    }
+  }
+
+  // 验证不通过时按钮的样式
+  &:invalid {
+    &~button {
+      pointer-events: none; // 去除点击事件，让按钮无法点击
+
+      &::after {
+        content: "未通过验证😒"
+      }
+    }
+  }
+}
