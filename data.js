@@ -2,7 +2,7 @@
 * @Author: vannvan <https://github.com/vannvan>
 * @Date:   2019-08-26 11:41:51
 * @Last Modified by:   vannvan
-* @Last Modified time: 2019-08-26 11:45:07
+* @Last Modified time: 2019-08-28 18:46:36
 */
 const linkList = [
 			'弹性布局',
@@ -33,5 +33,6 @@ const linkList = [
 			'JS实现拖拽',
 			'CSS加载中动画',
 			'两端对齐label文字',
+			'两端对齐label文字1',
 			'JS打字效果'
 ]
