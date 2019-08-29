@@ -1,0 +1,46 @@
+$red: #f66;
+$purple: #66f;
+$orange: #f90;
+$blue: #09f;
+$cyan: #9c3;
+$green: #3c9;
+.form-validation {
+	width: 500px;
+	div {
+		margin-top: 10px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	label {
+		display: block;
+		padding-bottom: 5px;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	input,
+	textarea {
+		display: block;
+		padding: 0 20px;
+		outline: none;
+		border: 1px solid #ccc;
+		width: 100%;
+		height: 40px;
+		caret-color: $blue;
+		transition: all 300ms;
+		&:valid {
+			border-color: $green;
+			box-shadow: inset 5px 0 0 $green;
+		}
+		&:invalid {
+			border-color: $red;
+			box-shadow: inset 5px 0 0 $red;
+		}
+	}
+	textarea {
+		height: 122px;
+		resize: none;
+		line-height: 30px;
+		font-size: 16px;
+	}
+}

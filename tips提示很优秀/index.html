@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+.tooltips {
+	position: relative;
+	margin-top: 10px;
+	padding: 0 20px;
+	border-radius: 10px;
+	height: 40px;
+	background-color: #f00;
+	line-height: 40px;
+	color: #fff;
+	display: inline-block;
+}
+.tooltips::after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-radius: 5px;
+		width: 100%;
+		height: 100%;
+		background-color: #ccc;
+		opacity: 0;
+		text-align: center;
+		font-size: 12px;
+		content: attr(data-msg);
+		transition: all 300ms;
+	}
+.tooltips:first-child {
+		margin-top: 0;
+	}
+.tooltips:hover::after {
+		left: calc(100% + 20px);
+		opacity: 1;
+	}
+.tooltips[href]:empty::before {
+		content: attr(href);
+	}
+.tooltips[href]:empty:hover::after {
+		display: none;
+	}
+</style>
+<body>
+<div class="bruce flex-ct-y">
+	<a class="tooltips" href="https://www.baidu.com" data-msg="Hello World">提示框</a>
+	<p></p>
+	<a class="tooltips" href="https://www.baidu.com"></a>
+</div>
+</body>
+</html>
