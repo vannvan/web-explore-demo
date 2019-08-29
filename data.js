@@ -37,4 +37,5 @@ const linkList = [
 			'两端对齐label文字1',
 			'JS打字效果',
 			'tips提示很优秀',
+			'加载中文字动画'
 ]

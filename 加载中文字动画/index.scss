@@ -1,0 +1,37 @@
+/*
+* @Author: vannvan <https://github.com/vannvan>
+* @Date:   2019-08-29 18:41:17
+* @Last Modified by:   vannvan
+* @Last Modified time: 2019-08-29 18:42:09
+*/
+$red: #f66;
+$purple: #66f;
+$orange: #f90;
+$blue: #09f;
+$cyan: #9c3;
+$green: #3c9;
+.load-indicator {
+	font-size: 16px;
+	color: $blue;
+	dot {
+		display: inline-block;
+		overflow: hidden;
+		height: 1em;
+		line-height: 1;
+		vertical-align: -.25em;
+		&::after {
+			display: block;
+			white-space: pre-wrap;
+			content: "...\A..\A.";
+			animation: loading 3s infinite step-start both;
+		}
+	}
+}
+@keyframes loading {
+	33% {
+		transform: translate3d(0, -2em, 0);
+	}
+	66% {
+		transform: translate3d(0, -1em, 0);
+	}
+}
