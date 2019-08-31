@@ -1,0 +1,25 @@
+/*
+* @Author: vannvan
+* @Date:   2019-08-31 14:26:04
+* @Last Modified by:   vannvan
+* @Last Modified time: 2019-08-31 14:26:59
+*/
+.auto-typing {
+  font-weight: bold;
+  font-size: 30px;
+  color: #09f;
+  overflow: hidden;
+  border-right: 1px solid transparent;
+  width: 53ch;
+  font-family: Consolas, Monaco, Monospace;
+  white-space: nowrap;
+  animation: typing 5s steps(53) 0s backwards, caret 500ms steps(1) 0s 10 forwards; }
+
+@keyframes typing {
+  from {
+    width: 0; } }
+@keyframes caret {
+  50% {
+    border-right-color: currentColor; } }
+
+/*# sourceMappingURL=index.css.map */
