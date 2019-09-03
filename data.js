@@ -1,8 +1,8 @@
-/*
+/*AAAAAAAAA
 * @Author: vannvan <https://github.com/vannvan>
 * @Date:   2019-08-26 11:41:51
 * @Last Modified by:   vannvan
-* @Last Modified time: 2019-08-31 14:27:41
+* @Last Modified time: 2019-09-02 16:37:07
 */
 const linkList = [
 			'弹性布局',
@@ -40,5 +40,5 @@ const linkList = [
 			'加载中文字动画',
 			'下划线跟随导航栏',
 			'CSS打字效果',
-			'1px解决方案'
+			'1px解决方案1'
 ]
