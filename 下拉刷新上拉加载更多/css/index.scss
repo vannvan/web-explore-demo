@@ -1,0 +1,72 @@
+/*
+* @Author: vannvan <https://github.com/vannvan>
+* @Date:   2019-09-04 15:20:49
+* @Last Modified by:   vannvan
+* @Last Modified time: 2019-09-05 14:46:02
+*/
+@import './mixin.scss';
+.container{
+	background: #fff;
+	.list-box{
+		width: pxTorem(700px);
+		min-height: pxTorem(300px);
+		margin:pxTorem(15px) auto;
+		background: #F3F1F3;
+		border-radius: pxTorem(20px);
+		.question-box,.anwser-box{
+			width: 100%;
+			min-height: pxTorem(150px);
+			// border-bottom: 1px solid #ccc;
+			display: table;
+			.left-item{
+				width: pxTorem(100px);
+				height: 100%;
+				display: table-cell;
+				img{
+					@include wh(50px,50px);
+					margin-top: 0.2rem;
+					margin-left: 0.2rem
+				}
+			}
+			.right-item{
+				width: pxTorem(630px);
+				height: 100%;
+				display: table-cell;
+				padding-bottom: pxTorem(15px);
+				padding-right: pxTorem(15px);
+				word-break: break-all;
+				line-height: 1.5;
+				.text-box{
+					height: auto;
+					width: 100%;
+					margin-bottom: pxTorem(15px);
+				}
+				.img-box{
+					width: 100%;
+					height: pxTorem(100px);
+					img{
+						@include wh(100px,100px);
+						margin-right: pxTorem(25px);
+					}
+				}
+				.date{
+					margin-top: pxTorem(15px)
+				}
+			}
+		}
+		.question-box {
+			border-bottom: 1px solid #ccc;
+		}
+	}
+}
+.empty{
+		display: none;
+		@include wh(500px,500px);
+		margin:pxTorem(200px) auto;
+		vertical-align: middle;
+		text-align: center;
+		// line-height: pxTorem(500px);
+		img{
+			@include wh(146px,96px)
+		}
+}

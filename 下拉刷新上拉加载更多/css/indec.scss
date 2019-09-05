@@ -1,0 +1,38 @@
+/*
+* @Author: vannvan <https://github.com/vannvan>
+* @Date:   2019-09-04 15:20:49
+* @Last Modified by:   vannvan
+* @Last Modified time: 2019-09-04 15:54:15
+*/
+@import './mixin.scss';
+.contaniner{
+	background: #fff;
+	.list-box{
+		width: pxTorem(730px);
+		min-height: pxTorem(300px);
+		margin:pxTorem(15px) auto;
+		background: #F3F1F3;
+		border-radius: pxTorem(10px);
+		.question-box{
+			width: 100%;
+			min-height: pxTorem(150px);
+			border-bottom: 1px solid #ccc;
+			display: table;
+			.left-item{
+				width: pxTorem(100px);
+				height: 100%;
+				background: #f00;
+				display: table-cell;
+				img{
+					@include wh(50px,50px)
+				}
+			}
+			.right-item{
+				width: pxTorem(630px);
+				height: 100%;
+				display: table-cell;
+				background: blue
+			}
+		}
+	}
+}
