@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <title>等高布局</title>
+  <style>
+    html {
+      font-size: 10px;;
+    }
+    body {
+      font-size: 1.4rem;
+    }
+    .box {
+      background-color: rgba(200,200,200,0.7);
+      margin: 0 1rem;
+      width: 33.33%;
+      padding: 1rem;
+    }
+    .box:nth-child(2) {
+      height: 5rem;
+      background-color: rgba(200,210,230,0.7);
+    }
+    .accordant {
+      display: table-row;
+    }
+    .table {
+      width: 100%;
+      display: table;
+    }
+    .table .accordant {
+      display: table-row;
+    }
+    .table .accordant .box {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="table">
+  <div class="accordant">
+    <div class="box" style="height: 300px">
+      <img src="http://placehold.it/200x200.png" alt="200x200"/>
+      <p>这是一个 Figure</p>
+    </div>
+    <div class="box">
+      <img src="http://placehold.it/250x250.png" alt="200x200"/>
+      <p>这是一个 Figure</p>
+    </div>
+    <div class="box">
+      <img src="http://placehold.it/300x300.png" alt="200x200"/>
+      <p>这是一个 Figure</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
