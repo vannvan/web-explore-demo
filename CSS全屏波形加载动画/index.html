@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<style type="text/css">
+  body {
+    height: 100vh;
+    background-color: royalblue;
+    background-image: -webkit-linear-gradient( rgba(0, 200, 255, 0.2), rgba(255, 255, 255, 0));
+    background-image: linear-gradient( rgba(0, 200, 255, 0.2), rgba(255, 255, 255, 0));
+    overflow: hidden;
+}
+.wave,
+.wave::before,
+.wave::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250vw;
+    height: 250vw;
+    margin-left: -125vw;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    background-image: -webkit-linear-gradient( rgba(150, 255, 255, 0.5), rgba(240, 240, 100, 0.5));
+    background-image: linear-gradient( rgba(150, 255, 255, 0.5), rgba(240, 240, 100, 0.5));
+    border-radius: 38% 42%;
+    box-shadow: inset 0 0 10vw rgba(255, 255, 255, 0.5);
+    -webkit-animation: spin 16s infinite linear;
+    animation: spin 16s infinite linear;
+}
+.wave::before {
+    width: 105%;
+    height: 95%;
+    margin-top: -125vw;
+    -webkit-transform-origin: 49% 51%;
+    transform-origin: 49% 51%;
+    background-image: -webkit-linear-gradient( rgba(255, 180, 150, 0.5), rgba(180, 200, 255, 0.5));
+    background-image: linear-gradient( rgba(255, 180, 150, 0.5), rgba(180, 200, 255, 0.5));
+    border-radius: 40% 38%;
+    -webkit-animation: spin 13s infinite linear;
+    animation: spin 13s infinite linear;
+}
+.wave::after {
+    width: 102%;
+    height: 98%;
+    margin-top: -125vw;
+    -webkit-transform-origin: 51% 49%;
+    transform-origin: 51% 49%;
+    background-image: -webkit-linear-gradient( rgba(100, 240, 150, 0.5), rgba(80, 200, 255, 0.5));
+    background-image: linear-gradient( rgba(100, 240, 150, 0.5), rgba(80, 200, 255, 0.5));
+    border-radius: 48% 42%;
+    -webkit-animation: spin 10s infinite linear;
+    animation: spin 10s infinite linear;
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+</style>
+<body>
+<div class="content" style="width: 80%;height: 50%">
+  <div class="wave"></div>
+</div>
+</body>
+</html>

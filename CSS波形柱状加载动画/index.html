@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+body {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #242d35;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.loader {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 400px;
+}
+.loader .bars {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.loading {
+    color: white;
+    font-family: open sans, sans-serif;
+    letter-spacing: 10px;
+    opacity: 0.05;
+    padding-top: 12px;
+    font-size: 30px;
+    font-weight: 100;
+    -webkit-animation-name: throb;
+    animation-name: throb;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+.bar {
+    background-color: #fff;
+    margin-left: 10px;
+    height: 1px;
+    width: 30px;
+    -webkit-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    transform-origin: bottom center;
+}
+.bar:first-child {
+    margin-left: 0;
+}
+.bar-1 {
+    -webkit-animation-name: animate-bar-1;
+    animation-name: animate-bar-1;
+    -webkit-animation-duration: 1.75s;
+    animation-duration: 1.75s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+.bar-2 {
+    -webkit-animation-name: animate-bar-2;
+    animation-name: animate-bar-2;
+    -webkit-animation-duration: 1.75s;
+    animation-duration: 1.75s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+.bar-3 {
+    -webkit-animation-name: animate-bar-3;
+    animation-name: animate-bar-3;
+    -webkit-animation-duration: 1.75s;
+    animation-duration: 1.75s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+.bar-4 {
+    -webkit-animation-name: animate-bar-4;
+    animation-name: animate-bar-4;
+    -webkit-animation-duration: 1.75s;
+    animation-duration: 1.75s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+.bar-5 {
+    -webkit-animation-name: animate-bar-5;
+    animation-name: animate-bar-5;
+    -webkit-animation-duration: 1.75s;
+    animation-duration: 1.75s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+@-webkit-keyframes throb {
+    0% {
+        opacity: 0.05;
+    }
+    100% {
+        opacity: 0.25;
+    }
+}
+@keyframes throb {
+    0% {
+        opacity: 0.05;
+    }
+    100% {
+        opacity: 0.25;
+    }
+}
+@-webkit-keyframes animate-bar-1 {
+    0% {
+        backgroun-color: #fff;
+        opacity: 0;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        background-color: #4998be;
+        opacity: 1;
+        -webkit-transform: scaleY(30);
+        transform: scaleY(30);
+    }
+}
+@keyframes animate-bar-1 {
+    0% {
+        backgroun-color: #fff;
+        opacity: 0;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        background-color: #4998be;
+        opacity: 1;
+        -webkit-transform: scaleY(30);
+        transform: scaleY(30);
+    }
+}
+@-webkit-keyframes animate-bar-2 {
+    0% {
+        backgroun-color: #fff;
+        opacity: 0;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        background-color: #4998be;
+        opacity: 1;
+        -webkit-transform: scaleY(60);
+        transform: scaleY(60);
+    }
+}
+@keyframes animate-bar-2 {
+    0% {
+        backgroun-color: #fff;
+        opacity: 0;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        background-color: #4998be;
+        opacity: 1;
+        -webkit-transform: scaleY(60);
+        transform: scaleY(60);
+    }
+}
+@-webkit-keyframes animate-bar-3 {
+    0% {
+        backgroun-color: #fff;
+        opacity: 0;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        background-color: #4998be;
+        opacity: 1;
+        -webkit-transform: scaleY(90);
+        transform: scaleY(90);
+    }
+}
+@keyframes animate-bar-3 {
+    0% {
+        backgroun-color: #fff;
+        opacity: 0;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        background-color: #4998be;
+        opacity: 1;
+        -webkit-transform: scaleY(90);
+        transform: scaleY(90);
+    }
+}
+@-webkit-keyframes animate-bar-4 {
+    0% {
+        backgroun-color: #fff;
+        opacity: 0;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        background-color: #4998be;
+        opacity: 1;
+        -webkit-transform: scaleY(120);
+        transform: scaleY(120);
+    }
+}
+@keyframes animate-bar-4 {
+    0% {
+        backgroun-color: #fff;
+        opacity: 0;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        background-color: #4998be;
+        opacity: 1;
+        -webkit-transform: scaleY(120);
+        transform: scaleY(120);
+    }
+}
+@-webkit-keyframes animate-bar-5 {
+    0% {
+        backgroun-color: #fff;
+        opacity: 0;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        background-color: #4998be;
+        opacity: 1;
+        -webkit-transform: scaleY(150);
+        transform: scaleY(150);
+    }
+}
+@keyframes animate-bar-5 {
+    0% {
+        backgroun-color: #fff;
+        opacity: 0;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+    100% {
+        background-color: #4998be;
+        opacity: 1;
+        -webkit-transform: scaleY(150);
+        transform: scaleY(150);
+    }
+}
+</style>
+<body>
+<div class="loader">
+    <div class="bars">
+        <div class="bar bar-1"></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
+        <div class="bar bar-4"></div>
+        <div class="bar bar-5"></div>
+    </div>
+    <div class="loading">LOADING</div>
+</div>
+</body>
+</html>

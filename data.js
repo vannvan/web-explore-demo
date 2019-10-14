@@ -2,7 +2,7 @@
 * @Author: vannvan <https://github.com/vannvan>
 * @Date:   2019-08-26 11:41:51
 * @Last Modified by:   vannvan
-* @Last Modified time: 2019-10-11 16:21:07
+* @Last Modified time: 2019-10-14 17:19:04
 */
 const linkList = [
 			'弹性布局',
@@ -46,5 +46,7 @@ const linkList = [
 			'原生多图上传预览',
 			"CSS子元素平均高度",
 			"canvas钟表",
-			"CSS变色全屏加载中动画"
+			"CSS变色全屏加载中动画",
+			"CSS全屏波形加载动画",
+			"CSS波形柱状加载动画"
 ]
