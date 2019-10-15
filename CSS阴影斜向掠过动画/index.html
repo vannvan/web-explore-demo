@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<style type="text/css">
+    body {
+    font-family: 'Lato', sans-serif;
+}
+.box {
+    position: relative;
+    background: #000;
+    border: 0;
+    padding: 14px 42px;
+    border-radius: 3px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: 0.2em;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    height: 500px;
+}
+.box:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -200%;
+    width: 200%;
+    height: 100%;
+    transform: skewX(-20deg);
+    background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shine 1.6s infinite;
+}
+
+
+.cntr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@-moz-keyframes shine {
+    100% {
+        left: 200%;
+    }
+}
+@-webkit-keyframes shine {
+    100% {
+        left: 200%;
+    }
+}
+@-o-keyframes shine {
+    100% {
+        left: 200%;
+    }
+}
+@keyframes shine {
+    100% {
+        left: 200%;
+    }
+}
+</style>
+<body>
+    <div class="box"></div>
+</body>
+</html>
