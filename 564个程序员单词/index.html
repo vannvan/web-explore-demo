@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>564个程序员单词</title>
+</head>
+<style type="text/css">
+*{
+	margin:0;padding: 0
+}
+#content{
+}
+li{
+	list-style: none;height: 40px;line-height: 40px;background: #ccc;width: 50%;padding-left:50px;float: left;border-bottom: 1px solid #f00;box-sizing: border-box;
+}
+</style>
+<body>
+<div id="content"></div>
+</body>
+<script type="text/javascript" src="data.js"></script>
+<script type="text/javascript">
+var content =  document.getElementById("content");
+var htmlStr = ''
+array.map(el =>{
+	htmlStr += `<li>${el.name}:${el.word}</li>`
+})
+content.innerHTML = htmlStr
+// content.appendChild(htmlStr)
+
+</script>
+</html>
