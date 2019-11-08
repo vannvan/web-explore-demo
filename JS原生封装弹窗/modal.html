@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+const Modal = function() {
+	this.prifix = 'w-'
+	var _this = this	
+	this.createModalContent = function() {
+		var bodyCtx = document.getElementsByTagName('body')[0]
+		var wrapCtxNode = document.createElement('div')
+		// console.log(wrapCtxNode.__proto__)
+		wrapCtxNode.id = this.prifix + 'modal'
+		bodyCtx.appendChild(wrapCtxNode)
+		return document.getElementById(this.prifix + 'modal')
+	}
+	this.alert = function(title,msg) {
+		var modalCtx =  document.getElementById(this.prifix + 'modal') || this.createModalContent()
+		var alertContentStr = `
+			<div class="alert-content">
+				<div class="title">${title}</div>
+				<div class="body">${msg}</div>
+			</div>
+			`
+		modalCtx.innerHTML = alertContentStr
+		console.log(title)
+	}
+	this.confirm = function({title,msg,onOk,onCancel}) {
+		var modalCtx =  document.getElementById(this.prifix + 'modal') || this.createModalContent()
+		var confirmContentStr = `
+			<div class="confirm-content">
+				<div class="title">${title}</div>
+				<div class="body">${msg}</div>
+				<div class="footer">
+					<button class="ok-btn" id="confirm-ok-btn">确认</button>
+					<button class="cancel-btn" id="confirm-cancel-btn">取消</button>
+				</div>
+			</div>
+		`
+		modalCtx.innerHTML = confirmContentStr
+	    document.getElementById('confirm-ok-btn').addEventListener('click', function () {
+            _this.sureConfirm(onOk);
+        })
+
+        document.getElementById('confirm-cancel-btn').addEventListener('click',function() {
+        	_this.cancelConfirm(onCancel)
+        })
+
+	}
+
+	this.sureConfirm = function(fn) {
+		if (typeof fn === 'function') {
+                fn.apply();
+            } else {
+                console.log(fn);
+        }
+	}
+
+	this.cancelConfirm = function(fn) {
+		//如果没有传入取消操作默认移除modal
+		if(!fn) {
+			console.log('移除modal操作')
+		}else {
+			if (typeof fn === 'function') {
+                fn.apply();
+            } else {
+                console.log(fn);
+        	}
+		}
+	}
+}
+
+var modal = new Modal()
+modal.confirm({
+	title:'警告',
+	msg:'lalal',
+	onOk:() => {
+		console.log('确认')
+	},
+	onCancel:() => {
+		console.log('取消')
+	}
+})
+function onOk() {
+	console.log('akka')
+}
+</script>
+</body>
+</html>
