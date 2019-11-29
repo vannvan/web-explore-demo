@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="progress.css">
+</head>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script type="text/javascript" src='progress.js'></script>
+<body>
+<div id="progress-container"></div>
+<div id="progress-container1"></div>
+<div id="progress-container2"></div>
+<div id="progress-container3"></div>
+<script type="text/javascript">
+		$('#progress-container').initData({
+			height: 10,
+			percent: 0
+		})
+		var mPercent = 0
+		setInterval(function(){
+			if (mPercent >= 100) {
+				mPercent = 0
+			}
+			mPercent = (mPercent * 10 + 1) / 10
+			mAutoPlay($('#progress-container'), mPercent, { height: 10 })
+		}, 20)
+		$('#progress-container1').initData({
+			height: 10,
+			percent: 100,
+			bgStartColor: 'green',
+			bgEndColor: 'red'
+		})
+		$('#progress-container2').initData({
+			height: 6,
+			percent: 80,
+			isAuto: true
+		})
+		$('#progress-container3').initData({
+			height: 10,
+			percent: 75,
+			bgStartColor: '#1989fa',
+			bgEndColor: '#1989fa'
+		})
+	</script>
+</body>
+</html>

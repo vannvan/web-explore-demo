@@ -1,0 +1,29 @@
+	.m-percent-include {
+		width: calc(100% - 70px);
+		background: #EBEBEB;
+		overflow: hidden;
+		position: relative;
+		display: inline-block;
+	}
+	
+	.m-percent-include .m-no-percent {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: -100%;
+		background: rgba(0, 0, 0, 0);
+		overflow: hidden;
+	}
+	
+	.m-bg-percent {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 100%;
+	}
+	
+	.m-percent{
+		display: inline-block;
+		vertical-align: middle;
+		padding-left: 2px;
+	}
