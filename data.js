@@ -2,7 +2,7 @@
 * @Author: vannvan <https://github.com/vannvan>
 * @Date:   2019-08-26 11:41:51
 * @Last Modified by:   vannvan
-* @Last Modified time: 2019-12-16 09:58:36
+* @Last Modified time: 2019-12-29 20:24:02
 */
 const linkList = [
 			'弹性布局',
@@ -62,5 +62,7 @@ const linkList = [
 			"科技感加载动画1",
 			"圆角环形图"，
 			"JS折叠动画",
-			"四角背景无边边框"
+			"四角背景无边边框",
+			"文本发光并逐个显示",
+			"鼠标经过剪裁放大效果"
 ]

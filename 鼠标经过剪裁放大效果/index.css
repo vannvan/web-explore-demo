@@ -1,0 +1,76 @@
+/*
+* @Author: vannvan <https://github.com/vannvan>
+* @Date:   2019-12-29 20:25:15
+* @Last Modified by:   vannvan
+* @Last Modified time: 2019-12-29 20:25:21
+*/
+@import url(https://fonts.googleapis.com/css?family=Lato);
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: Lato, sans-serif;
+  background: #fafafa; }
+
+.shadow {
+  filter: drop-shadow(-2px 2px 8px rgba(50, 50, 0, 0.5)); }
+
+.card {
+  clip-path: inset(0 0 70% 0);
+  transform: translateY(30%);
+  transition: 0.5s ease; }
+  .card .card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+    font-size: 2em;
+    color: white;
+    background-color: #2979ff;
+    clip-path: inset(0 19% 0 19%);
+    transition: 0.5s ease; }
+  .card .card-body {
+    box-sizing: border-box;
+    padding: 1.25em;
+    width: 400px;
+    height: 225px;
+    font-size: 1.5em;
+    background: white;
+    clip-path: inset(0 19% 0 19%);
+    transition: 0.5s ease; }
+    .card .card-body dl {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%; }
+    .card .card-body span {
+      opacity: 0;
+      transform: translateY(100%);
+      transition: 0.5s ease-in; }
+      .card .card-body span:nth-child(1) {
+        transition-delay: 0.1s; }
+      .card .card-body span:nth-child(2) {
+        transition-delay: 0.2s; }
+      .card .card-body span:nth-child(3) {
+        transition-delay: 0.3s; }
+      .card .card-body span dt,
+      .card .card-body span dd {
+        display: inline; }
+        .card .card-body span dt i,
+        .card .card-body span dd i {
+          margin-right: 0.3em;
+          color: #4289ff; }
+  .card:hover {
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0); }
+    .card:hover .card-header,
+    .card:hover .card-body {
+      clip-path: inset(0 0 0 0); }
+    .card:hover span {
+      opacity: 1;
+      transform: translateY(0); }
+
+/*# sourceMappingURL=index.css.map */
