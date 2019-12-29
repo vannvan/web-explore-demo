@@ -1,0 +1,54 @@
+/*
+* @Author: vannvan <https://github.com/vannvan>
+* @Date:   2019-12-29 21:08:50
+* @Last Modified by:   vannvan
+* @Last Modified time: 2019-12-29 21:18:47
+*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #2d303a;
+  overflow-y: hidden;
+}
+
+.bounce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+	color: white;
+  height: 100%;
+  font: normal bold 6rem "Product Sans", sans-serif;
+  white-space: nowrap;
+}
+
+.letter {
+  animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+  display: inline-block;
+  transform: translate3d(0, 0, 0);
+  margin-top: 0.5em;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+  font: normal 500 6rem 'Varela Round', sans-serif;
+}
+
+
+@for $i from 1 through 6 {
+	.letter:nth-child(#{$i}) {
+		animation-delay: (0.08s * $i);
+	}
+}
+
+
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0);
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+  }
+  100% {
+    transform: translate3d(0, -1em, 0);
+    text-shadow: rgba(255, 255, 255, 0.4) 0 1em 0.35em;
+  }
+}

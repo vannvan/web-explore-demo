@@ -2,7 +2,7 @@
 * @Author: vannvan <https://github.com/vannvan>
 * @Date:   2019-08-26 11:41:51
 * @Last Modified by:   vannvan
-* @Last Modified time: 2019-12-29 20:24:02
+* @Last Modified time: 2019-12-29 21:51:10
 */
 const linkList = [
 			'弹性布局',
@@ -64,5 +64,11 @@ const linkList = [
 			"JS折叠动画",
 			"四角背景无边边框",
 			"文本发光并逐个显示",
-			"鼠标经过剪裁放大效果"
+			"鼠标经过剪裁放大效果",
+			"翻转切换文字效果",
+			"菜单划线效果2",
+			"蛇形渐变边框",
+			"文字弹跳效果1",
+			"css卡片正反切换效果",
+			"css动画中用到的各种形变集合"
 ]
