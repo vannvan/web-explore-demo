@@ -2,7 +2,7 @@
 * @Author: vannvan <https://github.com/vannvan>
 * @Date:   2019-08-26 11:41:51
 * @Last Modified by:   vannvan
-* @Last Modified time: 2019-12-29 21:51:10
+* @Last Modified time: 2019-12-29 22:06:19
 */
 const linkList = [
 			'弹性布局',
@@ -70,5 +70,6 @@ const linkList = [
 			"蛇形渐变边框",
 			"文字弹跳效果1",
 			"css卡片正反切换效果",
-			"css动画中用到的各种形变集合"
+			"css动画中用到的各种形变集合",
+			"js数字递增动画"
 ]

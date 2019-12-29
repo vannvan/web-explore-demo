@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	* {
+	margin:0;
+	padding:0;
+}
+button {
+	width:50px;
+	height:50px;
+	line-height:30px;
+	background:skyblue;
+	font-size:32px;
+	border:none;
+	outline:none;
+}
+input {
+	height:30px;
+	text-align:center;
+	border:none;
+	font-size:32px;
+}
+div {
+	width:100%;
+	font-size:32px;
+	text-align:center;
+	/* margin-left:40%;
+	*/
+      margin-top:200px;
+}
+</style>
+<body>
+<div>
+    <button class="cut">减</button>
+    <input type="text" value="100">
+    <button class="add">加</button>
+</div>
+<script type="text/javascript">
+var add = document.querySelector('.add')
+var cut = document.querySelector('.cut')
+var box = document.querySelector('input')
+add.onclick = function() {
+    playEffect(box, {
+        time: 500,
+        initNum: parseInt(box.value),
+        num: parseInt(box.value) + 100,
+        regulator: 50
+    })
+}
+cut.onclick = function() {
+    playEffect(box, {
+        time: 500,
+        initNum: parseInt(box.value),
+        num: parseInt(box.value) - 100,
+        regulator: 50
+    })
+}
+
+function playEffect(target, options) {
+    options = options || {};
+    if (options.initNum == options.num)
+        return;
+    var time = options.time, //总时间--毫秒为单位 
+        finalNum = options.num, //要显示的真实数值
+        regulator = options.regulator || 100, //调速器，改变regulator的数值可以调节数字改变的速度  
+        step = (finalNum - options.initNum) / (time / regulator),
+        /*每30ms增加的数值--*/ count = options.initNum, //计数器       
+        initial = options.initNum;
+    var timer = setInterval(function() {
+        count = count + step;
+        if (count >= finalNum && options.initNum < finalNum) {
+            clearInterval(timer);
+            count = finalNum;
+        }
+        if (count <= finalNum && options.initNum > finalNum) {
+            clearInterval(timer);
+            count = finalNum;
+        }
+        //t未发生改变的话就直接返回  
+        var t = Math.floor(count);
+        if (t == initial)
+            return;
+        initial = t;
+        target.value = initial + "";
+    }, 30);
+};
+</script>
+</body>
+</html>
