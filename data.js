@@ -2,7 +2,7 @@
 * @Author: vannvan <https://github.com/vannvan>
 * @Date:   2019-08-26 11:41:51
 * @Last Modified by:   vannvan
-* @Last Modified time: 2019-12-30 18:29:21
+* @Last Modified time: 2020-01-20 09:35:36
 */
 const linkList = [
 			'弹性布局',
@@ -60,7 +60,7 @@ const linkList = [
 			"H5无缝间歇平滑向上滚动",
 			"JS原生轮播表",
 			"科技感加载动画1",
-			"圆角环形图"，
+			"圆角环形图",
 			"JS折叠动画",
 			"四角背景无边边框",
 			"文本发光并逐个显示",
