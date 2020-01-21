@@ -1,0 +1,50 @@
+/*
+* @Author: vannvan <https://github.com/vannvan>
+* @Date:   2020-01-21 10:42:12
+* @Last Modified by:   vannvan
+* @Last Modified time: 2020-01-21 10:51:01
+*/
+#w-modal{
+  max-width:100%;
+  max-height:100%;
+  position: fixed;
+  overflow: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1000;
+  background-color: rgba(55,55,55,.6);
+  .alert-content{
+  	margin: 0 auto;
+    position: relative;
+    outline: 0;
+    top: 230px;
+    background: #fff;
+    width:320px;
+    border-radius: 10px;
+    text-align: center;
+    user-select: none;
+    .title{
+    	height: 60px;
+    	width: 100%;
+    	line-height: 60px;
+    	border-bottom: 1px solid #ccc;
+    	font-size: 18px;
+    	font-weight: bold
+    }
+    .body{
+    	width: 100%;
+    	margin: 28px auto;
+    }
+    .alert-ok-btn{
+    	width: 100%;
+    	height: 60px;
+    	background-image: linear-gradient(45deg,#29323c,#485563 99%,#485563);
+    	line-height: 60px;
+    	border-radius: 0 0 10px 10px;
+    	color: #fff;
+    	cursor: pointer;
+    }
+  }
+}
