@@ -2,7 +2,7 @@
 * @Author: vannvan <https://github.com/vannvan>
 * @Date:   2019-08-26 11:41:51
 * @Last Modified by:   vannvan
-* @Last Modified time: 2020-01-20 09:35:36
+* @Last Modified time: 2020-03-17 14:57:37
 */
 const linkList = [
 			'弹性布局',
@@ -73,5 +73,6 @@ const linkList = [
 			"css动画中用到的各种形变集合",
 			"js数字递增动画",
 			"原生翻牌2",
-			"登录捂眼睛动画"
+			"登录捂眼睛动画",
+			"机器人样子变化css特效"
 ]
