@@ -1,0 +1,129 @@
+.baozhang {float:left;width: 100%;}
+.title{text-align: center}
+.title h4{font-size: 30px;line-height: 30px;}
+.title p{font-size: 16px;line-height: 10px;margin-top: -20px;}
+.clearfix:after{display:block; content:''; clear:both;}
+.clearfix{zoom:1;text-align: center;}
+.fl{float:left;}
+.fr{float:right;}
+
+
+.part5 .tBox{
+	width: 1154px;
+	height: 430px;
+	margin: 30px auto 0;
+	position: relative;
+}
+.part5 .tBox .picBox{
+	width: 1000px;
+	margin: 0 auto;
+	height: 100%;	
+	overflow: hidden;
+	position: relative;
+}
+#posBox{
+	width: 2048px;
+	position: absolute;
+	left: 0;
+	top: 0;	
+}
+.part5 .tBox .picBox .roll{
+	position: relative;
+	margin-right: 24px;	
+	perspective: 1000px;   	
+	cursor: pointer;
+}
+.part5 .tBox .picBox li .bg{
+	width: 100%;
+	height: 65px;
+	background: #000;
+	opacity: 0.8;
+	filter:alpha(opacity=80); 
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.part5 .tBox .picBox li h3{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 65px;
+	text-align: left;
+	padding-left: 13px;
+}
+
+.part5 .tBox .picBox li .tName{
+	font-size: 18px;
+	color: #fff;
+	padding-top: 13px;
+	margin-bottom: 5px;
+}
+.part5 .tBox .picBox li .tTitle{
+	font-size: 12px;
+	color: #b4b4b4;
+}
+
+.roll .box-content{
+	width: 100%;
+	height: 480px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	opacity: 0.8;
+	filter:alpha(opacity=80); 
+	transform: rotateY(90deg);
+	transition: all 0.50s ease-in-out 0s;
+	overflow: hidden;
+}
+.roll .box-img{
+	transform: rotateY(0);
+	transition: all 0.50s ease-in-out 0s;
+}
+.roll:hover .box-img{
+	transform: rotateY(-90deg);
+}
+.roll:hover .box-content{
+	transform: rotateY(0);
+}
+.roll .box-content .t1,.roll .box-content2 .t1{
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	padding-top: 50px;
+}
+.roll .box-content .t2,.roll .box-content2 .t2{
+	font-size: 16px;
+	color: #fff;
+	padding-top: 12px;
+}
+.roll .box-content .t3,.roll .box-content2 .t3{
+	width: 190px;
+	height: 1px ;
+	background: #fff;
+	margin: 20px auto 0;
+}
+.roll .box-content .t4,.roll .box-content2 .t4{
+	font-size: 14px;
+	width: 182px;
+	text-align: justify;
+	color: #fff;
+	margin: 20px auto 0;
+}
+
+.box-content2{
+	position: absolute;
+	left: 0px;
+	top: -470px;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.7;
+	filter:alpha(opacity=70); 
+	color: #fff;
+}
+.anniuk{width:100%;float: left;text-align: center;}
+.anniu{border:1px solid #0D0D0D;height: 60px;width:550px;line-height: 60px;text-align:center;border-radius: 200px;margin-top: 40px;margin-bottom: 40px;cursor:pointer;font-size: 30px;display: inline-block;}
+.anniu:hover{background: #ffc670;transform: scale(1.05);transition: all 0.5s;}
+
