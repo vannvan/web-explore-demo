@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<style type="text/css">
+.yw-tab-tab {
+    position: relative;
+    display: flex;
+    max-width: 414px;
+    justify-content: space-between;
+    border-bottom: 1px solid #717678;
+    background-color: #fff;
+    margin: 30px auto;
+}
+.yw-tab-tab::before,
+.yw-tab-tab::after {
+    position: absolute;
+    width: calc(var(--target-width, 0) * 1px);
+    left: calc(var(--target-left, -299) * 1px);
+    color: #2a80eb;
+}
+.yw-tab-tab[style]::before,
+.yw-tab-tab[style]::after  {
+    content: '';
+}
+.yw-tab-tab::before {
+    background-color: currentColor;
+    height: calc(var(--target-height) * 1px);
+    mix-blend-mode: overlay;
+}
+.yw-tab-tab::after {
+    border-bottom: solid;    
+    bottom: -2px;
+    transition: left .2s, width .2s;
+}
+.yw-tab-a {
+    color: #717678;
+    padding: 10px 0;
+}
+</style>
+<body>
+<div class="yw-tab-tab"> 
+  <a href="javascript:" class="yw-tab-a">QQ阅读</a>
+  <a href="javascript:" class="yw-tab-a">起点读书</a>
+  <a href="javascript:" class="yw-tab-a">红袖读书</a>
+  <a href="javascript:" class="yw-tab-a">飞读免费小说</a>
+</div>
+<script type="text/javascript">
+/**
+ * @author zhangxinxu(.com)
+ * @description 点击页面任意位置，标记坐标位置
+ */
+document.addEventListener('mousedown', function (event) {
+    var target = event.target;
+    var body = document.body;
+    var html = document.documentElement;
+
+    // 设置自定义属性值
+    body.style.setProperty('--pagex', event.pageX);
+    body.style.setProperty('--pagey', event.pageY);
+
+    html.style.setProperty('--clientx', event.clientX);
+    html.style.setProperty('--clienty', event.clientY);
+    html.style.setProperty('--scrolly', window.pageYOffset);
+
+    target.style.setProperty('--offsetx', event.offsetX);
+    target.style.setProperty('--offsety', event.offsetY);
+    target.parentElement.style.setProperty('--target-width', target.clientWidth);
+    target.parentElement.style.setProperty('--target-height', target.clientHeight);
+    target.parentElement.style.setProperty('--target-left', target.offsetLeft);
+    target.parentElement.style.setProperty('--target-top', target.offsetTop);
+});
+</script>
+</body>
+</html>
