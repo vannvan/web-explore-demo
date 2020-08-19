@@ -17,6 +17,7 @@ nav{
     <nav></nav>
     <button class="blue">蓝色</button>
     <button class="gray">灰色</button>
+    <button class="random">随机</button>
 
     使用 document.body.style.setProperty('--bg', '#7F583F'); 来设置变量
 使用 document.body.style.getPropertyValue('--bg'); 来获取变量
@@ -26,14 +27,18 @@ nav{
     <script type="text/javascript">
         const blue = document.querySelector('.blue')
         const gray = document.querySelector('.gray')
+        const random = document.querySelector('.random')
 
         blue.addEventListener('click',function() {
             document.body.style.setProperty('--bg', 'blue');
         })
 
-        gray.addEventListener('click',function() {
-            document.body.style.setProperty('--bg', '#ccc');
+        random.addEventListener('click',function() {
+            const RandomColor = () => "#" + Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0"); 
+            document.body.style.setProperty('--bg', RandomColor());
         })
+
+        random。
     </script>
 </body>
 </html>
