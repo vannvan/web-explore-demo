@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./css/coupons.css">
+    <title>可用优惠券</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="describe-wrap">
+            <p>使用说明</p>
+            <p>1、请在电脑端登录赴彼岸官网，在结算管理处即可获得对应的券码</p>
+            <p>2、您下单的时候即可把对应的券码填入，系统即可满减运费</p>
+        </div>
+        <div class="coupons-wrap">
+            <div class="coupons-item">
+                <div class="card-wrap">
+                    <div class="left-name">
+                        &yen; 200
+                    </div>
+                    <div class="right-info">
+                        <p>无门槛券</p>
+                        <p>有效期至：2020-09-01</p>
+                    </div>
+                </div>
+                <div class="tool">使用规则</div>
+                <div class="desc">
+                    <p>1、请在电脑端登录赴彼岸官网，在结算管理处即可获得对应的券码</p>
+                    <p>2、您下单的时候即可把对应的券码填入，系统即可满减运费</p>
+                </div>
+            </div>
+
+            <div class="coupons-item">
+                <div class="card-wrap">
+                    <div class="left-name">
+                        &yen; 100*3
+                    </div>
+                    <div class="right-info">
+                        <p>单票运费满3500元可使用</p>
+                        <p>有效期至：2020-09-01</p>
+                    </div>
+                </div>
+                <div class="tool">使用规则</div>
+                <div class="desc">
+                    <p>1、请在电脑端登录赴彼岸官网，在结算管理处即可获得对应的券码</p>
+                    <p>2、您下单的时候即可把对应的券码填入，系统即可满减运费</p>
+                </div>
+            </div>
+
+            <div class="coupons-item">
+                <div class="card-wrap">
+                    <div class="left-name">
+                        &yen; 50*10
+                    </div>
+                    <div class="right-info">
+                        <p>单票运费满2000元可使用</p>
+                        <p>有效期至：2020-09-01</p>
+                    </div>
+                </div>
+                <div class="tool">使用规则</div>
+                <div class="desc">
+                    <p>1、请在电脑端登录赴彼岸官网，在结算管理处即可获得对应的券码</p>
+                    <p>2、您下单的时候即可把对应的券码填入，系统即可满减运费</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+        $(function() {
+            $('.tool').click(function() {
+                $(this).next(".desc").slideToggle(100).siblings(".desc").slideUp(400);
+            })
+        })
+    </script>
+</body>
+
+</html>

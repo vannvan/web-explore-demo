@@ -1,0 +1,167 @@
+@import './mixin.scss';
+$primaryColor:#1496FA;
+
+.stage {
+    position: relative;
+    // padding: 0 15px;
+    height: pxTorem(90px)
+}
+
+.slider {
+    position: absolute;
+    height: pxTorem(90px);
+    box-shadow: 0 0 3px #999;
+    background-image: linear-gradient(45deg, #fff1eb 0%, #ace0f9 99%, #ace0f9 100%);
+    left: 10px;
+    right: 10px;
+}
+
+.label,
+.succuss {
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(.4, #4d4d4d), color-stop(.5, white), color-stop(.6, #4d4d4d), color-stop(1, #4d4d4d));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: slidetounlock 3s infinite;
+    -webkit-text-size-adjust: none;
+    line-height: pxTorem(90px);
+    height: pxTorem(90px);
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    color: #aaa
+}
+
+@keyframes slidetounlock {
+    0% {
+        background-position: -200px 0
+    }
+
+    100% {
+        background-position: 200px 0
+    }
+}
+
+@-webkit-keyframes slidetounlock {
+    0% {
+        background-position: -200px 0
+    }
+
+    100% {
+        background-position: 200px 0
+    }
+}
+
+.button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: pxTorem(90px);
+    height: pxTorem(90px);
+    background-color: #fff;
+    transition: left 0s;
+    -webkit-transition: left 0s
+}
+
+.button-on {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: pxTorem(90px);
+    height: pxTorem(90px);
+    background-color: #fff;
+    transition: left 1s;
+    -webkit-transition: left .5s
+}
+
+.track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    transition: width 0s;
+    -webkit-transition: width 0s
+}
+
+.track-on {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    transition: width 1s;
+    -webkit-transition: width .5s
+}
+
+.icon {
+    width: pxTorem(32px);
+    height: pxTorem(32px);
+    position: relative;
+    top: pxTorem(25px);
+    left: pxTorem(25px);
+    font-family: sans-serif
+}
+
+.icon:before {
+    content: '';
+    background: url(../img/right.png);
+    width: pxTorem(40px);
+    height: pxTorem(40px);
+    display: block;
+    color: #ccc;
+    background-size: 100% 100%;
+    position: absolute;
+    // top: pxTorem(6px)
+}
+
+.spinner {
+    width: pxTorem(40px);
+    height: pxTorem(40px);
+    position: relative;
+    top: pxTorem(25px);
+    left: pxTorem(25px);
+    background: url(../img/ok.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: none
+}
+
+@-webkit-keyframes bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes bouncedelay {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+        -webkit-transform: scale(0)
+    }
+
+    40% {
+        transform: scale(1);
+        -webkit-transform: scale(1)
+    }
+}
+
+.bg-green {
+    line-height: pxTorem(90px);
+    height: pxTorem(90px);
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    // background-color: $primaryColor
+    background-image: linear-gradient(45deg, #00c6fb 0%, #005bea 99%, #005bea 100%);
+}
