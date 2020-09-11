@@ -27,6 +27,12 @@ var name = process.argv[2] || dateToStr(new Date());
 var shell = require("shelljs");
 var exec = shell.exec;
 var echo = shell.echo;
+if (exec('node write-readme .').code !== 0) {
+  echo('Error: Git add failed');
+  exit(1);
+}
+
+
 if (exec('node readFile .').code !== 0) {
   echo('Error: Git add failed');
   exit(1);
