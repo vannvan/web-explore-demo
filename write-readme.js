@@ -14,11 +14,11 @@ fs.readdir('./', 'utf8', (err, data) => {
 // 写入到filelist.js文件
 function writeFile(datas) {
     let content = `
-    ### [web-explore-demo](https://vannvan.github.io/web-explore-demo/)
-    ---- \n
-    `
+### [web-explore-demo](https://vannvan.github.io/web-explore-demo/)
+---- \n
+`
     datas.map(el => {
-        content += `- [${el}](https://github.com/vannvan/web-explore-demo/blob/master/${el}.html) \n`
+        content += `- [${el}](https://github.com/vannvan/web-explore-demo/blob/master/${el}/index.html) \n`
     })
     // let itemStr = `- [${name}](https://github.com/vannvan/web-explore-demo/blob/master/${name}.html)`
 
