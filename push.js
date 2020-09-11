@@ -7,6 +7,7 @@
 * @Last Modified time: 2019-08-02 09:44:47
 */
 
+
 function dateToStr(datetime){
         var dateTime = new Date(datetime);
         var year = dateTime.getFullYear();
@@ -26,6 +27,11 @@ var name = process.argv[2] || dateToStr(new Date());
 var shell = require("shelljs");
 var exec = shell.exec;
 var echo = shell.echo;
+if (exec('node readFile .').code !== 0) {
+  echo('Error: Git add failed');
+  exit(1);
+}
+
 if (exec('git add .').code !== 0) {
   echo('Error: Git add failed');
   exit(1);
