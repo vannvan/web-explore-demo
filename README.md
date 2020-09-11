@@ -79,6 +79,7 @@
 - [纯css3伪元素图标](https://github.com/vannvan/web-explore-demo/blob/master/纯css3伪元素图标/index.html) 
 - [纯css横向滚动条](https://github.com/vannvan/web-explore-demo/blob/master/纯css横向滚动条/index.html) 
 - [翻转切换文字效果](https://github.com/vannvan/web-explore-demo/blob/master/翻转切换文字效果/index.html) 
+- [背景连线动画](https://github.com/vannvan/web-explore-demo/blob/master/背景连线动画/index.html) 
 - [自定义单选框](https://github.com/vannvan/web-explore-demo/blob/master/自定义单选框/index.html) 
 - [自定义复选框](https://github.com/vannvan/web-explore-demo/blob/master/自定义复选框/index.html) 
 - [菜单划线效果2](https://github.com/vannvan/web-explore-demo/blob/master/菜单划线效果2/index.html) 
