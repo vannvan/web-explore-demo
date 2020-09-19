@@ -24,6 +24,7 @@
 - [css表单验证](https://github.com/vannvan/web-explore-demo/blob/master/css表单验证/index.html) 
 - [CSS表单验证2](https://github.com/vannvan/web-explore-demo/blob/master/CSS表单验证2/index.html) 
 - [CSS阴影斜向掠过动画](https://github.com/vannvan/web-explore-demo/blob/master/CSS阴影斜向掠过动画/index.html) 
+- [epluspay](https://github.com/vannvan/web-explore-demo/blob/master/epluspay/index.html) 
 - [fba](https://github.com/vannvan/web-explore-demo/blob/master/fba/index.html) 
 - [H5无缝间歇平滑向上滚动](https://github.com/vannvan/web-explore-demo/blob/master/H5无缝间歇平滑向上滚动/index.html) 
 - [html5-circle-progressbar](https://github.com/vannvan/web-explore-demo/blob/master/html5-circle-progressbar/index.html) 

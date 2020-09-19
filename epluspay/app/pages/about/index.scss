@@ -1,0 +1,215 @@
+@keyframes textDown {
+    from {
+        transform: translate(0, -50px)
+    }
+
+    to {
+        transform: translate(0px, 0)
+    }
+}
+
+@keyframes textShow1 {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes textShow2 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.wrap-1 {
+    height: 505px;
+    width: 100%;
+    background: url('../../assets/images/about/top-bg-1.png');
+    background-size: 100 100%;
+    padding-top: 80px;
+    box-sizing: border-box;
+    user-select: none;
+
+    .xxx-large {
+        color: #fff;
+        font-size: 400%;
+        font-weight: bolder;
+        animation: textDown linear .5s forwards;
+
+    }
+
+    .desc {
+        color: rgba(#fff, .8);
+        margin: 50px;
+        font-size: larger;
+        animation: textShow2 linear .5s forwards;
+    }
+
+    .text-area {
+        width: 60%;
+        margin: 50px auto;
+        line-height: 35px;
+        font-size: smaller;
+        color: rgba(#fff, .9);
+        opacity: 0;
+        animation: textShow1 linear .8s forwards;
+        animation-delay: 1s;
+    }
+}
+
+.wrap-2 {
+    height: auto;
+    width: 100%;
+    padding: 60px 10%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    user-select: none;
+
+    .left-wrap {
+        width: 40%;
+        text-align: right;
+        margin-right: 80px;
+    }
+
+    .right-wrap {
+        padding-top: 40px;
+
+        .x-large {
+            line-height: 60px;
+        }
+
+        .desc {
+            line-height: 30px;
+            transform: translate(0, 30px);
+        }
+
+        .register-wrap {
+            margin-top: 70px;
+
+            .primary-btn {
+                border-radius: 15px;
+            }
+        }
+    }
+}
+
+
+.wrap-3 {
+    height: auto;
+    padding: 50px 10%;
+    box-sizing: border-box;
+    background: #4B93EC;
+    user-select: none;
+
+    .x-large {
+        margin-bottom: 15px;
+        color: #fff;
+    }
+
+    .desc {
+        color: rgba(#fff, .8);
+        line-height: 30px;
+    }
+
+    .cate-list {
+        width: 100%;
+        padding: 0 10%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+
+        @media screen and (max-width: 1370px) {
+            padding: 0
+        }
+
+        .cate-item {
+            width: 300px;
+            text-align: center;
+
+            @media screen and (max-width: 1370px) {
+                width: 260px;
+            }
+
+            img {
+                height: 80px;
+            }
+
+            .name {
+                font-size: large;
+                line-height: 60px;
+                color: rgba(#fff, .8)
+            }
+
+            .name-eng {
+                font-size: large;
+                line-height: 60px;
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+    }
+
+}
+
+.wrap-4 {
+    padding: 60px 10%;
+    box-sizing: border-box;
+    user-select: none;
+
+    .address-list {
+        height: auto;
+        width: 100%;
+        padding: 0 10%;
+        box-sizing: border-box;
+        display: flex;
+        margin-top: 25px;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1370px) {
+            padding: 0
+        }
+
+        .address-item {
+            width: 250px;
+
+            .name {
+                font-size: large;
+                line-height: 90px;
+                color: #4B93EC;
+                font-weight: bold;
+            }
+
+            .detail {
+                color: #999;
+                line-height: 28px;
+            }
+        }
+
+    }
+
+    .contact-list {
+        margin-top: 95px;
+        width: 100%;
+        padding: 0 25%;
+        box-sizing: border-box;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+
+        img {
+            margin-bottom: 25px;
+            height: 50px;
+        }
+    }
+}

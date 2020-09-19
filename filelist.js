@@ -21,6 +21,7 @@ const linkList = [
 	"css表单验证",
 	"CSS表单验证2",
 	"CSS阴影斜向掠过动画",
+	"epluspay",
 	"fba",
 	"H5无缝间歇平滑向上滚动",
 	"html5-circle-progressbar",
