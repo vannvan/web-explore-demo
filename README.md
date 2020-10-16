@@ -85,6 +85,7 @@
 - [自定义复选框](https://github.com/vannvan/web-explore-demo/blob/master/自定义复选框/index.html) 
 - [菜单划线效果2](https://github.com/vannvan/web-explore-demo/blob/master/菜单划线效果2/index.html) 
 - [蛇形渐变边框](https://github.com/vannvan/web-explore-demo/blob/master/蛇形渐变边框/index.html) 
+- [视频上传预览](https://github.com/vannvan/web-explore-demo/blob/master/视频上传预览/index.html) 
 - [输入框特效1](https://github.com/vannvan/web-explore-demo/blob/master/输入框特效1/index.html) 
 - [隐藏外层滚动条](https://github.com/vannvan/web-explore-demo/blob/master/隐藏外层滚动条/index.html) 
 - [隐藏滚动条](https://github.com/vannvan/web-explore-demo/blob/master/隐藏滚动条/index.html) 

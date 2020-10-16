@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<video style="height:auto;" src="" id="video0" controls="controls"></video>
+<input class="form-control" type="file" style="height:auto;"
+id="video" name="video"/>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.js"></script>
+<script type="text/javascript">
+    $("#video").change(function(){
+        console.log(this.files[0])
+             var objUrl = getObjectURL(this.files[0]) ;
+             console.log("objUrl = "+objUrl) ;
+             if (objUrl) {
+                 $("#video0").attr("src", objUrl) ;
+             }
+         }) ;
+         //建立一个可存取到该file的url
+         function getObjectURL(file) {
+             var url = null ;
+             if (window.createObjectURL!=undefined) { // basic
+                 url = window.createObjectURL(file) ;
+             } else if (window.URL!=undefined) { // mozilla(firefox)
+                 url = window.URL.createObjectURL(file) ;
+             } else if (window.webkitURL!=undefined) { // webkit or chrome
+                 url = window.webkitURL.createObjectURL(file) ;
+             }
+             return url ;
+         }
+</script>
+</body>
+</html>
