@@ -43,6 +43,7 @@
 - [jq自动生成文章标题索引](https://github.com/vannvan/web-explore-demo/blob/master/jq自动生成文章标题索引/index.html) 
 - [jsutify两端对齐](https://github.com/vannvan/web-explore-demo/blob/master/jsutify两端对齐/index.html) 
 - [tips提示很优秀](https://github.com/vannvan/web-explore-demo/blob/master/tips提示很优秀/index.html) 
+- [一个简洁的圆形波纹动画](https://github.com/vannvan/web-explore-demo/blob/master/一个简洁的圆形波纹动画/index.html) 
 - [下划线跟随导航栏](https://github.com/vannvan/web-explore-demo/blob/master/下划线跟随导航栏/index.html) 
 - [下拉刷新上拉加载更多](https://github.com/vannvan/web-explore-demo/blob/master/下拉刷新上拉加载更多/index.html) 
 - [两端对齐label文字](https://github.com/vannvan/web-explore-demo/blob/master/两端对齐label文字/index.html) 
