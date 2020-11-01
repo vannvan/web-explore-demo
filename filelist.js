@@ -26,6 +26,7 @@ const linkList = [
 	"JS数字递增动画",
 	"Pio-demo",
 	"ajax拦截器解决方案",
+	"bootsnav",
 	"box-shadow典型阴影效果",
 	"canvas图片加二维码",
 	"canvas绘制图表",

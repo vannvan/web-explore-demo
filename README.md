@@ -29,6 +29,7 @@
 - [JS数字递增动画](https://github.com/vannvan/web-explore-demo/blob/master/JS数字递增动画/index.html) 
 - [Pio-demo](https://github.com/vannvan/web-explore-demo/blob/master/Pio-demo/index.html) 
 - [ajax拦截器解决方案](https://github.com/vannvan/web-explore-demo/blob/master/ajax拦截器解决方案/index.html) 
+- [bootsnav](https://github.com/vannvan/web-explore-demo/blob/master/bootsnav/index.html) 
 - [box-shadow典型阴影效果](https://github.com/vannvan/web-explore-demo/blob/master/box-shadow典型阴影效果/index.html) 
 - [canvas图片加二维码](https://github.com/vannvan/web-explore-demo/blob/master/canvas图片加二维码/index.html) 
 - [canvas绘制图表](https://github.com/vannvan/web-explore-demo/blob/master/canvas绘制图表/index.html) 
