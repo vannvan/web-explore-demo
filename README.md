@@ -27,6 +27,7 @@
 - [JS打字效果](https://github.com/vannvan/web-explore-demo/blob/master/JS打字效果/index.html) 
 - [JS折叠动画](https://github.com/vannvan/web-explore-demo/blob/master/JS折叠动画/index.html) 
 - [JS数字递增动画](https://github.com/vannvan/web-explore-demo/blob/master/JS数字递增动画/index.html) 
+- [JS跟随鼠标粒子效果](https://github.com/vannvan/web-explore-demo/blob/master/JS跟随鼠标粒子效果/index.html) 
 - [Pio-demo](https://github.com/vannvan/web-explore-demo/blob/master/Pio-demo/index.html) 
 - [ajax拦截器解决方案](https://github.com/vannvan/web-explore-demo/blob/master/ajax拦截器解决方案/index.html) 
 - [bootsnav](https://github.com/vannvan/web-explore-demo/blob/master/bootsnav/index.html) 

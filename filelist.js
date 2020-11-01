@@ -24,6 +24,7 @@ const linkList = [
 	"JS打字效果",
 	"JS折叠动画",
 	"JS数字递增动画",
+	"JS跟随鼠标粒子效果",
 	"Pio-demo",
 	"ajax拦截器解决方案",
 	"bootsnav",
