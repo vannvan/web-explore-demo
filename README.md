@@ -43,6 +43,7 @@
 - [JS折叠动画](https://github.com/vannvan/web-explore-demo/blob/master/JS折叠动画/index.html) 
 - [js数字递增动画](https://github.com/vannvan/web-explore-demo/blob/master/js数字递增动画/index.html) 
 - [JS跟随鼠标粒子效果](https://github.com/vannvan/web-explore-demo/blob/master/JS跟随鼠标粒子效果/index.html) 
+- [JS鼠标经过光影效果](https://github.com/vannvan/web-explore-demo/blob/master/JS鼠标经过光影效果/index.html) 
 - [Pio-demo](https://github.com/vannvan/web-explore-demo/blob/master/Pio-demo/index.html) 
 - [tips提示很优秀](https://github.com/vannvan/web-explore-demo/blob/master/tips提示很优秀/index.html) 
 - [一个简洁的圆形波纹动画](https://github.com/vannvan/web-explore-demo/blob/master/一个简洁的圆形波纹动画/index.html) 
