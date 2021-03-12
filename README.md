@@ -69,6 +69,7 @@
 - [多列等高布局](https://github.com/vannvan/web-explore-demo/blob/master/多列等高布局/index.html) 
 - [多彩渐变进度百分比](https://github.com/vannvan/web-explore-demo/blob/master/多彩渐变进度百分比/index.html) 
 - [导航下划线滑动效果](https://github.com/vannvan/web-explore-demo/blob/master/导航下划线滑动效果/index.html) 
+- [左侧菜单](https://github.com/vannvan/web-explore-demo/blob/master/左侧菜单/index.html) 
 - [弹性布局](https://github.com/vannvan/web-explore-demo/blob/master/弹性布局/index.html) 
 - [待整理](https://github.com/vannvan/web-explore-demo/blob/master/待整理/index.html) 
 - [数据双向绑定](https://github.com/vannvan/web-explore-demo/blob/master/数据双向绑定/index.html) 
