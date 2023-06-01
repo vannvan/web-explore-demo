@@ -1,12 +1,12 @@
 /* Bounce Out */
 .bounce-out() {
-	.hacks();
-	.prefixed(transition-duration, @slowDuration);
+  .hacks();
+  .prefixed(transition-duration, @slowDuration);
 
-	&:hover,
-	&:focus,
-	&:active {
-		.prefixed(transform, scale(.8));
-		.prefixed(transition-timing-function, cubic-bezier(.47,2.02,.31,-0.36));
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    .prefixed(transform, scale(0.8));
+    .prefixed(transition-timing-function, cubic-bezier(0.47,2.02,0.31,-0.36));
+  }
 }

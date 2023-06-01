@@ -1,57 +1,57 @@
-<!DOCTYPE html>  
-<html lang="en">  
-    <head>  
-        <meta charset="utf-8">  
-        <style>  
-            *{  
-                margin:0;  
-                padding:0;  
-            }  
-            .center{  
-                text-align: center;  
-            }  
-  
-        </style>  
-    </head>  
-    <body>  
-       <!--  <div class="center">  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  <div class="center">  
             <img src="01.jpg" alt="" />  
             <img src="02.png" alt="" />  
         </div>   -->
-        <button onclick="date()">生成</button>  
-        <div id="imgBox" style="width:1000px;height:800px;">  
-        </div>  
-    </body>  
-    <script>  
-        var data=["code.png","img1.jpg"],base64=[]; 
-        function date(){  
-            //获得模板的宽高
-            var mbWidth='600'
-            var mbHeight='800'
-            var Mycanvas=document.createElement("canvas"),  
-                ct=Mycanvas.getContext("2d"),  
-                len=data.length;  
-                Mycanvas.width=680;     //应为模板的宽 
-                Mycanvas.height=386;    //应为模板的高
-                ct.rect(0,0,Mycanvas.width,Mycanvas.height);      
-                ct.fillStyle='#fff';  
-                ct.fill();  
-                function draw(n){  
-                    if(n<len){  
-                        var img=new Image;  
-                        // img.crossOrigin = 'Anonymous'; //解决跨域  
-                        img.src=data[n];  
-                        console.log(data[n]);  
-                        img.onload=function(){  
-                            ct.drawImage(this,0,0,640,386);
-                            draw(n+1);  
-                        }  
-                    }else{  
-                        base64.push(Mycanvas.toDataURL("image/png"));  
-                        document.getElementById("imgBox").innerHTML='<img src="'+base64[0]+'">';  
-                    }  
-                }  
-                draw(0)  
-        }  
-    </script>  
+    <button onclick="date()">生成</button>
+    <div id="imgBox" style="width: 1000px; height: 800px"></div>
+  </body>
+  <script>
+    var data = ["code.png", "img1.jpg"],
+      base64 = [];
+    function date() {
+      //获得模板的宽高
+      var mbWidth = "600";
+      var mbHeight = "800";
+      var Mycanvas = document.createElement("canvas"),
+        ct = Mycanvas.getContext("2d"),
+        len = data.length;
+      Mycanvas.width = 680; //应为模板的宽
+      Mycanvas.height = 386; //应为模板的高
+      ct.rect(0, 0, Mycanvas.width, Mycanvas.height);
+      ct.fillStyle = "#fff";
+      ct.fill();
+      function draw(n) {
+        if (n < len) {
+          var img = new Image();
+          // img.crossOrigin = 'Anonymous'; //解决跨域
+          img.src = data[n];
+          console.log(data[n]);
+          img.onload = function () {
+            ct.drawImage(this, 0, 0, 640, 386);
+            draw(n + 1);
+          };
+        } else {
+          base64.push(Mycanvas.toDataURL("image/png"));
+          document.getElementById("imgBox").innerHTML =
+            '<img src="' + base64[0] + '">';
+        }
+      }
+      draw(0);
+    }
+  </script>
 </html>

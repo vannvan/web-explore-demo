@@ -1,52 +1,57 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-<title>弹窗</title>
-<link rel="stylesheet" type="text/css" href="css/popup.css"/>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>弹窗</title>
+    <link rel="stylesheet" type="text/css" href="css/popup.css" />
+  </head>
+  <body>
+    <button id="alertBtn">alert弹窗</button>
+    <button id="confirm">confirm弹窗</button>
+    <button id="img_Confirm">imgConfirm弹窗</button>
+    <button id="toastBtn">toast提示，默认2s</button>
 
-<button id='alertBtn'>alert弹窗</button>
-<button id="confirm">confirm弹窗</button>
-<button id="img_Confirm">imgConfirm弹窗</button>
-<button id="toastBtn">toast提示，默认2s</button>
+    <p style="padding: 10px; font-size: 14px; color: #666">
+      1、所有alert、confirm的title为自定义，需以参数传入。<br />
+      2、confirm 弹窗支持回调。<br />
+      3、带图片的弹窗，图片自定义imgConfirm。<br />
+      4、toast弱提示，时间可以自定义，默认为2s
+    </p>
 
-<p style="padding: 10px; font-size: 14px; color: #666">
-	1、所有alert、confirm的title为自定义，需以参数传入。<br/>
-	2、confirm 弹窗支持回调。<br/>
-	3、带图片的弹窗，图片自定义imgConfirm。<br/>
-	4、toast弱提示，时间可以自定义，默认为2s
-</p>
-
-<script type="text/javascript" src="js/popup.js"></script>
-<script type="text/javascript">
-var img = './image/tsIcon1.png';
-function confirmData () {
-	console.log('tihsi')
-}
-var alertBtn = document.getElementById('alertBtn');
-var confirm = document.getElementById('confirm');
-var imgConfirm = document.getElementById('img_Confirm');
-var toastBtn = document.getElementById('toastBtn');
-var Popup = new Popup();
-alertBtn.addEventListener('click',function(){
-	Popup.alert('alert提示','创建的弹窗出来了！');
-})
-confirm.addEventListener('click',function(){
-	var title = 'confirm提示',
-		text = '确定要删除吗？';
-	Popup.confirm(title,text,confirmData);
-})
-imgConfirm.addEventListener('click',function(){
-	Popup.imgConfirm('带图片弹窗','这里是有图片的弹窗,图片必须传入！',img,confirmData);
-})
-toastBtn.addEventListener('click',function(){
-	Popup.toast('toast提示！时间可以自定义单位秒',3);
-})
-</script>
-
-</body>
+    <script type="text/javascript" src="js/popup.js"></script>
+    <script type="text/javascript">
+      var img = "./image/tsIcon1.png";
+      function confirmData() {
+        console.log("tihsi");
+      }
+      var alertBtn = document.getElementById("alertBtn");
+      var confirm = document.getElementById("confirm");
+      var imgConfirm = document.getElementById("img_Confirm");
+      var toastBtn = document.getElementById("toastBtn");
+      var Popup = new Popup();
+      alertBtn.addEventListener("click", function () {
+        Popup.alert("alert提示", "创建的弹窗出来了！");
+      });
+      confirm.addEventListener("click", function () {
+        var title = "confirm提示",
+          text = "确定要删除吗？";
+        Popup.confirm(title, text, confirmData);
+      });
+      imgConfirm.addEventListener("click", function () {
+        Popup.imgConfirm(
+          "带图片弹窗",
+          "这里是有图片的弹窗,图片必须传入！",
+          img,
+          confirmData
+        );
+      });
+      toastBtn.addEventListener("click", function () {
+        Popup.toast("toast提示！时间可以自定义单位秒", 3);
+      });
+    </script>
+  </body>
 </html>

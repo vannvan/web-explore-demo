@@ -26,15 +26,15 @@
 });
 
 .wobble-top() {
-	.hacks();
-	.prefixed(transform-origin, 0 100%);
+  .hacks();
+  .prefixed(transform-origin, 0 100%);
 
-	&:hover,
-	&:focus,
-	&:active {
-		.prefixed(animation-name, ~"@{nameSpace}-wobble-top");
-		.prefixed(animation-duration, 1s);
-		.prefixed(animation-timing-function, ease-in-out);
-		.prefixed(animation-iteration-count, 1);
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    .prefixed(animation-name, ~"@{nameSpace}-wobble-top");
+    .prefixed(animation-duration, 1s);
+    .prefixed(animation-timing-function, ease-in-out);
+    .prefixed(animation-iteration-count, 1);
+  }
 }

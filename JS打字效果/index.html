@@ -1,41 +1,44 @@
 <html>
-<head>
- <style type="text/css">
-  #myDiv{
-   width:500px;
-   height:300px;
-   margin: 100px auto;
-   background-color:#fff;
-   color:hsla(0,100%,70%,1);
-   word-wrap:break-word;
-   line-height:30px;
-   letter-spacing:3px;
-   padding-left:3px;
-   text-indent:40px;
-   border-radius:5px;
-   border:1px solid #ccc;
-  }
- </style>
- <script type="text/javascript">
-  window.onload = function () {
-   var myDiv = document.getElementById("myDiv");
-   var contentArr = "秋天来临了天空像一块覆盖大地的蓝宝石。村外那个小池塘睁着碧澄澄的眼睛，凝望着这美好的天色。一对小白鹅侧着脑袋欣赏自己映在水里的影子。山谷里枫树的叶子，不知是否喝了过量的酒，红的像一团火似的。村前村后的稻子，低着头弯着腰，在秋风中默默地等待着人们去收割，半空中，排着“人”字形的雁群，高兴的唱着歌，告别人们，向天边慢慢飞去……".split("");
-   var content = "";
-   var index = 0;
-   var ID = setInterval(function () {
-    content += contentArr[index];
-    myDiv.innerHTML = content + "_";
-    index++;
-    if(index === contentArr.length){
-     myDiv.innerHTML = content ;
-     clearInterval(ID);
-     console.log("结束了");
-    }
-   },100);
-  }
- </script>
-</head>
-<body>
-<div id="myDiv"></div>
-</body>
+  <head>
+    <style type="text/css">
+      #myDiv {
+        width: 500px;
+        height: 300px;
+        margin: 100px auto;
+        background-color: #fff;
+        color: hsla(0, 100%, 70%, 1);
+        word-wrap: break-word;
+        line-height: 30px;
+        letter-spacing: 3px;
+        padding-left: 3px;
+        text-indent: 40px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+    </style>
+    <script type="text/javascript">
+      window.onload = function () {
+        var myDiv = document.getElementById("myDiv");
+        var contentArr =
+          "秋天来临了天空像一块覆盖大地的蓝宝石。村外那个小池塘睁着碧澄澄的眼睛，凝望着这美好的天色。一对小白鹅侧着脑袋欣赏自己映在水里的影子。山谷里枫树的叶子，不知是否喝了过量的酒，红的像一团火似的。村前村后的稻子，低着头弯着腰，在秋风中默默地等待着人们去收割，半空中，排着“人”字形的雁群，高兴的唱着歌，告别人们，向天边慢慢飞去……".split(
+            ""
+          );
+        var content = "";
+        var index = 0;
+        var ID = setInterval(function () {
+          content += contentArr[index];
+          myDiv.innerHTML = content + "_";
+          index++;
+          if (index === contentArr.length) {
+            myDiv.innerHTML = content;
+            clearInterval(ID);
+            console.log("结束了");
+          }
+        }, 100);
+      };
+    </script>
+  </head>
+  <body>
+    <div id="myDiv"></div>
+  </body>
 </html>

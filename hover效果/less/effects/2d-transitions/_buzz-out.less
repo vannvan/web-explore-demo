@@ -42,14 +42,14 @@
 });
 
 .buzz-out() {
-	.hacks();
+  .hacks();
 
-	&:hover,
-	&:focus,
-	&:active {
-		.prefixed(animation-name, ~"@{nameSpace}-buzz-out");
-		.prefixed(animation-duration, .75s);
-		.prefixed(animation-timing-function, linear);
-		.prefixed(animation-iteration-count, 1);
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    .prefixed(animation-name, ~"@{nameSpace}-buzz-out");
+    .prefixed(animation-duration, 0.75s);
+    .prefixed(animation-timing-function, linear);
+    .prefixed(animation-iteration-count, 1);
+  }
 }

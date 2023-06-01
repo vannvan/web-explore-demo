@@ -26,29 +26,28 @@
 });
 
 .icon-wobble-horizontal() {
-	.hacks();
-	position: relative;
-	padding-right: 2.2em;
-	.prefixed(transition-duration, @mediumDuration);
+  .hacks();
+  position: relative;
+  padding-right: 2.2em;
+  .prefixed(transition-duration, @mediumDuration);
 
-	&:before {
-		content: "\f061";
-		position: absolute;
-		right: 1em;
-		padding: 0 1px;
-		font-family: FontAwesome;
-		.prefixed(transform, translateZ(0));
-	}
+  &:before {
+    content: "\f061";
+    position: absolute;
+    right: 1em;
+    padding: 0 1px;
+    font-family: FontAwesome;
+    .prefixed(transform, translateZ(0));
+  }
 
-	&:hover,
-	&:focus,
-	&:active {
-
-		&:before {
-			.prefixed(animation-name, ~"@{nameSpace}-icon-wobble-horizontal");
-			.prefixed(animation-duration, 1s);
-			.prefixed(animation-timing-function, ease-in-out);
-			.prefixed(animation-iteration-count, 1);
-		}
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    &:before {
+      .prefixed(animation-name, ~"@{nameSpace}-icon-wobble-horizontal");
+      .prefixed(animation-duration, 1s);
+      .prefixed(animation-timing-function, ease-in-out);
+      .prefixed(animation-iteration-count, 1);
+    }
+  }
 }

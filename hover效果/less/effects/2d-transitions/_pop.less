@@ -6,14 +6,14 @@
 });
 
 .pop() {
-	.hacks();
+  .hacks();
 
-	&:hover,
-	&:focus,
-	&:active {
-		.prefixed(animation-name, ~"@{nameSpace}-pop");
-		.prefixed(animation-duration, @mediumDuration);
-		.prefixed(animation-timing-function, linear);
-		.prefixed(animation-iteration-count, 1);
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    .prefixed(animation-name, ~"@{nameSpace}-pop");
+    .prefixed(animation-duration, @mediumDuration);
+    .prefixed(animation-timing-function, linear);
+    .prefixed(animation-iteration-count, 1);
+  }
 }

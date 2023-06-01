@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<style type="text/css">
-body {
-    /*direction: rtl;    改变排列方式，包括容器和子元素  */
-}
-.flex{
-	margin-bottom: 20px;
-    height: 250px;
-    background-color: lightgrey;
-    width: 400px;
-    height: 250px;
-}
-.item{
-	 width: 100px;
-    height: 100px;
-    margin: 10px;
-	background-color: cornflowerblue;
-}
-.flex-container1{
-	display: flex;
-}	
-.flex-item1{
+  <head>
+    <title></title>
+  </head>
+  <style type="text/css">
+    body {
+      /*direction: rtl;    改变排列方式，包括容器和子元素  */
+    }
+    .flex {
+      margin-bottom: 20px;
+      height: 250px;
+      background-color: lightgrey;
+      width: 400px;
+      height: 250px;
+    }
+    .item {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      background-color: cornflowerblue;
+    }
+    .flex-container1 {
+      display: flex;
+    }
+    .flex-item1 {
+    }
 
-}
+    .flex-container2 {
+      display: flex;
+      flex-direction: row-reverse; /*改变子元素排列方向*/
+    }
+    .flex-item2 {
+    }
+    .flex-container3 {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <body>
+    <div class="flex flex-container1">
+      <div class="flex-item1 item">11</div>
+      <div class="flex-item1 item">22</div>
+      <div class="flex-item1 item">33</div>
+    </div>
 
-.flex-container2{
-	display: flex;
-	flex-direction: row-reverse;  /*改变子元素排列方向*/
-}	
-.flex-item2{
-
-}
-.flex-container3{
-	display: flex;
-	flex-direction:column;
-}
-
-</style>
-<body>
-	<div class="flex flex-container1">
-		<div class="flex-item1 item">11</div>
-		<div class="flex-item1 item">22</div>
-		<div class="flex-item1 item">33</div>
-	</div>
-
-	<!-- 反转 -->
-	<div class="flex flex-container2">
-		<div class="flex-item2 item">11</div>
-		<div class="flex-item2 item">22</div>
-		<div class="flex-item2 item">33</div>
-	</div>
-	<!-- 纵向 -->
-	<div class="flex flex-container3">
-		<div class="flex-item3 item">11</div>
-		<div class="flex-item3 item">22</div>
-		<div class="flex-item3 item">33</div>
-	</div>
-</body>
+    <!-- 反转 -->
+    <div class="flex flex-container2">
+      <div class="flex-item2 item">11</div>
+      <div class="flex-item2 item">22</div>
+      <div class="flex-item2 item">33</div>
+    </div>
+    <!-- 纵向 -->
+    <div class="flex flex-container3">
+      <div class="flex-item3 item">11</div>
+      <div class="flex-item3 item">22</div>
+      <div class="flex-item3 item">33</div>
+    </div>
+  </body>
 </html>

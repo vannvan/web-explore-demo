@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>css无角渐变边框</title>
-</head>
-<style type="text/css">
-.boxWrap {
+  <head>
+    <title>css无角渐变边框</title>
+  </head>
+  <style type="text/css">
+    .boxWrap {
       width: 1000px;
       height: 500px;
       margin: 100px;
-      background: radial-gradient(circle at center center, rgba(25, 25, 112, 0), rgba(25, 25, 112, 0)),
-        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left top,
-        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left top,
-        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right top,
-        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right top,
-        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left bottom,
-        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) left bottom,
-        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right bottom,
-        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62)) right bottom,
-        linear-gradient(rgba(56, 144, 184, 0.60), rgba(56, 144, 184, 0.60)) top,
-        linear-gradient(rgba(26, 87, 130, 0.60), rgba(26, 87, 130, 0.60)) bottom,
-        linear-gradient(rgba(56, 144, 184, 0.60), rgba(219, 240, 255, 0.80), rgba(26, 87, 130, 0.60)) left,
-        linear-gradient(rgba(56, 144, 184, 0.60), rgba(219, 240, 255, 0.80), rgba(26, 87, 130, 0.60)) right;
+      background: radial-gradient(
+          circle at center center,
+          rgba(25, 25, 112, 0),
+          rgba(25, 25, 112, 0)
+        ),
+        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62))
+          left top,
+        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62))
+          left top,
+        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62))
+          right top,
+        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62))
+          right top,
+        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62))
+          left bottom,
+        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62))
+          left bottom,
+        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62))
+          right bottom,
+        linear-gradient(rgba(179, 224, 255, 0.62), rgba(179, 224, 255, 0.62))
+          right bottom,
+        linear-gradient(rgba(56, 144, 184, 0.6), rgba(56, 144, 184, 0.6)) top,
+        linear-gradient(rgba(26, 87, 130, 0.6), rgba(26, 87, 130, 0.6)) bottom,
+        linear-gradient(
+            rgba(56, 144, 184, 0.6),
+            rgba(219, 240, 255, 0.8),
+            rgba(26, 87, 130, 0.6)
+          )
+          left,
+        linear-gradient(
+            rgba(56, 144, 184, 0.6),
+            rgba(219, 240, 255, 0.8),
+            rgba(26, 87, 130, 0.6)
+          )
+          right;
       background-repeat: no-repeat;
-      background-position: 1px 1px, 0px 0px, 0px 0px, 0px 100%, 0px 100%, 100% 0px, 100% 0px, 100% 100%, 100% 100%, 0px 0px, 0px 100%, 0px 100%, 100% 100%;
-      background-size: calc(100% - 2px) calc(100% - 2px), 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 100% 1px, 100% 1px, 1px 100%, 1px 100%;
-
+      background-position: 1px 1px, 0px 0px, 0px 0px, 0px 100%, 0px 100%,
+        100% 0px, 100% 0px, 100% 100%, 100% 100%, 0px 0px, 0px 100%, 0px 100%,
+        100% 100%;
+      background-size: calc(100% - 2px) calc(100% - 2px), 1px 10px, 10px 1px,
+        1px 10px, 10px 1px, 1px 10px, 10px 1px, 1px 10px, 10px 1px, 100% 1px,
+        100% 1px, 1px 100%, 1px 100%;
     }
-
-</style>
-<body>
-<div class="boxWrap"></div>
-</body>
+  </style>
+  <body>
+    <div class="boxWrap"></div>
+  </body>
 </html>

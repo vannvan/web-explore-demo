@@ -18,32 +18,31 @@
 });
 
 .icon-bob() {
-	.hacks();
-	position: relative;
-	padding-right: 2.2em;
-	.prefixed(transition-duration, @mediumDuration);
+  .hacks();
+  position: relative;
+  padding-right: 2.2em;
+  .prefixed(transition-duration, @mediumDuration);
 
-	&:before {
-		content: "\f077";
-		position: absolute;
-		right: 1em;
-		padding: 0 1px;
-		font-family: FontAwesome;
-		.prefixed(transform, translateZ(0));
-	}
+  &:before {
+    content: "\f077";
+    position: absolute;
+    right: 1em;
+    padding: 0 1px;
+    font-family: FontAwesome;
+    .prefixed(transform, translateZ(0));
+  }
 
-	&:hover,
-	&:focus,
-	&:active {
-
-		&:before {
-			.prefixed(animation-name, ~"@{nameSpace}-icon-bob-float, @{nameSpace}-icon-bob");
-			.prefixed(animation-duration, ~".3s, 1.5s");
-			.prefixed(animation-delay, ~"0s, .3s");
-			.prefixed(animation-timing-function, ~"ease-out, ease-in-out");
-			.prefixed(animation-iteration-count, ~"1, infinite");
-			.prefixed(animation-fill-mode, ~"forwards");
-			.prefixed(animation-direction, ~"normal, alternate");
-		}
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    &:before {
+      .prefixed(animation-name, ~"@{nameSpace}-icon-bob-float, @{nameSpace}-icon-bob");
+      .prefixed(animation-duration, ~".3s, 1.5s");
+      .prefixed(animation-delay, ~"0s, .3s");
+      .prefixed(animation-timing-function, ~"ease-out, ease-in-out");
+      .prefixed(animation-iteration-count, ~"1, infinite");
+      .prefixed(animation-fill-mode, ~"forwards");
+      .prefixed(animation-direction, ~"normal, alternate");
+    }
+  }
 }

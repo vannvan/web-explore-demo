@@ -1,130 +1,134 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>canvas钟表</title>
-<style type="text/css">
-canvas{
-    margin-left:500px;
-    margin-top:100px;
-}
-</style>
-</head>
-<body>
-<canvas id="canvas" width="600" height="600"></canvas>
-<script language="javascript">
-var Canvas = {
-	//属性
-    Context:document.getElementById("canvas").getContext('2d'),
-	//擦除
-    Clear:function(){
-        var cxt = Canvas.Context;
-        var width = cxt.canvas.width;
-        var height =  cxt.canvas.height;;
-        this.Context.clearRect(0,0, width, height);
-    },
-    //radius钟表半径,sencondScaleWidth刻度长度，secondHandWidth秒针长度
-    CreateClock:function(radius,sencondScaleWidth,secondHandWidth){
-        var me = this;
-        var radius = radius;
-        var sencondScaleWidth = sencondScaleWidth;
-        var secondHandWidth = secondHandWidth;
-        //小时刻度
-        var hourScaleWidth = sencondScaleWidth*2;
-        //时针分针长度
-        var hourHandWidth = secondHandWidth*80/100;
-        //分针长度
-        var minuteHandWidth = secondHandWidth*90/100;
-        //确定圆心坐标
-        var point = {x:this.Context.canvas.width/2,y:this.Context.canvas.height/2};
-        var ctx = this.Context;//获取上下文
-        //绘制圆圈
-        function drawCircle(){
-            ctx.save();//记录画笔状态
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>canvas钟表</title>
+    <style type="text/css">
+      canvas {
+        margin-left: 500px;
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+    <script language="javascript">
+      var Canvas = {
+        //属性
+        Context: document.getElementById("canvas").getContext("2d"),
+        //擦除
+        Clear: function () {
+          var cxt = Canvas.Context;
+          var width = cxt.canvas.width;
+          var height = cxt.canvas.height;
+          this.Context.clearRect(0, 0, width, height);
+        },
+        //radius钟表半径,sencondScaleWidth刻度长度，secondHandWidth秒针长度
+        CreateClock: function (radius, sencondScaleWidth, secondHandWidth) {
+          var me = this;
+          var radius = radius;
+          var sencondScaleWidth = sencondScaleWidth;
+          var secondHandWidth = secondHandWidth;
+          //小时刻度
+          var hourScaleWidth = sencondScaleWidth * 2;
+          //时针分针长度
+          var hourHandWidth = (secondHandWidth * 80) / 100;
+          //分针长度
+          var minuteHandWidth = (secondHandWidth * 90) / 100;
+          //确定圆心坐标
+          var point = {
+            x: this.Context.canvas.width / 2,
+            y: this.Context.canvas.height / 2,
+          };
+          var ctx = this.Context; //获取上下文
+          //绘制圆圈
+          function drawCircle() {
+            ctx.save(); //记录画笔状态
             //确定画笔的位置在圆心点
-            ctx.translate(point.x,point.y);
+            ctx.translate(point.x, point.y);
             //ctx.fillStyle = "black";
-            ctx.strokeStyle="gray";
+            ctx.strokeStyle = "gray";
             ctx.lineWidth = 2;
-            ctx.beginPath();//开始绘制路径
-            ctx.arc(0,0,radius,0,Math.PI*2);
-            ctx.closePath();//关闭路径
-            ctx.stroke();//绘制
-            ctx.restore();//复位
-        }
-        //绘制刻度
-        function drawScale(){
-            ctx.save();//记录画笔状态
-            var perHourRadian = Math.PI/6;
-            var perMinuteRadian = Math.PI/30;
+            ctx.beginPath(); //开始绘制路径
+            ctx.arc(0, 0, radius, 0, Math.PI * 2);
+            ctx.closePath(); //关闭路径
+            ctx.stroke(); //绘制
+            ctx.restore(); //复位
+          }
+          //绘制刻度
+          function drawScale() {
+            ctx.save(); //记录画笔状态
+            var perHourRadian = Math.PI / 6;
+            var perMinuteRadian = Math.PI / 30;
             //确定画笔的位置在圆心点
-            ctx.translate(point.x,point.y);
-            ctx.strokeStyle="gray";
+            ctx.translate(point.x, point.y);
+            ctx.strokeStyle = "gray";
             //此处为了省事，只在表盘上简单的写了几个时间数字
-            ctx.font = "bold 30px impack"
-            var dc = radius-hourScaleWidth-30;
+            ctx.font = "bold 30px impack";
+            var dc = radius - hourScaleWidth - 30;
             ctx.fillText("3", dc, 10);
-            ctx.fillText("6", -10,dc );
+            ctx.fillText("6", -10, dc);
             ctx.fillText("9", -dc, 10);
             ctx.fillText("12", -15, -dc);
             ctx.stroke();
-            for(var i=0;i<12;i++){
-                //坐标旋转
-                ctx.rotate(perHourRadian);
-                ctx.moveTo(radius-hourScaleWidth,0);
-                ctx.lineTo(radius,0);
+            for (var i = 0; i < 12; i++) {
+              //坐标旋转
+              ctx.rotate(perHourRadian);
+              ctx.moveTo(radius - hourScaleWidth, 0);
+              ctx.lineTo(radius, 0);
             }
-            for(var i=0;i<60;i++){
-                //坐标旋转
-                ctx.rotate(perMinuteRadian);
-                ctx.moveTo(radius-sencondScaleWidth,0);
-                ctx.lineTo(radius,0);
+            for (var i = 0; i < 60; i++) {
+              //坐标旋转
+              ctx.rotate(perMinuteRadian);
+              ctx.moveTo(radius - sencondScaleWidth, 0);
+              ctx.lineTo(radius, 0);
             }
-            ctx.stroke();//绘制
+            ctx.stroke(); //绘制
             ctx.restore();
             //radian
-        }
-        //drawScale();
-        function drawHand(){
+          }
+          //drawScale();
+          function drawHand() {
             var myDate = new Date();
             var curHour = myDate.getHours();
             var curMinute = myDate.getMinutes();
             var curSecond = myDate.getSeconds();
             //绘制时针
-            curHour = curHour>12?curHour-12:curHour;
-            var hourRadian = (curHour+curMinute/60+curSecond/3600) * (Math.PI/6);
+            curHour = curHour > 12 ? curHour - 12 : curHour;
+            var hourRadian =
+              (curHour + curMinute / 60 + curSecond / 3600) * (Math.PI / 6);
             //绘制分针
-            var minuteRadian = (curMinute+curSecond/60) * (Math.PI/30);
+            var minuteRadian = (curMinute + curSecond / 60) * (Math.PI / 30);
             //绘制秒针
-            var secondRadian = curSecond * (Math.PI/30);
-            function run(radian,width,color){
-                ctx.save();
-                ctx.translate(point.x,point.y);
-                ctx.rotate(-Math.PI/2);
-                ctx.strokeStyle=color
-                ctx.beginPath();
-                ctx.rotate(radian);
-                ctx.moveTo(0,0);
-                ctx.lineTo(width,0);
-                ctx.closePath();
-                ctx.stroke();
-                ctx.restore();
+            var secondRadian = curSecond * (Math.PI / 30);
+            function run(radian, width, color) {
+              ctx.save();
+              ctx.translate(point.x, point.y);
+              ctx.rotate(-Math.PI / 2);
+              ctx.strokeStyle = color;
+              ctx.beginPath();
+              ctx.rotate(radian);
+              ctx.moveTo(0, 0);
+              ctx.lineTo(width, 0);
+              ctx.closePath();
+              ctx.stroke();
+              ctx.restore();
             }
-            run(hourRadian,hourHandWidth,"black");
-            run(minuteRadian,minuteHandWidth,"green");
-            run(secondRadian,secondHandWidth,"red");
-        }
-        //drawHand();
-        function drawAll(){
+            run(hourRadian, hourHandWidth, "black");
+            run(minuteRadian, minuteHandWidth, "green");
+            run(secondRadian, secondHandWidth, "red");
+          }
+          //drawHand();
+          function drawAll() {
             me.Clear();
             drawCircle();
             drawScale();
             drawHand();
-        }
-        setInterval(drawAll,1000);
-    }
-};
-Canvas.CreateClock(290,20,200);
-</script>
-</body>
+          }
+          setInterval(drawAll, 1000);
+        },
+      };
+      Canvas.CreateClock(290, 20, 200);
+    </script>
+  </body>
 </html>

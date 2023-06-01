@@ -18,17 +18,17 @@
 });
 
 .hang() {
-	.hacks();
+  .hacks();
 
-	&:hover,
-	&:focus,
-	&:active {
-		.prefixed(animation-name, ~"@{nameSpace}-hang-sink, @{nameSpace}-hang");
-		.prefixed(animation-duration, ~".3s, 1.5s");
-		.prefixed(animation-delay, ~"0s, .3s");
-		.prefixed(animation-timing-function, ~"ease-out, ease-in-out");
-		.prefixed(animation-iteration-count, ~"1, infinite");
-		.prefixed(animation-fill-mode, ~"forwards");
-		.prefixed(animation-direction, ~"normal, alternate");
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    .prefixed(animation-name, ~"@{nameSpace}-hang-sink, @{nameSpace}-hang");
+    .prefixed(animation-duration, ~".3s, 1.5s");
+    .prefixed(animation-delay, ~"0s, .3s");
+    .prefixed(animation-timing-function, ~"ease-out, ease-in-out");
+    .prefixed(animation-iteration-count, ~"1, infinite");
+    .prefixed(animation-fill-mode, ~"forwards");
+    .prefixed(animation-direction, ~"normal, alternate");
+  }
 }

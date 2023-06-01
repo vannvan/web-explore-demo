@@ -1,20 +1,20 @@
 /* Pulse Shrink */
 .keyframes(~"@{nameSpace}-pulse-shrink", {
 	to {
-		.prefixed(transform, scale(.9));
+		.prefixed(transform, scale(0.9));
 	}
 });
 
 .pulse-shrink() {
-	.hacks();
+  .hacks();
 
-	&:hover,
-	&:focus,
-	&:active {
-		.prefixed(animation-name, ~"@{nameSpace}-pulse-shrink");
-		.prefixed(animation-duration, @mediumDuration);
-		.prefixed(animation-timing-function, linear);
-		.prefixed(animation-iteration-count, infinite);
-		.prefixed(animation-direction, alternate);
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    .prefixed(animation-name, ~"@{nameSpace}-pulse-shrink");
+    .prefixed(animation-duration, @mediumDuration);
+    .prefixed(animation-timing-function, linear);
+    .prefixed(animation-iteration-count, infinite);
+    .prefixed(animation-direction, alternate);
+  }
 }

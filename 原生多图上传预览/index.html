@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-</head>
-<style type="text/css">
-.main{
-	display: flex;
-}
-.uploadbtn{
-    position: relative;
-    float: left;
-    display: block;
-    height: 150px;
-    width: 140px;
-    background: url('upload_btn.png') no-repeat;
-    background-size: cover;
-  }
-  .uploadbtn input {
-    height: 150px;
-    width: 140px !important;
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    filter: alpha(opacity=0);
-  }
-  .imgs{
-  	float: left
-  }
-</style>
-<body>
-	<div class="main">
-        <div id="imgs"></div>
-		<span class="uploadbtn">
-          <input class="file" type="file" οnchange="chooseImage()" accept="image/*" />
-        </span>
-	</div>
-<script type="text/javascript">
-var allFile = []  //用来存所有的照片文件
-$(".uploadbtn").on("change",".file",function(){
-    var filePath=$(this).val();
-    readFile(this);
-});
+  <head>
+    <title></title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  </head>
+  <style type="text/css">
+    .main {
+      display: flex;
+    }
+    .uploadbtn {
+      position: relative;
+      float: left;
+      display: block;
+      height: 150px;
+      width: 140px;
+      background: url("upload_btn.png") no-repeat;
+      background-size: cover;
+    }
+    .uploadbtn input {
+      height: 150px;
+      width: 140px !important;
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      filter: alpha(opacity=0);
+    }
+    .imgs {
+      float: left;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div id="imgs"></div>
+      <span class="uploadbtn">
+        <input
+          class="file"
+          type="file"
+          οnchange="chooseImage()"
+          accept="image/*"
+        />
+      </span>
+    </div>
+    <script type="text/javascript">
+      var allFile = []; //用来存所有的照片文件
+      $(".uploadbtn").on("change", ".file", function () {
+        var filePath = $(this).val();
+        readFile(this);
+      });
 
-var readFile = function(obj){
-	// 获取input里面的文件组
-	var fileList=obj.files;
-	//对文件组进行遍历，可以到控制台打印出fileList去看看
-	for(var i=0;i<fileList.length;i++){
-		var reader= new FileReader();
-		reader.readAsDataURL(fileList[i]);
-		// 当文件读取成功时执行的函数
-		reader.onload=function(e){
-			img = document.createElement('img');
-			img.setAttribute("src",this.result);
-			img.setAttribute("height","150px");
-			img.setAttribute("width","140px");
-			document.getElementById("imgs").appendChild(img)
-		}
-  }
-  allFile.push(fileList[0])
-  console.log(allFile)
-}
-
-</script>
-</body>
+      var readFile = function (obj) {
+        // 获取input里面的文件组
+        var fileList = obj.files;
+        //对文件组进行遍历，可以到控制台打印出fileList去看看
+        for (var i = 0; i < fileList.length; i++) {
+          var reader = new FileReader();
+          reader.readAsDataURL(fileList[i]);
+          // 当文件读取成功时执行的函数
+          reader.onload = function (e) {
+            img = document.createElement("img");
+            img.setAttribute("src", this.result);
+            img.setAttribute("height", "150px");
+            img.setAttribute("width", "140px");
+            document.getElementById("imgs").appendChild(img);
+          };
+        }
+        allFile.push(fileList[0]);
+        console.log(allFile);
+      };
+    </script>
+  </body>
 </html>

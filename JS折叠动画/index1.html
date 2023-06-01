@@ -1,138 +1,141 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
-<title>点击展开文字隐藏文字JS代码</title>
-<style type="text/css">
-* {
-	margin:0; padding:0; border:0;
-}
-ul {
-	list-style-type:none;
-}
-li {
-	margin:10px;
-	width:200px;
-	border:4px double #ccc;
-	background:#eee;
-}
-li .main,li .intro {
-	margin:5px 5px 0 5px;
-	font-size:12px;
-}
-li .main {
-	height:25px;
-	overflow:hidden;
-	line-height:22px;
-}
-#main1 {
-	height:380px;
-}
-li h3 {
-	margin:0 5px 5px;
-}
-li p{
-	margin:8px 0;
-	font-size:14px;
-	color:#111;
-}
-li .mainf {
-	line-height:15px;
-	font-size:12px;
-	color:#333;
-}
-li .intro {
-	padding:3px 0 0;
-	color:#036;
-	line-height:18px;
-	border-top:1px dotted #366;
-}
-li .key {
-	float:right;
-	margin-top:-20px;
-	color:#900;
-	cursor:pointer;
-}
-</style>
-</head>
-<body>
-<ul>
-<li>
-<div class="main" id="main1">
-	<h3>孤雁儿</h3>
-	<p class="mainf">世人作梅词，下笔便俗。予试作一篇，乃知前言不妄耳。</p>
-	<p>藤床纸帐朝眠起，
-	<br />说不尽、无佳思。
-	<br />沈香烟断玉炉寒，
-	<br />伴我情怀如水。
-	<br />笛声三弄，
-	<br />梅心惊破，
-	<br />多少春情意。</p>
-	<p>小风疏雨萧萧地，
-	<br />又催下、千行泪。
-	<br />吹箫人去玉楼空，
-	<br />肠断与谁同倚？
-	<br />一枝折得，
-	<br />人间天上，
-	<br />没个人堪寄。</p>
-</div>
-<div class="intro">
-	作者：李清照
-	<span class="key" onclick="fn(this,1)">折叠</span>
-</div>
-</li>
-<li>
-<div class="main" id="main2">
-	<h3>孤雁儿</h3>
-	<p class="mainf">世人作梅词，下笔便俗。予试作一篇，乃知前言不妄耳。</p>
-	<p>藤床纸帐朝眠起，
-	<br />说不尽、无佳思。
-	<br />沈香烟断玉炉寒，
-	<br />伴我情怀如水。
-	<br />笛声三弄，
-	<br />梅心惊破，
-	<br />多少春情意。</p>
-	<p>小风疏雨萧萧地，
-	<br />又催下、千行泪。
-	<br />吹箫人去玉楼空，
-	<br />肠断与谁同倚？
-	<br />一枝折得，
-	<br />人间天上，
-	<br />没个人堪寄。</p>
-</div>
-<div class="intro">
-	作者：李清照
-	<span class="key" onclick="fn(this,2)">展开</span>
-</div>
-</li>
-</ul>
-<script type="text/javascript">
-var h = new Array(0,380,25,25,25);
-var tf = new Array(false,true,false,false,false);
-var minheight = 25;
-var maxheight = 380;
-function fn(likey,tag){
-	if (tf[tag]){
-		if (h[tag]>=minheight){
-			document.getElementById("main"+tag).style.height = h[tag] + "px";
-			setTimeout(function(){fn(likey,tag)},1);
-			h[tag] -= 10;
-		} else {
-			likey.innerHTML = "展开";
-			tf[tag] = !tf[tag];
-			h[tag] += 10;
-		}
-	} else {
-		if (h[tag]<=maxheight){
-			document.getElementById("main"+tag).style.height = h[tag] + "px";
-			setTimeout(function(){fn(likey,tag)},1);
-			h[tag] += 10;
-		} else {
-			likey.innerHTML = "折叠";
-			tf[tag] = !tf[tag];
-			h[tag] -= 10;
-		}
-	}
-}
-</script>
-</body>
+  <head>
+    <title>点击展开文字隐藏文字JS代码</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li {
+        margin: 10px;
+        width: 200px;
+        border: 4px double #ccc;
+        background: #eee;
+      }
+      li .main,
+      li .intro {
+        margin: 5px 5px 0 5px;
+        font-size: 12px;
+      }
+      li .main {
+        height: 25px;
+        overflow: hidden;
+        line-height: 22px;
+      }
+      #main1 {
+        height: 380px;
+      }
+      li h3 {
+        margin: 0 5px 5px;
+      }
+      li p {
+        margin: 8px 0;
+        font-size: 14px;
+        color: #111;
+      }
+      li .mainf {
+        line-height: 15px;
+        font-size: 12px;
+        color: #333;
+      }
+      li .intro {
+        padding: 3px 0 0;
+        color: #036;
+        line-height: 18px;
+        border-top: 1px dotted #366;
+      }
+      li .key {
+        float: right;
+        margin-top: -20px;
+        color: #900;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div class="main" id="main1">
+          <h3>孤雁儿</h3>
+          <p class="mainf">
+            世人作梅词，下笔便俗。予试作一篇，乃知前言不妄耳。
+          </p>
+          <p>
+            藤床纸帐朝眠起， <br />说不尽、无佳思。 <br />沈香烟断玉炉寒，
+            <br />伴我情怀如水。 <br />笛声三弄， <br />梅心惊破，
+            <br />多少春情意。
+          </p>
+          <p>
+            小风疏雨萧萧地， <br />又催下、千行泪。 <br />吹箫人去玉楼空，
+            <br />肠断与谁同倚？ <br />一枝折得， <br />人间天上，
+            <br />没个人堪寄。
+          </p>
+        </div>
+        <div class="intro">
+          作者：李清照
+          <span class="key" onclick="fn(this,1)">折叠</span>
+        </div>
+      </li>
+      <li>
+        <div class="main" id="main2">
+          <h3>孤雁儿</h3>
+          <p class="mainf">
+            世人作梅词，下笔便俗。予试作一篇，乃知前言不妄耳。
+          </p>
+          <p>
+            藤床纸帐朝眠起， <br />说不尽、无佳思。 <br />沈香烟断玉炉寒，
+            <br />伴我情怀如水。 <br />笛声三弄， <br />梅心惊破，
+            <br />多少春情意。
+          </p>
+          <p>
+            小风疏雨萧萧地， <br />又催下、千行泪。 <br />吹箫人去玉楼空，
+            <br />肠断与谁同倚？ <br />一枝折得， <br />人间天上，
+            <br />没个人堪寄。
+          </p>
+        </div>
+        <div class="intro">
+          作者：李清照
+          <span class="key" onclick="fn(this,2)">展开</span>
+        </div>
+      </li>
+    </ul>
+    <script type="text/javascript">
+      var h = new Array(0, 380, 25, 25, 25);
+      var tf = new Array(false, true, false, false, false);
+      var minheight = 25;
+      var maxheight = 380;
+      function fn(likey, tag) {
+        if (tf[tag]) {
+          if (h[tag] >= minheight) {
+            document.getElementById("main" + tag).style.height = h[tag] + "px";
+            setTimeout(function () {
+              fn(likey, tag);
+            }, 1);
+            h[tag] -= 10;
+          } else {
+            likey.innerHTML = "展开";
+            tf[tag] = !tf[tag];
+            h[tag] += 10;
+          }
+        } else {
+          if (h[tag] <= maxheight) {
+            document.getElementById("main" + tag).style.height = h[tag] + "px";
+            setTimeout(function () {
+              fn(likey, tag);
+            }, 1);
+            h[tag] += 10;
+          } else {
+            likey.innerHTML = "折叠";
+            tf[tag] = !tf[tag];
+            h[tag] -= 10;
+          }
+        }
+      }
+    </script>
+  </body>
 </html>

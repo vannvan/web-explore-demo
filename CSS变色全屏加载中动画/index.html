@@ -1,92 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<style type="text/css">
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-body {
-  background: #0A212E;
-  margin: 0px;
-  overflow: hidden;
-  animation: color-loop 18s infinite;
-}
-.waves {
-  position: relative;
-  top: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  left: 50%;
-  width: 25px;
-  height: 25px;
-  margin-left: -12px;
-  margin-top: -12px;
-  border-radius: 50%;
-  -webkit-backface-visibility: hidden;
-}
-.waves:before {
-  position: absolute;
-  background: white;
-  margin-left: -12px;
-  margin-top: -12px;
-  width: 50px;
-  height: 50px;
-  content: "";
-  display: block;
-  border-radius: 50%;
-  -webkit-backface-visibility: hidden;
-  animation: wave-animate 3s infinite ease-out;
-}
-.waves:after {
-  position: absolute;
-  background: white;
-  margin-left: -12px;
-  margin-top: -12px;
-  width: 50px;
-  height: 50px;
-  content: "";
-  display: block;
-  border-radius: 50%;
-  -webkit-backface-visibility: hidden;
-  opacity: 0;
-  animation: wave-animate 3s 1.5s infinite ease-out;
-}
-@keyframes wave-animate {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-    transform-origin: center;
-  }
-  100% {
-    transform: scale(3);
-    opacity: 0;
-    transform-origin: center;
-  }
-}
-@keyframes color-loop {
-  0% {
-    background: #2CAB5B;
-  }
-  25% {
-    background: #FABC03;
-  }
-  50% {
-    background: #ED4B40;
-  }
-  75% {
-    background: #4286F3;
-  }
-  100% {
-    background: #2CAB5B;
-  }
-}
-
-</style>
-<body>
-<div class="waves">
-</div>
-</body>
+  <head>
+    <title></title>
+  </head>
+  <style type="text/css">
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      background: #0a212e;
+      margin: 0px;
+      overflow: hidden;
+      animation: color-loop 18s infinite;
+    }
+    .waves {
+      position: relative;
+      top: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      margin-left: -12px;
+      margin-top: -12px;
+      border-radius: 50%;
+      -webkit-backface-visibility: hidden;
+    }
+    .waves:before {
+      position: absolute;
+      background: white;
+      margin-left: -12px;
+      margin-top: -12px;
+      width: 50px;
+      height: 50px;
+      content: "";
+      display: block;
+      border-radius: 50%;
+      -webkit-backface-visibility: hidden;
+      animation: wave-animate 3s infinite ease-out;
+    }
+    .waves:after {
+      position: absolute;
+      background: white;
+      margin-left: -12px;
+      margin-top: -12px;
+      width: 50px;
+      height: 50px;
+      content: "";
+      display: block;
+      border-radius: 50%;
+      -webkit-backface-visibility: hidden;
+      opacity: 0;
+      animation: wave-animate 3s 1.5s infinite ease-out;
+    }
+    @keyframes wave-animate {
+      0% {
+        transform: scale(0);
+        opacity: 1;
+        transform-origin: center;
+      }
+      100% {
+        transform: scale(3);
+        opacity: 0;
+        transform-origin: center;
+      }
+    }
+    @keyframes color-loop {
+      0% {
+        background: #2cab5b;
+      }
+      25% {
+        background: #fabc03;
+      }
+      50% {
+        background: #ed4b40;
+      }
+      75% {
+        background: #4286f3;
+      }
+      100% {
+        background: #2cab5b;
+      }
+    }
+  </style>
+  <body>
+    <div class="waves"></div>
+  </body>
 </html>

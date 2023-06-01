@@ -1,85 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS-target实现手风琴效果</title>
-</head>
-<style>
+  </head>
+  <style>
     body {
-        background-color: #222;
-        font-size: .85em;
-        color: #222;
+      background-color: #222;
+      font-size: 0.85em;
+      color: #222;
     }
 
     .accordion {
-        width: 30em;
-        margin: 4em auto 0;
-        box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+      width: 30em;
+      margin: 4em auto 0;
+      box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
     }
 
     .accordion a {
-        position: relative;
-        z-index: 1;
-        display: block;
-        background-color: #666;
-        text-decoration: none;
-        color: #fff;
-        padding: .75em 1.25em;
-        border-bottom: 1px #555 solid;
-        margin-top: -1px;
-        -webkit-transition: background .2s ease;
-        transition: background .2s ease;
+      position: relative;
+      z-index: 1;
+      display: block;
+      background-color: #666;
+      text-decoration: none;
+      color: #fff;
+      padding: 0.75em 1.25em;
+      border-bottom: 1px #555 solid;
+      margin-top: -1px;
+      -webkit-transition: background 0.2s ease;
+      transition: background 0.2s ease;
     }
 
     .accordion a:hover {
-        background-color: #444;
+      background-color: #444;
     }
 
     .accordion div {
-        background-color: #fff;
-        opacity: 0;
-        padding: 0 1.5em;
-        max-height: 0;
-        -webkit-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
-        border-left: 1px #ddd solid;
-        border-right: 1px #ddd solid;
+      background-color: #fff;
+      opacity: 0;
+      padding: 0 1.5em;
+      max-height: 0;
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      border-left: 1px #ddd solid;
+      border-right: 1px #ddd solid;
     }
 
     .accordion div:not(:first-child) {
-        border-bottom: 1px #ddd solid;
+      border-bottom: 1px #ddd solid;
     }
 
     .accordion div:target {
-        padding: 1.5em;
-        max-height: 500px;
-        opacity: 1;
+      padding: 1.5em;
+      max-height: 500px;
+      opacity: 1;
     }
-</style>
+  </style>
 
-<body>
+  <body>
     <section class="accordion">
-        <a href="#acc-1">About</a>
-        <div id="acc-1">
-            Intrinsicly supply multimedia based value after superior infomediaries. Quickly evisculate ethical meta-services via an expanded array of results. Continually synergize empowered benefits through superior synergy. Conveniently maximize equity invested
-            growth strategies via performance based best practices. Dynamically customize leveraged channels before maintainable initiatives.
-        </div>
-        <a href="#acc-2">Blog</a>
-        <div id="acc-2">
-            Energistically unleash customized markets and tactical ideas. Completely leverage other's frictionless users rather than effective markets. Competently maximize unique collaboration and idea-sharing before focused.
-        </div>
-        <a href="#acc-3">Portfolio</a>
-        <div id="acc-3">
-            Intrinsicly supply multimedia based value after superior infomediaries. Quickly evisculate ethical meta-services via an expanded array of results. Continually synergize empowered benefits through superior synergy. Conveniently maximize equity invested
-            growth strategies via performance based best practices. Dynamically customize leveraged channels before maintainable initiatives.
-        </div>
-        <a href="#acc-4">Contact</a>
-        <div id="acc-4">
-            Energistically unleash customized markets and tactical ideas. Completely leverage other's frictionless users rather than effective markets. Competently maximize unique collaboration and idea-sharing before focused.
-        </div>
+      <a href="#acc-1">About</a>
+      <div id="acc-1">
+        Intrinsicly supply multimedia based value after superior infomediaries.
+        Quickly evisculate ethical meta-services via an expanded array of
+        results. Continually synergize empowered benefits through superior
+        synergy. Conveniently maximize equity invested growth strategies via
+        performance based best practices. Dynamically customize leveraged
+        channels before maintainable initiatives.
+      </div>
+      <a href="#acc-2">Blog</a>
+      <div id="acc-2">
+        Energistically unleash customized markets and tactical ideas. Completely
+        leverage other's frictionless users rather than effective markets.
+        Competently maximize unique collaboration and idea-sharing before
+        focused.
+      </div>
+      <a href="#acc-3">Portfolio</a>
+      <div id="acc-3">
+        Intrinsicly supply multimedia based value after superior infomediaries.
+        Quickly evisculate ethical meta-services via an expanded array of
+        results. Continually synergize empowered benefits through superior
+        synergy. Conveniently maximize equity invested growth strategies via
+        performance based best practices. Dynamically customize leveraged
+        channels before maintainable initiatives.
+      </div>
+      <a href="#acc-4">Contact</a>
+      <div id="acc-4">
+        Energistically unleash customized markets and tactical ideas. Completely
+        leverage other's frictionless users rather than effective markets.
+        Competently maximize unique collaboration and idea-sharing before
+        focused.
+      </div>
     </section>
-</body>
-
+  </body>
 </html>

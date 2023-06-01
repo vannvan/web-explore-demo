@@ -12,33 +12,32 @@
 
 /* Icon Sink Away */
 .icon-sink-away() {
-	.hacks();
-	position: relative;
-	padding-right: @spaceBetweenTextAndArrows;
+  .hacks();
+  position: relative;
+  padding-right: @spaceBetweenTextAndArrows;
 
-	&:before,
-	&:after {
-		content: "\f056";
-		position: absolute;
-		right: 1em;
-		padding: 0 1px;
-		font-family: FontAwesome;
-		.prefixed(transform, translateZ(0));
-	}
+  &:before,
+  &:after {
+    content: "\f056";
+    position: absolute;
+    right: 1em;
+    padding: 0 1px;
+    font-family: FontAwesome;
+    .prefixed(transform, translateZ(0));
+  }
 
-	&:after {
-		opacity: 0;
-		.prefixed(animation-duration, @slowDuration);
-		.prefixed(animation-fill-mode, forwards);
-	}
+  &:after {
+    opacity: 0;
+    .prefixed(animation-duration, @slowDuration);
+    .prefixed(animation-fill-mode, forwards);
+  }
 
-	&:hover,
-	&:focus,
-	&:active {
-
-		&:after {
-			.prefixed(animation-name, ~"@{nameSpace}-icon-sink-away");
-			.prefixed(animation-timing-function, ease-out);
-		}
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    &:after {
+      .prefixed(animation-name, ~"@{nameSpace}-icon-sink-away");
+      .prefixed(animation-timing-function, ease-out);
+    }
+  }
 }

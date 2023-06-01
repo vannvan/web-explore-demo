@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<script type="text/javascript">
-	
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <script type="text/javascript">
+    function SaferHTML(templateData) {
+      let s = templateData[0];
+      for (let i = 1; i < arguments.length; i++) {
+        let arg = String(arguments[i]);
 
-	function SaferHTML(templateData) {
-	  let s = templateData[0];
-	  for (let i = 1; i < arguments.length; i++) {
-	    let arg = String(arguments[i]);
+        // Escape special characters in the substitution.
+        s += arg
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
 
-	    // Escape special characters in the substitution.
-	    s += arg.replace(/&/g, "&amp;")
-	            .replace(/</g, "&lt;")
-	            .replace(/>/g, "&gt;");
+        // Don't escape special characters in the template.
+        s += templateData[i];
+      }
+      return s;
+    }
 
-	    // Don't escape special characters in the template.
-	    s += templateData[i];
-	  }
-	  return s;
-	}
-
-	function handle(){
-		let sender = document.getElementsByName('sender')[0].value;
-		let message = SaferHTML`<p>${sender} has sent you a message.</p>`;
-		let message1 = `<p>${sender} has sent you a message.</p>`;
-		let append = document.getElementById("append")
-		append.innerHTML = message
-		console.log(message)
-
-	}
-</script>
-<body>
-
-	<input type="" name="sender" value="">
-	<button onclick="handle()">button</button>
-	<div id="append"></div>
-
-</body>
+    function handle() {
+      let sender = document.getElementsByName("sender")[0].value;
+      let message = SaferHTML`<p>${sender} has sent you a message.</p>`;
+      let message1 = `<p>${sender} has sent you a message.</p>`;
+      let append = document.getElementById("append");
+      append.innerHTML = message;
+      console.log(message);
+    }
+  </script>
+  <body>
+    <input type="" name="sender" value="" />
+    <button onclick="handle()">button</button>
+    <div id="append"></div>
+  </body>
 </html>

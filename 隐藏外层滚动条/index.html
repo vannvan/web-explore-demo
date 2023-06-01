@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<style type="text/css">
+  <head>
+    <title></title>
+  </head>
+  <style type="text/css">
+    .outer-container,
+    .content {
+      width: 200px;
+      height: 200px;
+    }
+    .outer-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .inner-container {
+      position: absolute;
+      left: 0;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
 
-.outer-container,.content {
-    width: 200px; height: 200px;
-}
-.outer-container {
-    position: relative;
-    overflow: hidden;
-}
-.inner-container {
-    position: absolute; left: 0;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
- /* for Chrome */
-.inner-container::-webkit-scrollbar {
-    display: none;
-}
-</style>
-<body>
-	<div class="outer-container">
-     <div class="inner-container">
-        <div class="content">
-            ......
-        </div>
-     </div>
- </div>
-</body>
+    /* for Chrome */
+    .inner-container::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="outer-container">
+      <div class="inner-container">
+        <div class="content">......</div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,25 @@
+{
+  "name": "web-explore-demo",
+  "version": "1.0.0",
+  "description": "----",
+  "main": "filelist.js",
+  "dependencies": {
+    "prettier": "^2.8.8",
+    "shelljs": "^0.8.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write '**/*.{js,html,jsx,tsx,ts,less,md,json}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vannvan/web-explore-demo.git"
+  },
+  "keywords": [],
+  "author": "vannvan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vannvan/web-explore-demo/issues"
+  },
+  "homepage": "https://github.com/vannvan/web-explore-demo#readme"
+}

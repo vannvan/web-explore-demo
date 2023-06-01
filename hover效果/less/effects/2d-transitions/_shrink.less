@@ -1,12 +1,12 @@
 /* Shrink */
 .shrink() {
-	.hacks();
-	.prefixed(transition-duration, @mediumDuration);
-	.prefixed(transition-property, transform);
+  .hacks();
+  .prefixed(transition-duration, @mediumDuration);
+  .prefixed(transition-property, transform);
 
-	&:hover,
-	&:focus,
-	&:active {
-		.prefixed(transform, scale(.9));
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    .prefixed(transform, scale(0.9));
+  }
 }

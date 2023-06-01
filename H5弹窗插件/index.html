@@ -1,225 +1,355 @@
-<html lang="en" class=" ready">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="ready">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hsycmsAlert弹窗插件</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script src="hsycmsAlert.js"></script>
     <style type="text/css">
-        @font-face {
-            font-family: "element-icons";
-            src: url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.woff') format('woff'),
-                url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.ttf ') format('truetype');
-            /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-        }
+      @font-face {
+        font-family: "element-icons";
+        src: url("chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.woff")
+            format("woff"),
+          url("chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.ttf ")
+            format("truetype");
+        /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+      }
     </style>
-</head>
+  </head>
 
-<body style="">
+  <body style="">
     <style>
-        body,
-        html {
-            width: 100%;
-            height: 100%;
-        }
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+      }
 
-        body {
-            max-width: 640px;
-            margin: 0 auto;
-        }
+      body {
+        max-width: 640px;
+        margin: 0 auto;
+      }
 
-        .btnss {
-            display: flex;
-            height: 100%;
-            justify-items: center;
-            flex-direction: column;
-            justify-content: center;
-        }
+      .btnss {
+        display: flex;
+        height: 100%;
+        justify-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-        .box {
-            padding: 20px;
-            background: #f1f1f1;
-            overflow: hidden;
-            color: #333;
-        }
+      .box {
+        padding: 20px;
+        background: #f1f1f1;
+        overflow: hidden;
+        color: #333;
+      }
 
-        .box h2 {
-            font-size: 16px;
-            padding-bottom: 12px;
-        }
+      .box h2 {
+        font-size: 16px;
+        padding-bottom: 12px;
+      }
 
-        .box h3 {
-            color: #f54655;
-            font-size: 15px;
-        }
+      .box h3 {
+        color: #f54655;
+        font-size: 15px;
+      }
 
-        .box p {
-            font-size: 14px;
-            color: #444;
-            padding-top: 10px;
-        }
+      .box p {
+        font-size: 14px;
+        color: #444;
+        padding-top: 10px;
+      }
 
-        .btnss button {
-            padding: 10px;
-            cursor: pointer;
-            height: 40px;
-            min-width: 120px;
-            border: 0;
-            color: #FFF;
-            margin: 10px 0;
-            border-radius: 40px;
-        }
+      .btnss button {
+        padding: 10px;
+        cursor: pointer;
+        height: 40px;
+        min-width: 120px;
+        border: 0;
+        color: #fff;
+        margin: 10px 0;
+        border-radius: 40px;
+      }
     </style>
     <div class="box">
-        <h2>hsycmsAlert弹窗插件 炫酷动画</h2>
-        <div class="btnss">
-            <button type="button" onclick="alert('普通弹窗文字说明')" style="background:#333;">普通弹窗</button>
-            <button type="button" onclick="tips('提示文字说明')" style="background:#f68909;">提示弹窗</button>
-            <button type="button" onclick="confirm()" style="background:#14bf24;">询问弹窗</button>
-            <button type="button" onclick="loading()" style="background:#f345dc;">Loading</button>
-            <button type="button" onclick="hsycms.alert('model')" style="background:#17d397;">自定义弹窗</button>
-            <button type="button" onclick="success()" style="background:#238af4;">成功</button>
-            <button type="button" onclick="error()" style="background:#f54655;">失败</button>
-        </div>
-        <h3>使用说明</h3>
-        <p>请将本页面的HMTL结构复制过去<br>再引入JS文件：jquery.js 和 hsycmsAlert.js<br>样式文件： hsycmsAlert.css </p>
+      <h2>hsycmsAlert弹窗插件 炫酷动画</h2>
+      <div class="btnss">
+        <button
+          type="button"
+          onclick="alert('普通弹窗文字说明')"
+          style="background: #333"
+        >
+          普通弹窗
+        </button>
+        <button
+          type="button"
+          onclick="tips('提示文字说明')"
+          style="background: #f68909"
+        >
+          提示弹窗
+        </button>
+        <button type="button" onclick="confirm()" style="background: #14bf24">
+          询问弹窗
+        </button>
+        <button type="button" onclick="loading()" style="background: #f345dc">
+          Loading
+        </button>
+        <button
+          type="button"
+          onclick="hsycms.alert('model')"
+          style="background: #17d397"
+        >
+          自定义弹窗
+        </button>
+        <button type="button" onclick="success()" style="background: #238af4">
+          成功
+        </button>
+        <button type="button" onclick="error()" style="background: #f54655">
+          失败
+        </button>
+      </div>
+      <h3>使用说明</h3>
+      <p>
+        请将本页面的HMTL结构复制过去<br />再引入JS文件：jquery.js 和
+        hsycmsAlert.js<br />样式文件： hsycmsAlert.css
+      </p>
     </div>
 
-    <div class="hsycms-model-mask" onclick="hsycms.closeAll()" id="mask-model" style="display: none;"></div>
-    <div class="hsycms-model hsycms-model-model" id="model" style="margin-top: -221px; display: none;">
-        <div class="hscysm-model-title">自定义弹窗</div>
-        <div class="hsycms-model-content">
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-            这里是自定义的内容<br>
-        </div>
+    <div
+      class="hsycms-model-mask"
+      onclick="hsycms.closeAll()"
+      id="mask-model"
+      style="display: none"
+    ></div>
+    <div
+      class="hsycms-model hsycms-model-model"
+      id="model"
+      style="margin-top: -221px; display: none"
+    >
+      <div class="hscysm-model-title">自定义弹窗</div>
+      <div class="hsycms-model-content">
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+        这里是自定义的内容<br />
+      </div>
     </div>
 
     <div class="hsycms-model-mask" id="mask-alert"></div>
-    <div class="hsycms-model hsycms-model-alert" id="alert" style="display: none;">
-        <div class="hscysm-model-title">温馨提示</div>
-        <div class="hsycms-model-text">这里是内容</div>
-        <div class="hsycms-model-btn">
-            <button type="button ok">确定</button>
-        </div>
+    <div
+      class="hsycms-model hsycms-model-alert"
+      id="alert"
+      style="display: none"
+    >
+      <div class="hscysm-model-title">温馨提示</div>
+      <div class="hsycms-model-text">这里是内容</div>
+      <div class="hsycms-model-btn">
+        <button type="button ok">确定</button>
+      </div>
     </div>
 
-    <div class="hsycms-model-mask" id="mask-tips" style="display: none;"></div>
-    <div class="hsycms-model hsycms-model-tips" id="tips" style="margin-top: -12px; display: none;">
-        <div class="hsycms-model-text">提示文字说明</div>
+    <div class="hsycms-model-mask" id="mask-tips" style="display: none"></div>
+    <div
+      class="hsycms-model hsycms-model-tips"
+      id="tips"
+      style="margin-top: -12px; display: none"
+    >
+      <div class="hsycms-model-text">提示文字说明</div>
     </div>
 
-    <div class="hsycms-model-mask" id="mask-confirm" style="display: none;"></div>
-    <div class="hsycms-model hsycms-model-confirm" id="confirm" style="margin-top: -68px; display: none;">
-        <div class="hscysm-model-title">温馨提示</div>
-        <div class="hsycms-model-text">确定要这么做</div>
-        <div class="hsycms-model-btn">
-            <button type="button" class="cancel">取消</button>
-            <button type="button" class="ok">确定</button>
-        </div>
+    <div
+      class="hsycms-model-mask"
+      id="mask-confirm"
+      style="display: none"
+    ></div>
+    <div
+      class="hsycms-model hsycms-model-confirm"
+      id="confirm"
+      style="margin-top: -68px; display: none"
+    >
+      <div class="hscysm-model-title">温馨提示</div>
+      <div class="hsycms-model-text">确定要这么做</div>
+      <div class="hsycms-model-btn">
+        <button type="button" class="cancel">取消</button>
+        <button type="button" class="ok">确定</button>
+      </div>
     </div>
 
-    <div class="hsycms-model-mask" id="mask-success" style="display: none;"></div>
-    <div class="hsycms-model hsycms-model-success" id="success" style="margin-top: -43px; display: none;">
-        <div class="hsycms-model-icon">
-            <svg width="50" height="50">
-                <circle class="hsycms-alert-svgcircle" cx="25" cy="25" r="24" fill="none" stroke="#238af4" stroke-width="2"></circle>
-                <polyline class="hsycms-alert-svggou" fill="none" stroke="#238af4" stroke-width="2.5" points="14,25 23,34 36,18" stroke-linecap="round" stroke-linejoin="round"></polyline>
-            </svg>
-        </div>
-        <div class="hsycms-model-text">操作成功</div>
+    <div
+      class="hsycms-model-mask"
+      id="mask-success"
+      style="display: none"
+    ></div>
+    <div
+      class="hsycms-model hsycms-model-success"
+      id="success"
+      style="margin-top: -43px; display: none"
+    >
+      <div class="hsycms-model-icon">
+        <svg width="50" height="50">
+          <circle
+            class="hsycms-alert-svgcircle"
+            cx="25"
+            cy="25"
+            r="24"
+            fill="none"
+            stroke="#238af4"
+            stroke-width="2"
+          ></circle>
+          <polyline
+            class="hsycms-alert-svggou"
+            fill="none"
+            stroke="#238af4"
+            stroke-width="2.5"
+            points="14,25 23,34 36,18"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></polyline>
+        </svg>
+      </div>
+      <div class="hsycms-model-text">操作成功</div>
     </div>
 
-    <div class="hsycms-model-mask" id="mask-error" style="display: none;"></div>
-    <div class="hsycms-model hsycms-model-error" id="error" style="margin-top: -43px; display: none;">
-        <div class="hsycms-model-icon">
-            <svg width="50" height="50">
-                <circle class="hsycms-alert-svgcircle" cx="25" cy="25" r="24" fill="none" stroke="#f54655" stroke-width="2"></circle>
-                <polyline class="hsycms-alert-svgca1" fill="none" stroke="#f54655" stroke-width="2.5" points="18,17 32,35" stroke-linecap="round" stroke-linejoin="round"></polyline>
-                <polyline class="hsycms-alert-svgca2" fill="none" stroke="#f54655" stroke-width="2.5" points="18,35 32,17" stroke-linecap="round" stroke-linejoin="round"></polyline>
-            </svg>
-        </div>
-        <div class="hsycms-model-text">操作失败</div>
+    <div class="hsycms-model-mask" id="mask-error" style="display: none"></div>
+    <div
+      class="hsycms-model hsycms-model-error"
+      id="error"
+      style="margin-top: -43px; display: none"
+    >
+      <div class="hsycms-model-icon">
+        <svg width="50" height="50">
+          <circle
+            class="hsycms-alert-svgcircle"
+            cx="25"
+            cy="25"
+            r="24"
+            fill="none"
+            stroke="#f54655"
+            stroke-width="2"
+          ></circle>
+          <polyline
+            class="hsycms-alert-svgca1"
+            fill="none"
+            stroke="#f54655"
+            stroke-width="2.5"
+            points="18,17 32,35"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></polyline>
+          <polyline
+            class="hsycms-alert-svgca2"
+            fill="none"
+            stroke="#f54655"
+            stroke-width="2.5"
+            points="18,35 32,17"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></polyline>
+        </svg>
+      </div>
+      <div class="hsycms-model-text">操作失败</div>
     </div>
 
     <div class="hsycms-model-mask" id="mask-loading"></div>
-    <div class="hsycms-model hsycms-model-loading" id="loading" style="display: none;">
-        <div class="hsycms-model-load">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="hsycms-model-text">正在加载</div>
+    <div
+      class="hsycms-model hsycms-model-loading"
+      id="loading"
+      style="display: none"
+    >
+      <div class="hsycms-model-load">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="hsycms-model-text">正在加载</div>
     </div>
     <script>
-        //参数说明 id,文字,方法
+      //参数说明 id,文字,方法
 
-        //普通弹窗 
-        function alert(txt) {
-            hsycms.alert('alert', txt, function() {
-                hsycms.close('alert');
-                console.log("点击了确定");
-            })
-        }
+      //普通弹窗
+      function alert(txt) {
+        hsycms.alert("alert", txt, function () {
+          hsycms.close("alert");
+          console.log("点击了确定");
+        });
+      }
 
-        //提示弹窗
-        function tips(txt) {
-            hsycms.tips('tips', txt, function() {
-                console.log("提示关闭后");
-            }, 2000)
-        }
+      //提示弹窗
+      function tips(txt) {
+        hsycms.tips(
+          "tips",
+          txt,
+          function () {
+            console.log("提示关闭后");
+          },
+          2000
+        );
+      }
 
-        //询问弹窗
-        function confirm() {
-            hsycms.confirm('confirm', '确定要这么做',
-                function(res) {
-                    hsycms.success('success', '点击了确定');
-                },
-                function(res) {
-                    hsycms.error('error', '点击了取消');
-                },
-            )
-        }
+      //询问弹窗
+      function confirm() {
+        hsycms.confirm(
+          "confirm",
+          "确定要这么做",
+          function (res) {
+            hsycms.success("success", "点击了确定");
+          },
+          function (res) {
+            hsycms.error("error", "点击了取消");
+          }
+        );
+      }
 
-        //操作成功调用 
-        function success() {
-            hsycms.success('success', '操作成功', function() { console.log('操作成功关闭后'); }, 1800)
-        }
+      //操作成功调用
+      function success() {
+        hsycms.success(
+          "success",
+          "操作成功",
+          function () {
+            console.log("操作成功关闭后");
+          },
+          1800
+        );
+      }
 
-        //操作失败调用
-        function error() {
-            hsycms.error('error', '操作失败', function() { console.log('操作失败关闭后'); }, 1800)
-        }
+      //操作失败调用
+      function error() {
+        hsycms.error(
+          "error",
+          "操作失败",
+          function () {
+            console.log("操作失败关闭后");
+          },
+          1800
+        );
+      }
 
-        //显示loading
-        function loading() {
-            hsycms.loading('loading', '正在加载');
-            //2秒后隐藏
-            setTimeout(res => {
-                hsycms.hideLoading('loading');
-            }, 2000)
-        }
+      //显示loading
+      function loading() {
+        hsycms.loading("loading", "正在加载");
+        //2秒后隐藏
+        setTimeout((res) => {
+          hsycms.hideLoading("loading");
+        }, 2000);
+      }
     </script>
-
-</body>
-
+  </body>
 </html>

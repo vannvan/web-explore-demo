@@ -26,14 +26,14 @@
 });
 
 .wobble-to-bottom-right() {
-	.hacks();
+  .hacks();
 
-	&:hover,
-	&:focus,
-	&:active {
-		.prefixed(animation-name, ~"@{nameSpace}-wobble-to-bottom-right");
-		.prefixed(animation-duration, 1s);
-		.prefixed(animation-timing-function, ease-in-out);
-		.prefixed(animation-iteration-count, 1);
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    .prefixed(animation-name, ~"@{nameSpace}-wobble-to-bottom-right");
+    .prefixed(animation-duration, 1s);
+    .prefixed(animation-timing-function, ease-in-out);
+    .prefixed(animation-iteration-count, 1);
+  }
 }

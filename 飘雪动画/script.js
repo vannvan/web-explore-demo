@@ -1,10 +1,10 @@
-(function() {
+(function () {
   let speedSlider = document.querySelector("#range-slider");
   let speedValue = speedSlider.value;
   let snow = document.querySelectorAll("#snowbanner .snow");
   let snowSwitch = true;
 
-  speedSlider.addEventListener("input", function() {
+  speedSlider.addEventListener("input", function () {
     speedValue = speedSlider.value;
     setSeconds();
   });
@@ -17,7 +17,7 @@
 
     seconds >= 20 ? (snowSwitch = false) : (snowSwitch = true);
 
-    snow.forEach(element => {
+    snow.forEach((element) => {
       element.style.WebkitAnimationDuration = `${seconds}s`;
       element.style.animationDuration = `${seconds}s`;
 

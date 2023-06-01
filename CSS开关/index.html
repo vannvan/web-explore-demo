@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<style type="text/css">
-/* 背景层 */
-.switch-component {
-  position: relative;
-  width: 60px;
-  height: 30px;
-  background-color: #dadada;
-  border-radius: 30px;
-  border: none;
-  outline: none;
-  -webkit-appearance: none;
-  transition: all .2s ease;
-}
+  <head>
+    <title></title>
+  </head>
+  <style type="text/css">
+    /* 背景层 */
+    .switch-component {
+      position: relative;
+      width: 60px;
+      height: 30px;
+      background-color: #dadada;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      -webkit-appearance: none;
+      transition: all 0.2s ease;
+    }
 
-/* 按钮 */
-.switch-component::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background-color: #fff;
-  border-radius: 50%;
-  transition: all .2s ease;
-}
+    /* 按钮 */
+    .switch-component::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
 
-/* 选中状态时，背景色切换 */
-.switch-component:checked {
-  background-color: #86c0fa;
- }
+    /* 选中状态时，背景色切换 */
+    .switch-component:checked {
+      background-color: #86c0fa;
+    }
 
-/* 选中状态时，按钮的位置移动 */
-.switch-component:checked::after {
-  left: 50%;
-}
-
-</style>
-<body>
-	
-<input class="switch-component" type="checkbox">
-
-</body>
+    /* 选中状态时，按钮的位置移动 */
+    .switch-component:checked::after {
+      left: 50%;
+    }
+  </style>
+  <body>
+    <input class="switch-component" type="checkbox" />
+  </body>
 </html>

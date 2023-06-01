@@ -10,14 +10,14 @@
 });
 
 .buzz() {
-	.hacks();
+  .hacks();
 
-	&:hover,
-	&:focus,
-	&:active {
-		.prefixed(animation-name, ~"@{nameSpace}-buzz");
-		.prefixed(animation-duration, .15s);
-		.prefixed(animation-timing-function, linear);
-		.prefixed(animation-iteration-count, infinite);
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    .prefixed(animation-name, ~"@{nameSpace}-buzz");
+    .prefixed(animation-duration, 0.15s);
+    .prefixed(animation-timing-function, linear);
+    .prefixed(animation-iteration-count, infinite);
+  }
 }

@@ -1,32 +1,31 @@
 /* Overline From Center */
 .overline-from-center() {
-	@duration: @mediumDuration;
+  @duration: @mediumDuration;
 
-	.hacks();
-	position: relative;
-	overflow: hidden;
+  .hacks();
+  position: relative;
+  overflow: hidden;
 
-	&:before {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		left: 50%;
-		right: 50%;
-		top: 0;
-		background: @activeColor;
-		height: 4px;
-		.prefixed(transition-property, "left, right");
-		.prefixed(transition-duration, @duration);
-		.prefixed(transition-timing-function, ease-out);
-	}
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    top: 0;
+    background: @activeColor;
+    height: 4px;
+    .prefixed(transition-property, "left, right");
+    .prefixed(transition-duration, @duration);
+    .prefixed(transition-timing-function, ease-out);
+  }
 
-	&:hover,
-	&:focus,
-	&:active {
-
-		&:before {
-			left: 0;
-			right: 0;
-		}
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    &:before {
+      left: 0;
+      right: 0;
+    }
+  }
 }

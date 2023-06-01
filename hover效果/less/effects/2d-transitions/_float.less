@@ -1,13 +1,13 @@
 /* Float */
 .float() {
-	.hacks();
-	.prefixed(transition-duration, @mediumDuration);
-	.prefixed(transition-property, transform);
-	.prefixed(transition-timing-function, ease-out);
+  .hacks();
+  .prefixed(transition-duration, @mediumDuration);
+  .prefixed(transition-property, transform);
+  .prefixed(transition-timing-function, ease-out);
 
-	&:hover,
-	&:focus,
-	&:active {
-		.prefixed(transform, translateY(-8px));
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    .prefixed(transform, translateY(-8px));
+  }
 }

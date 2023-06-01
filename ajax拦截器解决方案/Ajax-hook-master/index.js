@@ -1,1 +1,1 @@
-require("./src/ajaxhook")(module.exports)
+require("./src/ajaxhook")(module.exports);

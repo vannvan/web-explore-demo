@@ -10,27 +10,27 @@
 });
 
 .ripple-in() {
-	@outerBorderWidth: 4px;
-	@innerBorderWidth: 4px;
+  @outerBorderWidth: 4px;
+  @innerBorderWidth: 4px;
 
-	.hacks();
-	position: relative;
+  .hacks();
+  position: relative;
 
-	&:before {
-		content: '';
-		position: absolute;
-		border: @primaryColor solid @outerBorderWidth;
-		top: -(6px + 6px);
-		right: -(6px + 6px);
-		bottom: -(6px + 6px);
-		left: -(6px + 6px);
-		opacity: 0;
-		.prefixed(animation-duration, 1s);
-	}
+  &:before {
+    content: "";
+    position: absolute;
+    border: @primaryColor solid @outerBorderWidth;
+    top: -(6px + 6px);
+    right: -(6px + 6px);
+    bottom: -(6px + 6px);
+    left: -(6px + 6px);
+    opacity: 0;
+    .prefixed(animation-duration, 1s);
+  }
 
-	&:hover:before,
-	&:focus:before,
-	&:active:before {
-		.prefixed(animation-name, ~"@{nameSpace}-ripple-in");
-	}
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    .prefixed(animation-name, ~"@{nameSpace}-ripple-in");
+  }
 }

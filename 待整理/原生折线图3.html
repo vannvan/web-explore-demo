@@ -1,73 +1,80 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>只属于你的折线图！</title>
-	</head>
-	<body style="background-color:#f3f3f3"> 
-		<canvas id="canvas" width=1000 height=650></canvas>
-		<script>
-			var canvas = document.getElementById("canvas");
-			var startX = 100;
-			var startY = 600;
-			var ctx = canvas.getContext('2d');
-			var data = [0,100,200,300,400,500];		//坐标轴坐标
-			var point = [[100,200],[150,230],[200,190],[250,240],[300,300],[350,270],[400,500],[450,400],[500,100]];	//点坐标
-			//建立坐标系
-			function creat(){
-				ctx.beginPath();
-				ctx.moveTo(startX,50);
-				ctx.lineTo(startX,startY);
-				ctx.moveTo(startX,startY);
-				ctx.lineTo(650,startY);
-				ctx.closePath();
-				ctx.stroke();
- 
-			}
-			//填充横纵坐标
-			function insert(){
-				var x = 100;
-				var y = 600;
-				//绘制横坐标
-				for(var i in data){
-					ctx.fillText(data[i],x,y+20);
-					x += 100;
-				}
-				x = 100;
-				y = 600;
-				//绘制纵坐标
-				for(var i in data){
-					ctx.fillText(data[i],x-20,y);
-					y -= 100;
-				}
-			}
-			//绘制折线
-			var num = 0;
-			var sh = setInterval(function(){
-				//只有第一个点重新开始绘制
-				if(num == 0)
-					ctx.beginPath();
-				//终止
-				if(num == 8){
-					clearInterval(sh);
-				}
-				var x = point[num][0];
-				var y = point[num][1];
-				//转换坐标
-				x += 100;
-				y = startY - y;
-				ctx.arc(x,y, 2, 0, 2*Math.PI);
-				//进行点的内部连接
-				if(num != 0)
-					ctx.lineTo(x,y);
-				num++;
-				ctx.moveTo(x,y);
-				ctx.strokeStyle = "#3FA7DC";
-				//连接边框
-				ctx.stroke();
-				console.log(num);
-			}, 400);
-			creat();
-			insert();
-		</script>
-	</body>
+  <head>
+    <title>只属于你的折线图！</title>
+  </head>
+  <body style="background-color: #f3f3f3">
+    <canvas id="canvas" width="1000" height="650"></canvas>
+    <script>
+      var canvas = document.getElementById("canvas");
+      var startX = 100;
+      var startY = 600;
+      var ctx = canvas.getContext("2d");
+      var data = [0, 100, 200, 300, 400, 500]; //坐标轴坐标
+      var point = [
+        [100, 200],
+        [150, 230],
+        [200, 190],
+        [250, 240],
+        [300, 300],
+        [350, 270],
+        [400, 500],
+        [450, 400],
+        [500, 100],
+      ]; //点坐标
+      //建立坐标系
+      function creat() {
+        ctx.beginPath();
+        ctx.moveTo(startX, 50);
+        ctx.lineTo(startX, startY);
+        ctx.moveTo(startX, startY);
+        ctx.lineTo(650, startY);
+        ctx.closePath();
+        ctx.stroke();
+      }
+      //填充横纵坐标
+      function insert() {
+        var x = 100;
+        var y = 600;
+        //绘制横坐标
+        for (var i in data) {
+          ctx.fillText(data[i], x, y + 20);
+          x += 100;
+        }
+        x = 100;
+        y = 600;
+        //绘制纵坐标
+        for (var i in data) {
+          ctx.fillText(data[i], x - 20, y);
+          y -= 100;
+        }
+      }
+      //绘制折线
+      var num = 0;
+      var sh = setInterval(function () {
+        //只有第一个点重新开始绘制
+        if (num == 0) ctx.beginPath();
+        //终止
+        if (num == 8) {
+          clearInterval(sh);
+        }
+        var x = point[num][0];
+        var y = point[num][1];
+        //转换坐标
+        x += 100;
+        y = startY - y;
+        ctx.arc(x, y, 2, 0, 2 * Math.PI);
+        //进行点的内部连接
+        if (num != 0) ctx.lineTo(x, y);
+        num++;
+        ctx.moveTo(x, y);
+        ctx.strokeStyle = "#3FA7DC";
+        //连接边框
+        ctx.stroke();
+        console.log(num);
+      }, 400);
+      creat();
+      insert();
+    </script>
+  </body>
 </html>

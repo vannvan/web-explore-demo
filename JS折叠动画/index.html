@@ -1,61 +1,60 @@
 <!DOCTYPE = html>
 <html>
- <head>
-  <title>折叠1</title>
-  <style>
-  body{
-   margin: 0px;
-   padding: 0px;
-  }
-  .red{
-   background-color:red;
-   width:200px;
-   height:200px;
-   position:relative;
-   left:-200px;
-   top:0px;
-  }
-  .blue{
-   background:blue;
-   width:20px;
-   height:50px;
-   position:absolute;
-   left:200px;
-   top:75px;
-  }
-  </style>
- </head>
- <body>
-  <div class="red" id="cf1"><div class="blue" id="cf">分享</div></div>
-  <script>
-  window.onload = function(){
-     var onDiv = document.getElementById("cf1");
-     onDiv.onmouseover = function(){
-      startmove(0);
-     }
-     onDiv.onmouseout = function(){
-      startmove(-200);
-     }
-  }
-  var timer ;
-  function startmove(target){
-   clearInterval(timer);//清除定时器，以免多次触发定时器导致速度越来越快而不是匀速前进
-   var onDiv1 = document.getElementById("cf1");
-   timer = setInterval(function(){
-   var speed = 0;
-   if(onDiv1.offsetLeft<target){
-    speed = 10;
-   }else{
-    speed = -10;
-   }
-   if(onDiv1.offsetLeft==target){
-    clearInterval(timer);
-   }
-   else{
-   onDiv1.style.left = onDiv1.offsetLeft+speed+'px';
-   }
-   },30)
-  }
-  </script>
- </body>
+  <head>
+    <title>折叠1</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      .red {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        left: -200px;
+        top: 0px;
+      }
+      .blue {
+        background: blue;
+        width: 20px;
+        height: 50px;
+        position: absolute;
+        left: 200px;
+        top: 75px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="red" id="cf1"><div class="blue" id="cf">分享</div></div>
+    <script>
+      window.onload = function () {
+        var onDiv = document.getElementById("cf1");
+        onDiv.onmouseover = function () {
+          startmove(0);
+        };
+        onDiv.onmouseout = function () {
+          startmove(-200);
+        };
+      };
+      var timer;
+      function startmove(target) {
+        clearInterval(timer); //清除定时器，以免多次触发定时器导致速度越来越快而不是匀速前进
+        var onDiv1 = document.getElementById("cf1");
+        timer = setInterval(function () {
+          var speed = 0;
+          if (onDiv1.offsetLeft < target) {
+            speed = 10;
+          } else {
+            speed = -10;
+          }
+          if (onDiv1.offsetLeft == target) {
+            clearInterval(timer);
+          } else {
+            onDiv1.style.left = onDiv1.offsetLeft + speed + "px";
+          }
+        }, 30);
+      }
+    </script>
+  </body>
 </html>

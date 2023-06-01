@@ -10,7 +10,7 @@ export const shouldUseSourceMap = false; //
 
 export const PORT = process.env.port || 8101;
 
-export const PROTOCOL = process.env.HTTPS === 'true' ? 'https' : 'http';
+export const PROTOCOL = process.env.HTTPS === "true" ? "https" : "http";
 
 export const HOST = "127.0.0.1";
 

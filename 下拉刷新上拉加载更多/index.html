@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>在线客服</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/loading.css">
+  <head>
+    <title>在线客服</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/loading.css" />
     <script type="text/javascript" src="js/flexible.debug.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.base64.js"></script>
-</head>
-<style type="text/css">
-.loading{
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  position: fixed;
-}
-[data-loader=circle] {
-	border-top-color: #00CCFC
-}
-.refreshText{ position: absolute; width: 100%; line-height: 50px; text-align: center; left: 0; top: 0; }
-</style>
-<body>
-  <p class="refreshText"></p>
-	<div class="container"></div>
-	 <div class="loading">
-	    <div data-loader="circle"></div>
-	 </div>
-   <div class="empty">
-     <img src="img/empty.png">
-     <p></p>
-   </div>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript" src="js/fetch.js"></script>
-</body>
+  </head>
+  <style type="text/css">
+    .loading {
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      position: fixed;
+    }
+    [data-loader="circle"] {
+      border-top-color: #00ccfc;
+    }
+    .refreshText {
+      position: absolute;
+      width: 100%;
+      line-height: 50px;
+      text-align: center;
+      left: 0;
+      top: 0;
+    }
+  </style>
+  <body>
+    <p class="refreshText"></p>
+    <div class="container"></div>
+    <div class="loading">
+      <div data-loader="circle"></div>
+    </div>
+    <div class="empty">
+      <img src="img/empty.png" />
+      <p></p>
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/fetch.js"></script>
+  </body>
 </html>

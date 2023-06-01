@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8" />
     <title>画图</title>
     <style>
-      #divContainer{
+      #divContainer {
         margin-top: 20px;
         text-align: center;
       }
-      #cv{
+      #cv {
         width: 500px;
         height: 300px;
         border-bottom: 2px solid #000;
@@ -18,70 +18,71 @@
   </head>
   <body>
     <div id="divContainer">
-      铝锭价走势图<br/>
+      铝锭价走势图<br />
       <canvas id="cv">你的设备不支持图表数据显示</canvas>
     </div>
     <script>
-      (function(){
-        window.onload = function(){
+      (function () {
+        window.onload = function () {
           //数据源
           var dict = [
-            {x: "2015-04-24", y: 13400},
-            {x: "2015-04-25", y: 13380},
-            {x: "2015-04-26", y: 13370},
-            {x: "2015-04-27", y: 13370},
-            {x: "2015-04-28", y: 13380}
-          ]
+            { x: "2015-04-24", y: 13400 },
+            { x: "2015-04-25", y: 13380 },
+            { x: "2015-04-26", y: 13370 },
+            { x: "2015-04-27", y: 13370 },
+            { x: "2015-04-28", y: 13380 },
+          ];
           //数据源提取
           var len = dict.length;
-          var xArr = [], yArr = [], tmp_yArr = [];
-          for(var i=0; i<len; i++){
+          var xArr = [],
+            yArr = [],
+            tmp_yArr = [];
+          for (var i = 0; i < len; i++) {
             xArr.push(i * 60);
             tmp_yArr.push(dict[i].y);
           }
-          var tmp_minY = Math.min.apply(Math, tmp_yArr);//最小值
-          var tmp_maxY = Math.max.apply(Math, tmp_yArr);//最大值
-          if(tmp_maxY - tmp_minY <= 100){
-            for(var i=0; i<len; i++){
-              yArr.push(tmp_yArr[i] - tmp_minY + 50);//与最小的做比较
+          var tmp_minY = Math.min.apply(Math, tmp_yArr); //最小值
+          var tmp_maxY = Math.max.apply(Math, tmp_yArr); //最大值
+          if (tmp_maxY - tmp_minY <= 100) {
+            for (var i = 0; i < len; i++) {
+              yArr.push(tmp_yArr[i] - tmp_minY + 50); //与最小的做比较
             }
-          }
-          else{//如果相差太大会导致图表不美观
-            for(var i=0; i<len; i++){
+          } else {
+            //如果相差太大会导致图表不美观
+            for (var i = 0; i < len; i++) {
               yArr.push(tmp_yArr[i] / 500);
             }
           }
           var minY = Math.min.apply(Math, yArr);
           var maxY = Math.max.apply(Math, yArr);
           //canvas 准备
-          var canvas = document.getElementById("cv");//获取canvas画布
+          var canvas = document.getElementById("cv"); //获取canvas画布
           var ctx = canvas.getContext("2d");
           //画折线
-          for(var i=0 ;i<len; i++){
+          for (var i = 0; i < len; i++) {
             var x = xArr[i];
             var y = maxY - yArr[i] + minY;
-            if(i === 0){
-              ctx .moveTo(x, y);
-            }
-            else{
-              ctx .lineTo(x, y);
+            if (i === 0) {
+              ctx.moveTo(x, y);
+            } else {
+              ctx.lineTo(x, y);
             }
           }
-          ctx .stroke();
+          ctx.stroke();
           //画点
-          for(var i=0; i<len; i++){
+          for (var i = 0; i < len; i++) {
             var x = xArr[i];
             var y = maxY - yArr[i] + minY;
             var xMemo = dict[i].x;
             var yMemo = "¥" + dict[i].y;
             ctx.beginPath();
             ctx.fillStyle = "#000";
-            ctx.arc(x, y, 2, 0, 2*Math.PI);//画点
+            ctx.arc(x, y, 2, 0, 2 * Math.PI); //画点
             ctx.fill();
             ctx.fillText(yMemo, x + 3, y - 10);
-            ctx.fillText(xMemo, x + 3, canvas.height - 10, 40);//画文字
+            ctx.fillText(xMemo, x + 3, canvas.height - 10, 40); //画文字
           }
-        }
+        };
       })();
     </script>
   </body>

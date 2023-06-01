@@ -1,157 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
     <title>基于jQuery实现下拉刷新上拉加载</title>
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
 
     <style type="text/css">
-        body {
-            background-color: beige;
-            padding: 0;
-        }
-        div {
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 100%;
-            margin: 0 auto;
-            padding: 0;
-        }
-        .container .scroll .status {
-            text-align: center;
-            font-size: 14px;
-            color: white;
-            background-color: darkgrey;
-            display: none;
-            padding-top: 30px;
-        }
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        ul li {
-            text-align: center;
-            border: 1px solid rgba(166, 166, 166, 0.4);
-        }
+      body {
+        background-color: beige;
+        padding: 0;
+      }
+      div {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .container .scroll .status {
+        text-align: center;
+        font-size: 14px;
+        color: white;
+        background-color: darkgrey;
+        display: none;
+        padding-top: 30px;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      ul li {
+        text-align: center;
+        border: 1px solid rgba(166, 166, 166, 0.4);
+      }
     </style>
-</head>
-<body>
-<div class="container">
-    <div class="scroll">
+  </head>
+  <body>
+    <div class="container">
+      <div class="scroll">
         <div class="status">
-            <p>下拉刷新</p>
+          <p>下拉刷新</p>
         </div>
         <ul>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
-            <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
+          <li>测试数据</li>
         </ul>
+      </div>
     </div>
-</div>
-<script>
-    //------------------------下拉刷新-------------------------------
-    //定义的全局变量
-    var disY, startY, endY;
-    //触摸事件开始时触发
-    $('.scroll').on('touchstart', function (e) {
+    <script>
+      //------------------------下拉刷新-------------------------------
+      //定义的全局变量
+      var disY, startY, endY;
+      //触摸事件开始时触发
+      $(".scroll").on("touchstart", function (e) {
         startY = e.changedTouches[0].pageY;
-    });
-    //触摸事件移动中时触发
-    $('.scroll').on('touchmove', function (e) {
+      });
+      //触摸事件移动中时触发
+      $(".scroll").on("touchmove", function (e) {
         endY = e.changedTouches[0].pageY;
         disY = endY - startY;
         if (disY > 30) {
-            $('.status').css({
-                display: 'block',
-                height: disY + 'px',
-            });
+          $(".status").css({
+            display: "block",
+            height: disY + "px",
+          });
         }
-    });
-    //触摸事件结束时触发
-    $('.scroll').on('touchend', function (e) {
+      });
+      //触摸事件结束时触发
+      $(".scroll").on("touchend", function (e) {
         endY = e.changedTouches[0].pageY;
         disY = endY - startY;
         if (disY > 60) {
-            //定义一个定时器，返回下拉到一定的高度
-            var timer = setInterval(function () {
-                disY -= 13;
-                if (disY <= 60) {
-                    $('.status').css({
-                        height: 52 + 'px',
-                    });
-                    clearInterval(timer);
-                    refresh();
-                }
-                $('.status').css({
-                    height: disY + 'px',
-                });
-            }, 75);
-        }
-    });
-    //请求刷新数据
-    function refresh() {
-        var t = setTimeout(function () {
-            $('.scroll ul').empty()
-            for (var i = 0; i < 13; i++) {
-                $('.scroll ul').append('<li>' + '添加的数据:' + parseInt(i + 1) + '</li>');
+          //定义一个定时器，返回下拉到一定的高度
+          var timer = setInterval(function () {
+            disY -= 13;
+            if (disY <= 60) {
+              $(".status").css({
+                height: 52 + "px",
+              });
+              clearInterval(timer);
+              refresh();
             }
-            $('.status').css({
-                display: 'none',
-                height:0
+            $(".status").css({
+              height: disY + "px",
             });
-            clearTimeout(t)
+          }, 75);
+        }
+      });
+      //请求刷新数据
+      function refresh() {
+        var t = setTimeout(function () {
+          $(".scroll ul").empty();
+          for (var i = 0; i < 13; i++) {
+            $(".scroll ul").append(
+              "<li>" + "添加的数据:" + parseInt(i + 1) + "</li>"
+            );
+          }
+          $(".status").css({
+            display: "none",
+            height: 0,
+          });
+          clearTimeout(t);
         }, 500);
-    }
-</script>
+      }
+    </script>
 
-<script>
-    //--------------上拉加载更多---------------
-    //获取滚动条当前的位置
-    function getScrollTop() {
+    <script>
+      //--------------上拉加载更多---------------
+      //获取滚动条当前的位置
+      function getScrollTop() {
         var scrollTop = 0;
         if (document.documentElement && document.documentElement.scrollTop) {
-            scrollTop = document.documentElement.scrollTop;
+          scrollTop = document.documentElement.scrollTop;
         } else if (document.body) {
-            scrollTop = document.body.scrollTop;
+          scrollTop = document.body.scrollTop;
         }
         return scrollTop;
-    }
-    //获取当前可视范围的高度
-    function getClientHeight() {
+      }
+      //获取当前可视范围的高度
+      function getClientHeight() {
         var clientHeight = 0;
-        if (document.body.clientHeight && document.documentElement.clientHeight) {
-            clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight);
+        if (
+          document.body.clientHeight &&
+          document.documentElement.clientHeight
+        ) {
+          clientHeight = Math.min(
+            document.body.clientHeight,
+            document.documentElement.clientHeight
+          );
         } else {
-            clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight);
+          clientHeight = Math.max(
+            document.body.clientHeight,
+            document.documentElement.clientHeight
+          );
         }
         return clientHeight;
-    }
-    //获取文档完整的高度
-    function getScrollHeight() {
-        return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
-    }
-    //滚动事件触发
-    window.onscroll = function () {
+      }
+      //获取文档完整的高度
+      function getScrollHeight() {
+        return Math.max(
+          document.body.scrollHeight,
+          document.documentElement.scrollHeight
+        );
+      }
+      //滚动事件触发
+      window.onscroll = function () {
         if (getScrollTop() + getClientHeight() === getScrollHeight()) {
-            console.log('在这里加载数据咯！');
+          console.log("在这里加载数据咯！");
         }
-    };
-</script>
-</body>
+      };
+    </script>
+  </body>
 </html>

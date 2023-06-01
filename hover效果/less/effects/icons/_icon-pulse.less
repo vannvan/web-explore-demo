@@ -5,34 +5,33 @@
 	}
 
 	75% {
-		.prefixed(transform, scale(.8));
+		.prefixed(transform, scale(0.8));
 	}
 });
 
 .icon-pulse() {
-	.hacks();
-	position: relative;
-	padding-right: @spaceBetweenTextAndArrows;
+  .hacks();
+  position: relative;
+  padding-right: @spaceBetweenTextAndArrows;
 
-	&:before {
-		content: "\f015";
-		position: absolute;
-		right: 1em;
-		padding: 0 1px;
-		font-family: FontAwesome;
-		.prefixed(transform, translateZ(0));
-		.prefixed(transition-timing-function, ease-out);
-	}
+  &:before {
+    content: "\f015";
+    position: absolute;
+    right: 1em;
+    padding: 0 1px;
+    font-family: FontAwesome;
+    .prefixed(transform, translateZ(0));
+    .prefixed(transition-timing-function, ease-out);
+  }
 
-	&:hover,
-	&:focus,
-	&:active {
-
-		&:before {
-			.prefixed(animation-name, ~"@{nameSpace}-icon-pulse");
-			.prefixed(animation-duration, 1s);
-			.prefixed(animation-timing-function, linear);
-			.prefixed(animation-iteration-count, infinite);
-		}
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    &:before {
+      .prefixed(animation-name, ~"@{nameSpace}-icon-pulse");
+      .prefixed(animation-duration, 1s);
+      .prefixed(animation-timing-function, linear);
+      .prefixed(animation-iteration-count, infinite);
+    }
+  }
 }

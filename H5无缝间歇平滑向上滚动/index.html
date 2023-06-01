@@ -1,58 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Document</title>
-<style>
-*{margin:0;padding:0;}
-li{list-style:none;}
-body{line-height:1.5;font-size:14px;}
-.scroll{display:inline-block;overflow:hidden;position:relative;height:30px;}
-.scroll ul{transform:translateY(0);}
-.animate{-webkit-transition:all .3s ease-out;}
-.scroll li{overflow:hidden;display:-webkit-box;margin-left:10px;width:90%;height:30px;line-height:30px;color:#333;text-overflow:ellipsis;-webkit-line-clamp:1;-webkit-box-orient:vertical;white-space:normal;}
-</style>
-<script src="zepto.min.js"></script>
-</head>
-<body>
-<div class="scroll"> 
-    <ul>
-        <li>2016高颜值拍照手机：一言不合秒单反</li> 
-        <li>细说奥运中国女排的各「大长腿」</li> 
-        <li>开学季来了 年轻人如何选择第一台笔记本？</li> 
-        <li>六大零食是缓解痛经好帮手 ！</li> 
-    </ul> 
-</div>
-<script>
-$(function(){
-    var scrollDiv = $(".scroll"),
-        $ul = scrollDiv.find("ul"),
-        $li = scrollDiv.find("li"),
-        $length = $li.length,
-        $liHeight = $li.height(),
-        num = 0;
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      body {
+        line-height: 1.5;
+        font-size: 14px;
+      }
+      .scroll {
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        height: 30px;
+      }
+      .scroll ul {
+        transform: translateY(0);
+      }
+      .animate {
+        -webkit-transition: all 0.3s ease-out;
+      }
+      .scroll li {
+        overflow: hidden;
+        display: -webkit-box;
+        margin-left: 10px;
+        width: 90%;
+        height: 30px;
+        line-height: 30px;
+        color: #333;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+      }
+    </style>
+    <script src="zepto.min.js"></script>
+  </head>
+  <body>
+    <div class="scroll">
+      <ul>
+        <li>2016高颜值拍照手机：一言不合秒单反</li>
+        <li>细说奥运中国女排的各「大长腿」</li>
+        <li>开学季来了 年轻人如何选择第一台笔记本？</li>
+        <li>六大零食是缓解痛经好帮手 ！</li>
+      </ul>
+    </div>
+    <script>
+      $(function () {
+        var scrollDiv = $(".scroll"),
+          $ul = scrollDiv.find("ul"),
+          $li = scrollDiv.find("li"),
+          $length = $li.length,
+          $liHeight = $li.height(),
+          num = 0;
 
-    if(scrollDiv.length == 0){
-        return;
-    }
+        if (scrollDiv.length == 0) {
+          return;
+        }
 
-    if($length > 1){
-        $ul.append($li.eq(0).clone());
-        setInterval(
-            function(){
-                num++;
-                $ul.addClass("animate").css("-webkit-transform","translateY(-"+ $liHeight*(num) +"px)");
-                setTimeout(
-                    function(){
-                        if(num == $length){
-                            $ul.removeClass("animate").css("-webkit-transform","translateY(0)");
-                            num = 0;
-                        }
-                    },300);
-            },3000);
-    }
-});
-</script>
-</body>
+        if ($length > 1) {
+          $ul.append($li.eq(0).clone());
+          setInterval(function () {
+            num++;
+            $ul
+              .addClass("animate")
+              .css(
+                "-webkit-transform",
+                "translateY(-" + $liHeight * num + "px)"
+              );
+            setTimeout(function () {
+              if (num == $length) {
+                $ul
+                  .removeClass("animate")
+                  .css("-webkit-transform", "translateY(0)");
+                num = 0;
+              }
+            }, 300);
+          }, 3000);
+        }
+      });
+    </script>
+  </body>
 </html>

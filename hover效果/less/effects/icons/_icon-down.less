@@ -13,27 +13,26 @@
 
 /* Icon Down */
 .icon-down() {
-	.hacks();
-	position: relative;
-	padding-right: @spaceBetweenTextAndArrows;
+  .hacks();
+  position: relative;
+  padding-right: @spaceBetweenTextAndArrows;
 
-	&:before {
-		content: "\f01a";
-		position: absolute;
-		right: 1em;
-		padding: 0 1px;
-		font-family: FontAwesome;
-		.prefixed(transform, translateZ(0));
-	}
+  &:before {
+    content: "\f01a";
+    position: absolute;
+    right: 1em;
+    padding: 0 1px;
+    font-family: FontAwesome;
+    .prefixed(transform, translateZ(0));
+  }
 
-	&:hover,
-	&:focus,
-	&:active {
-
-		&:before {
-			.prefixed(animation-name, ~"@{nameSpace}-icon-down");
-			.prefixed(animation-duration, .75s);
-			.prefixed(animation-timing-function, ease-out);
-		}
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    &:before {
+      .prefixed(animation-name, ~"@{nameSpace}-icon-down");
+      .prefixed(animation-duration, 0.75s);
+      .prefixed(animation-timing-function, ease-out);
+    }
+  }
 }

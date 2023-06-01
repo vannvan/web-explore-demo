@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<style type="text/css">
-#menu{
-width: 0; /*设置为0 隐藏自定义菜单*/
-height: 125px;
-overflow: hidden; /*隐藏溢出的元素*/
-box-shadow: 0 1px 1px #888,1px 0 1px #ccc;
-position: absolute; /*自定义菜单相对与body元素进行定位*/
-}
-.menu{
-width: 130px;
-height: 25px;
-line-height: 25px;
-padding: 0 10px;
-cursor: pointer;
-border-bottom: 1px solid #f00
-}
-</style>
-<body>
-<!--自定义右键菜单html代码-->
-<div id="menu">
-	<div class="menu">功能1</div>
-	<div class="menu">功能2</div>
-	<div class="menu">功能3</div>
-	<div class="menu">功能4</div>
-	<div class="menu">功能5</div>
-</div>
+  <head>
+    <title></title>
+  </head>
+  <style type="text/css">
+    #menu {
+      width: 0; /*设置为0 隐藏自定义菜单*/
+      height: 125px;
+      overflow: hidden; /*隐藏溢出的元素*/
+      box-shadow: 0 1px 1px #888, 1px 0 1px #ccc;
+      position: absolute; /*自定义菜单相对与body元素进行定位*/
+    }
+    .menu {
+      width: 130px;
+      height: 25px;
+      line-height: 25px;
+      padding: 0 10px;
+      cursor: pointer;
+      border-bottom: 1px solid #f00;
+    }
+  </style>
+  <body>
+    <!--自定义右键菜单html代码-->
+    <div id="menu">
+      <div class="menu">功能1</div>
+      <div class="menu">功能2</div>
+      <div class="menu">功能3</div>
+      <div class="menu">功能4</div>
+      <div class="menu">功能5</div>
+    </div>
 
+    <script type="text/javascript">
+      window.oncontextmenu = function (e) {
+        //取消默认的浏览器自带右键 很重要！！
+        e.preventDefault();
 
-<script type="text/javascript">
-window.oncontextmenu=function(e){
-//取消默认的浏览器自带右键 很重要！！
-e.preventDefault();
+        //获取我们自定义的右键菜单
+        var menu = document.querySelector("#menu");
 
-//获取我们自定义的右键菜单
-var menu=document.querySelector("#menu");
+        //根据事件对象中鼠标点击的位置，进行定位
+        menu.style.left = e.clientX + "px";
+        menu.style.top = e.clientY + "px";
 
-//根据事件对象中鼠标点击的位置，进行定位
-menu.style.left=e.clientX+'px';
-menu.style.top=e.clientY+'px';
+        //改变自定义菜单的宽，让它显示出来
+        menu.style.width = "125px";
+      };
 
-//改变自定义菜单的宽，让它显示出来
-menu.style.width='125px';
-}
+      var item = document.getElementsByClassName("menu");
 
-var item = document.getElementsByClassName('menu')
+      for (let i = 0; i < item.length; i++) {
+        item[i].onclick = (e) => {
+          console.log(e);
+          // console.log(e.target)
+          console.log(e.target.innerText);
+        };
+      }
 
-for(let i=0;i<item.length;i++) {
-	item[i].onclick = (e) => {
-		console.log(e)
-		// console.log(e.target)
-		console.log(e.target.innerText)
-	}
-}
-
-// item[0].onclick = function(e) {
-// 	console.log(e)
-// }
-//关闭右键菜单，很简单
-window.onclick=function(e){
-//用户触发click事件就可以关闭了，因为绑定在window上，按事件冒泡处理，不会影响菜单的功能
-　　　　document.querySelector('#menu').style.width=0;
-}
-</script>
-</body>
+      // item[0].onclick = function(e) {
+      // 	console.log(e)
+      // }
+      //关闭右键菜单，很简单
+      window.onclick = function (e) {
+        //用户触发click事件就可以关闭了，因为绑定在window上，按事件冒泡处理，不会影响菜单的功能
+        document.querySelector("#menu").style.width = 0;
+      };
+    </script>
+  </body>
 </html>

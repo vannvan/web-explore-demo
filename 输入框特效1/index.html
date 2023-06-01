@@ -1,130 +1,127 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<style type="text/css">
-.form1 {
-  position: relative;
-  display: inline-block;
-}
-.form1 input {
-  outline: none;
-  border: none;
-  background: #fafafa;
-  height: 40px;
-}
-.form1 input ~ span {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background-color: #262626;
-  transform: scaleX(0);
-  transform-origin: right center;
-  transition: transform 0.3s ease-in-out;
-}
+  <head>
+    <title></title>
+  </head>
+  <style type="text/css">
+    .form1 {
+      position: relative;
+      display: inline-block;
+    }
+    .form1 input {
+      outline: none;
+      border: none;
+      background: #fafafa;
+      height: 40px;
+    }
+    .form1 input ~ span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: #262626;
+      transform: scaleX(0);
+      transform-origin: right center;
+      transition: transform 0.3s ease-in-out;
+    }
 
-.form1 input:focus ~ span {
-  transform: scaleX(1);
-  transform-origin: left center;
-}
+    .form1 input:focus ~ span {
+      transform: scaleX(1);
+      transform-origin: left center;
+    }
 
-.form2 {
-  position: relative;
-  display: inline-block;
-  padding: 3px;
-}
+    .form2 {
+      position: relative;
+      display: inline-block;
+      padding: 3px;
+    }
 
-.form2 input {
-  outline: none;
-  border: none;
-  background: #fafafa;
-  padding: 3px;
-  height: 40px
-}
-.bottom,
-.top,
-.left,
-.right {
-  position: absolute;
-  background-color: #262626;
-  transition: transform 0.1s ease-in-out;
-}
-/*对于.bottom 和.top，它们的变化方向是水平；对于.left 和.right，它们的变化方向是垂直。*/
-.bottom,
-.top {
-  left: 0;
-  right: 0;
-  height: 1px;
-  transform: scaleX(0);
-}
+    .form2 input {
+      outline: none;
+      border: none;
+      background: #fafafa;
+      padding: 3px;
+      height: 40px;
+    }
+    .bottom,
+    .top,
+    .left,
+    .right {
+      position: absolute;
+      background-color: #262626;
+      transition: transform 0.1s ease-in-out;
+    }
+    /*对于.bottom 和.top，它们的变化方向是水平；对于.left 和.right，它们的变化方向是垂直。*/
+    .bottom,
+    .top {
+      left: 0;
+      right: 0;
+      height: 1px;
+      transform: scaleX(0);
+    }
 
-.left,
-.right {
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  transform: scaleY(0);
-}
-/*下面就是处理延时的特效。动态图中，动画按照下、右、上、左的顺序依次变化。借助的是transition-delay属性，来实现动画延迟。*/
-.bottom {
-  bottom: 0;
-  transform-origin: right center;
-}
-input:focus ~ .bottom {
-  transform: scaleX(1);
-  transform-origin: left center;
-}
+    .left,
+    .right {
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      transform: scaleY(0);
+    }
+    /*下面就是处理延时的特效。动态图中，动画按照下、右、上、左的顺序依次变化。借助的是transition-delay属性，来实现动画延迟。*/
+    .bottom {
+      bottom: 0;
+      transform-origin: right center;
+    }
+    input:focus ~ .bottom {
+      transform: scaleX(1);
+      transform-origin: left center;
+    }
 
-.top {
-  top: 0;
-  transform-origin: left center;
-  transition-delay: 0.2s;
-}
-input:focus ~ .top {
-  transform: scaleX(1);
-  transform-origin: right center;
-}
+    .top {
+      top: 0;
+      transform-origin: left center;
+      transition-delay: 0.2s;
+    }
+    input:focus ~ .top {
+      transform: scaleX(1);
+      transform-origin: right center;
+    }
 
-.right {
-  transform-origin: top center;
-  right: 0;
-  transition-delay: 0.1s;
-}
-input:focus ~ .right {
-  transform: scaleY(1);
-  transform-origin: bottom center;
-}
+    .right {
+      transform-origin: top center;
+      right: 0;
+      transition-delay: 0.1s;
+    }
+    input:focus ~ .right {
+      transform: scaleY(1);
+      transform-origin: bottom center;
+    }
 
-.left {
-  left: 0;
-  transform-origin: bottom center;
-  transition-delay: 0.3s;
-}
-input:focus ~ .left {
-  transform: scaleY(1);
-  transform-origin: top center;
-}
-
-</style>
-<body>
-	<h3>划线动态</h3>
-	<div class="form1">
-	  <input type="text" />
-	  <!-- span标签实现「左进右出」的动态，需要改变transform-origin方向。为了避免回流重绘，通过scaleX来实现宽度变化的视觉效果。 -->
-	  <span></span>
-	</div>
-	<h3>动态边框</h3>
-	<div class="form2">
-	  <input type="text">
-	  <span class="bottom"></span>
-	  <span class="right"></span>
-	  <span class="top"></span>
-	  <span class="left"></span>
-	  <span>
-	</div>
-
-</body>
+    .left {
+      left: 0;
+      transform-origin: bottom center;
+      transition-delay: 0.3s;
+    }
+    input:focus ~ .left {
+      transform: scaleY(1);
+      transform-origin: top center;
+    }
+  </style>
+  <body>
+    <h3>划线动态</h3>
+    <div class="form1">
+      <input type="text" />
+      <!-- span标签实现「左进右出」的动态，需要改变transform-origin方向。为了避免回流重绘，通过scaleX来实现宽度变化的视觉效果。 -->
+      <span></span>
+    </div>
+    <h3>动态边框</h3>
+    <div class="form2">
+      <input type="text" />
+      <span class="bottom"></span>
+      <span class="right"></span>
+      <span class="top"></span>
+      <span class="left"></span>
+    </div>
+  </body>
 </html>

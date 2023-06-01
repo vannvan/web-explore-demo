@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
+  <head>
+    <title></title>
+  </head>
 
-<style>
-.flex-row {display:flex;flex-direction:row;}
-.flex-row > .flex-main {flex:1 1 auto;}
-.flex-row > .flex-side {flex:0 0 auto;}
-.side-left {width:200px;}
-.side-right {width:200px;}
-</style>
+  <style>
+    .flex-row {
+      display: flex;
+      flex-direction: row;
+    }
+    .flex-row > .flex-main {
+      flex: 1 1 auto;
+    }
+    .flex-row > .flex-side {
+      flex: 0 0 auto;
+    }
+    .side-left {
+      width: 200px;
+    }
+    .side-right {
+      width: 200px;
+    }
+  </style>
 
-<body>
-<div class="flex-row">
-    <div class="flex-side side-left"></div>
-    <div class="flex-main"></div>
-    <div class="flex-side side-right"></div>
-</div>
-</body>
+  <body>
+    <div class="flex-row">
+      <div class="flex-side side-left"></div>
+      <div class="flex-main"></div>
+      <div class="flex-side side-right"></div>
+    </div>
+  </body>
 </html>

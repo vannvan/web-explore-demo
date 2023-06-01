@@ -47,20 +47,20 @@
   </body>
   <script src="script.js"></script>
   <script>
-    ;(function () {
+    (function () {
       var num = 231365789,
-        num2 = 345
-      var odo1 = new Odometer('.Odometer', {
+        num2 = 345;
+      var odo1 = new Odometer(".Odometer", {
         num: num,
-      })
-      var odo2 = new Odometer('.Odometer2', {
+      });
+      var odo2 = new Odometer(".Odometer2", {
         num: num2,
-      })
+      });
 
       setInterval(() => {
-        ;(num += 117), odo1.update(num)
-        ;(num2 += 230), odo2.update(num2)
-      }, 1300)
-    })()
+        (num += 117), odo1.update(num);
+        (num2 += 230), odo2.update(num2);
+      }, 1300);
+    })();
   </script>
 </html>

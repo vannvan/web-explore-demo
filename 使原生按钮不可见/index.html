@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<style type="text/css">
- [type="submit"] {
- position: absolute;
- clip: rect(0 0 0 0);
-}
-.btn {
- display: inline-block;
- padding: 8px 14px;
- background-color: #cd0000;
- color: #fff;
- font-size: 14px;
- cursor: pointer;
-} 
-/* 点击高亮效果*/
-:focus + label.btn {
- outline: 1px dotted Highlight;
- outline: 5px auto -webkit-focus-ring-color;
-} 
-</style>
-<body>
-	<input id="t" type="submit">
-	<label class="btn" for="t">提交</label> 
-	<p>
-		为了规避 submit 类型按钮 UI 很难完全保持一致
-的问题，我们会使用<label>元素来移花接木，通过 for 属性和这些原生的表单控件相关
-联。
-	</p>
-	<p>
-		当我们 focus 看不见的提交按
-钮的时候，让“代言人”<label>元素模拟原生的 focus 高亮效果。
-	</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <style type="text/css">
+    [type="submit"] {
+      position: absolute;
+      clip: rect(0 0 0 0);
+    }
+    .btn {
+      display: inline-block;
+      padding: 8px 14px;
+      background-color: #cd0000;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    /* 点击高亮效果*/
+    :focus + label.btn {
+      outline: 1px dotted Highlight;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+  </style>
+  <body>
+    <input id="t" type="submit" />
+    <label class="btn" for="t">提交</label>
+    <p>
+      为了规避 submit 类型按钮 UI 很难完全保持一致 的问题，我们会使用<label
+        >元素来移花接木，通过 for 属性和这些原生的表单控件相关</label
+      >
+      联。
+    </p>
+    <p>
+      当我们 focus 看不见的提交按 钮的时候，让“代言人”<label
+        >元素模拟原生的 focus 高亮效果。</label
+      >
+    </p>
+  </body>
 </html>

@@ -26,14 +26,14 @@
 });
 
 .wobble-skew() {
-	.hacks();
+  .hacks();
 
-	&:hover,
-	&:focus,
-	&:active {
-		.prefixed(animation-name, ~"@{nameSpace}-wobble-skew");
-		.prefixed(animation-duration, 1s);
-		.prefixed(animation-timing-function, ease-in-out);
-		.prefixed(animation-iteration-count, 1);
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    .prefixed(animation-name, ~"@{nameSpace}-wobble-skew");
+    .prefixed(animation-duration, 1s);
+    .prefixed(animation-timing-function, ease-in-out);
+    .prefixed(animation-iteration-count, 1);
+  }
 }

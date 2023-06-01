@@ -6,15 +6,15 @@
 });
 
 .pulse-grow() {
-	.hacks();
+  .hacks();
 
-	&:hover,
-	&:focus,
-	&:active {
-		.prefixed(animation-name, ~"@{nameSpace}-pulse-grow");
-		.prefixed(animation-duration, @mediumDuration);
-		.prefixed(animation-timing-function, linear);
-		.prefixed(animation-iteration-count, infinite);
-		.prefixed(animation-direction, alternate);
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    .prefixed(animation-name, ~"@{nameSpace}-pulse-grow");
+    .prefixed(animation-duration, @mediumDuration);
+    .prefixed(animation-timing-function, linear);
+    .prefixed(animation-iteration-count, infinite);
+    .prefixed(animation-direction, alternate);
+  }
 }

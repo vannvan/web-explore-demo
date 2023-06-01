@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
 
-<body>
-<div class="container">
-  <div class="dialog">自适应弹出层</div>
-</div>
-<style>
-.container{
-  position: fixed;
-  top: 0; right: 0; bottom: 0; left: 0;
-  background-color: rgba(0, 0, 0, .15);
-  text-align: center;
-  font-size: 0;
-  white-space: nowrap;
-  overflow: auto;
-}
-.container:after{
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-.dialog{
-  display: inline-block;
-  width: 400px;
-  height: 400px;
-  vertical-align: middle;
-  text-align: left;
-  font-size: 14px;
-  white-space: normal;
-  background: white;
-}
-</style>
-	
-</body>
+  <body>
+    <div class="container">
+      <div class="dialog">自适应弹出层</div>
+    </div>
+    <style>
+      .container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.15);
+        text-align: center;
+        font-size: 0;
+        white-space: nowrap;
+        overflow: auto;
+      }
+      .container:after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+      .dialog {
+        display: inline-block;
+        width: 400px;
+        height: 400px;
+        vertical-align: middle;
+        text-align: left;
+        font-size: 14px;
+        white-space: normal;
+        background: white;
+      }
+    </style>
+  </body>
 </html>

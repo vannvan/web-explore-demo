@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>卡片正反切换效果</title>
-</head>
-<style type="text/css">
-body {
-    background: #ccc;
-}
-.loader {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    perspective: 1200;
-}
-.flipper {
-    position: relative;
-    display: block;
-    height: inherit;
-    width: inherit;
-    animation: flip 1.2s infinite ease-in-out;
-    transform-style: preserve-3d;
-}
-.front,
-.back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    display: block;
-    background-color: #d50000;
-    height: 100%;
-    width: 100%;
-}
-.back {
-    background-color: #fff;
-    z-index: 800;
-    transform: rotateY(-180deg);
-}
-@keyframes flip {
-    0% {
+  <head>
+    <title>卡片正反切换效果</title>
+  </head>
+  <style type="text/css">
+    body {
+      background: #ccc;
+    }
+    .loader {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      perspective: 1200;
+    }
+    .flipper {
+      position: relative;
+      display: block;
+      height: inherit;
+      width: inherit;
+      animation: flip 1.2s infinite ease-in-out;
+      transform-style: preserve-3d;
+    }
+    .front,
+    .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+      display: block;
+      background-color: #d50000;
+      height: 100%;
+      width: 100%;
+    }
+    .back {
+      background-color: #fff;
+      z-index: 800;
+      transform: rotateY(-180deg);
+    }
+    @keyframes flip {
+      0% {
         transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    }
-    50% {
+      }
+      50% {
         transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    }
-    100% {
+      }
+      100% {
         transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      }
     }
-}
-</style>
-<body>
-<div class="loader">
-    <div class="flipper">
+  </style>
+  <body>
+    <div class="loader">
+      <div class="flipper">
         <div class="front"></div>
         <div class="back"></div>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>

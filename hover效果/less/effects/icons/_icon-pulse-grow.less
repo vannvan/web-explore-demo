@@ -6,30 +6,29 @@
 });
 
 .icon-pulse-grow() {
-	.hacks();
-	position: relative;
-	padding-right: @spaceBetweenTextAndArrows;
+  .hacks();
+  position: relative;
+  padding-right: @spaceBetweenTextAndArrows;
 
-	&:before {
-		content: "\f015";
-		position: absolute;
-		right: 1em;
-		padding: 0 1px;
-		font-family: FontAwesome;
-		.prefixed(transform, translateZ(0));
-		.prefixed(transition-timing-function, ease-out);
-	}
+  &:before {
+    content: "\f015";
+    position: absolute;
+    right: 1em;
+    padding: 0 1px;
+    font-family: FontAwesome;
+    .prefixed(transform, translateZ(0));
+    .prefixed(transition-timing-function, ease-out);
+  }
 
-	&:hover,
-	&:focus,
-	&:active {
-
-		&:before {
-			.prefixed(animation-name, ~"@{nameSpace}-icon-pulse-grow");
-			.prefixed(animation-duration, @mediumDuration);
-			.prefixed(animation-timing-function, linear);
-			.prefixed(animation-iteration-count, infinite);
-			.prefixed(animation-direction, alternate);
-		}
-	}
+  &:hover,
+  &:focus,
+  &:active {
+    &:before {
+      .prefixed(animation-name, ~"@{nameSpace}-icon-pulse-grow");
+      .prefixed(animation-duration, @mediumDuration);
+      .prefixed(animation-timing-function, linear);
+      .prefixed(animation-iteration-count, infinite);
+      .prefixed(animation-direction, alternate);
+    }
+  }
 }

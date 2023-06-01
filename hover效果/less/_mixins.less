@@ -5,15 +5,15 @@
   }
 
   & when (@moz = true) {
-      -moz-@{property}: @value;
+    -moz-@{property}: @value;
   }
 
   & when (@ms = true) {
-      -ms-@{property}: @value;
+    -ms-@{property}: @value;
   }
 
   & when (@o = true) {
-      -o-@{property}: @value;
+    -o-@{property}: @value;
   }
 
   @{property}: @value;
@@ -28,21 +28,21 @@
   }
 
   & when (@moz = true) {
-      @-moz-keyframes @name {
-          @content();
-      }
+    @-moz-keyframes @name {
+      @content();
+    }
   }
 
   & when (@ms = true) {
-      @-ms-keyframes @name {
-          @content();
-      }
+    @-ms-keyframes @name {
+      @content();
+    }
   }
 
   & when (@o = true) {
-      @-o-keyframes @name {
-          @content();
-      }
+    @-o-keyframes @name {
+      @content();
+    }
   }
 
   @keyframes @name {
