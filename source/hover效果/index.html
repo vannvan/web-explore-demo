@@ -2,11 +2,9 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <title>
-      Hover.css纯CSS3鼠标滑过特效动画库_jQuery之家-自由分享jQuery、html5、css3的插件库
-    </title>
+    <title>Hover.css纯CSS3鼠标滑过特效动画库_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
     <link href="css/demo-page.css" rel="stylesheet" media="all" />
-    <!-- <link href="css/hover.css" rel="stylesheet" media="all"> -->
+    <link href="css/hover.css" rel="stylesheet" media="all" />
     <!-- <link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"> -->
   </head>
 
@@ -14,18 +12,16 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
-        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
-        your experience.
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
 
     <h1>Hover.css</h1>
 
     <p class="intro">
-      A collection of CSS3 powered hover effects to be applied to links,
-      buttons, logos, SVG, featured images and so on. Easily apply to your own
-      elements, modify or just use for inspiration. Available in CSS, SASS, and
-      LESS.
+      A collection of CSS3 powered hover effects to be applied to links, buttons, logos, SVG,
+      featured images and so on. Easily apply to your own elements, modify or just use for
+      inspiration. Available in CSS, SASS, and LESS.
     </p>
 
     <div class="effects">
@@ -84,8 +80,7 @@
       <small
         >Font icons courtesy of
         <a href="https://fortawesome.github.io/Font-Awesome/">FontAwesome</a>.
-        <a
-          href="https://github.com/IanLunn/Hover/#using-fontawesome-with-icon-effects"
+        <a href="https://github.com/IanLunn/Hover/#using-fontawesome-with-icon-effects"
           >How to use FontAwesome icons</a
         >
         with Hover.css.</small
@@ -171,9 +166,7 @@
     <div class="footer">
       <div class="author">
         <p class="credit">
-          更多精彩内容请关注：<a href="http://www.htmleaf.com/" target="_blank"
-            >jQuery之家</a
-          >
+          更多精彩内容请关注：<a href="http://www.htmleaf.com/" target="_blank">jQuery之家</a>
         </p>
       </div>
     </div>
@@ -184,14 +177,14 @@
        * Hover.css to your own pages. Prevents a link from being
        * navigated and gaining focus.
        */
-      var effects = document.querySelectorAll(".effects")[0];
+      var effects = document.querySelectorAll('.effects')[0]
 
-      effects.addEventListener("click", function (e) {
-        if (e.target.className.indexOf("hvr") > -1) {
-          e.preventDefault();
-          e.target.blur();
+      effects.addEventListener('click', function (e) {
+        if (e.target.className.indexOf('hvr') > -1) {
+          e.preventDefault()
+          e.target.blur()
         }
-      });
+      })
     </script>
   </body>
 </html>
