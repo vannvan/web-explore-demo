@@ -24,3 +24,5 @@ pnpm-lock.yaml
 # bun
 bun.lockb
 bunfig.toml
+
+*sh
