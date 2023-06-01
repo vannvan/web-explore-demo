@@ -9,7 +9,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "prettier --write '**/*.{js,html,jsx,tsx,ts,less,md,json}'"
+    "prettier": "prettier --write '**/*.{js,html,jsx,tsx,ts,less,md,json}'",
+    "rrm": "node script/write-readme",
+    "rdf": "node script/read-file"
   },
   "repository": {
     "type": "git",

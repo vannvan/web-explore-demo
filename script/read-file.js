@@ -1,11 +1,11 @@
 const fs = require("fs");
-var path = require("path");
+const path = require("path");
 
-var filePath = path.resolve();
+const filePath = path.resolve();
 
 const exclude = [".git", ".gitignore", "node_modules"];
 
-fs.readdir("./", "utf8", (err, data) => {
+fs.readdir("./source", "utf8", (err, data) => {
   let datas = data.filter(
     (item) => !exclude.includes(item) && !/\./.test(item)
   );
@@ -17,7 +17,7 @@ fs.readdir("./", "utf8", (err, data) => {
 function writeFile(data) {
   data = JSON.stringify(data, null, "\t");
   let content = `const linkList = ${data}`;
-  fs.writeFile(filePath + "/" + "filelist.js", content + "\n", function (err) {
+  fs.writeFile("./script/filelist.js", content + "\n", function (err) {
     if (err) throw err;
   });
 }
