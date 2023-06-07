@@ -21,6 +21,7 @@ const linkList = [
 	"JS实现拖拽",
 	"JS打字效果",
 	"JS折叠动画",
+	"JS绘制任意图形",
 	"JS跟随鼠标粒子效果",
 	"JS鼠标经过光影效果",
 	"Pio-demo",
