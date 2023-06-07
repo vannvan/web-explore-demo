@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas绘制任意图形</title>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script>
+      const canvas = document.querySelector('canvas')
+      canvas.width = 400
+      canvas.height = 200
+
+      const ctx = canvas.getContext('2d')
+      const cx = 200
+      const cy = 100
+
+      function color16() {
+        //十六进制颜色随机
+        const r = Math.floor(Math.random() * 256)
+        const g = Math.floor(Math.random() * 256)
+        const b = Math.floor(Math.random() * 256)
+        const color = `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`
+        return color
+      }
+
+      function drawShape(x, y, r, sides) {
+        // move the canvas to the center position
+        ctx.translate(x, y)
+
+        for (let i = 0; i < sides; i++) {
+          // calculate the rotation
+          const rotation = ((Math.PI * 2) / sides) * i
+
+          // for the first point move to
+          if (i === 0) {
+            ctx.moveTo(r * Math.cos(rotation), r * Math.sin(rotation))
+          } else {
+            // for the rest draw a line
+            ctx.lineTo(r * Math.cos(rotation), r * Math.sin(rotation))
+          }
+        }
+        // close path and stroke it
+        ctx.closePath()
+        ctx.stroke()
+        ctx.fillStyle = color16()
+        ctx.fill()
+
+        // reset the translate position
+        ctx.resetTransform()
+      }
+
+      drawShape(100, 100, 50, 3)
+      drawShape(225, 100, 50, 7)
+      drawShape(350, 100, 50, 4)
+    </script>
+  </body>
+</html>

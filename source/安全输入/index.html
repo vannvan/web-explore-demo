@@ -2,34 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Document</title>
+    <title>安全输入</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <script type="text/javascript">
     function SaferHTML(templateData) {
-      let s = templateData[0];
+      let s = templateData[0]
       for (let i = 1; i < arguments.length; i++) {
-        let arg = String(arguments[i]);
+        let arg = String(arguments[i])
 
         // Escape special characters in the substitution.
-        s += arg
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;");
+        s += arg.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
         // Don't escape special characters in the template.
-        s += templateData[i];
+        s += templateData[i]
       }
-      return s;
+      return s
     }
 
     function handle() {
-      let sender = document.getElementsByName("sender")[0].value;
-      let message = SaferHTML`<p>${sender} has sent you a message.</p>`;
-      let message1 = `<p>${sender} has sent you a message.</p>`;
-      let append = document.getElementById("append");
-      append.innerHTML = message;
-      console.log(message);
+      let sender = document.getElementsByName('sender')[0].value
+      let message = SaferHTML`<p>${sender} has sent you a message.</p>`
+      let message1 = `<p>${sender} has sent you a message.</p>`
+      let append = document.getElementById('append')
+      append.innerHTML = message
+      console.log(message)
     }
   </script>
   <body>

@@ -1,4 +1,4 @@
-# 已包含98条内容 [预览地址👉](https://vannvan.github.io/web-explore-demo)  
+# 已包含100条内容 [预览地址👉](https://vannvan.github.io/web-explore-demo)  
  ---- 
 <details> 
 <summary>案例内容⬇️</summary>
@@ -56,6 +56,7 @@
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/原生折线图1/index.html">原生折线图1</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/原生翻牌2/index.html">原生翻牌2</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/右键菜单/index.html">右键菜单</a> </li>
+<li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/呼吸灯效果/index.html">呼吸灯效果</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/四角背景无边边框/index.html">四角背景无边边框</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/固定背景图片/index.html">固定背景图片</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/图标资源/index.html">图标资源</a> </li>
@@ -66,6 +67,7 @@
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/圣杯布局三种方案/index.html">圣杯布局三种方案</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/多列等高布局/index.html">多列等高布局</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/多彩渐变进度百分比/index.html">多彩渐变进度百分比</a> </li>
+<li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/安全输入/index.html">安全输入</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/导航下划线滑动效果/index.html">导航下划线滑动效果</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/左侧菜单/index.html">左侧菜单</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/弹性布局/index.html">弹性布局</a> </li>
