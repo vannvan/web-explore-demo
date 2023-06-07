@@ -15,7 +15,8 @@
     "prettier": "prettier --write '**/*.{js,html,jsx,tsx,ts,less,md,json}'",
     "rrm": "node script/write-readme",
     "rdf": "node script/read-file",
-    "build": "npm run rrm && npm run rdf"
+    "build": "npm run rrm && npm run rdf",
+    "new": "node script/new"
   },
   "repository": {
     "type": "git",
