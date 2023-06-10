@@ -1,4 +1,4 @@
-# 已包含103条内容 [预览地址👉](https://vannvan.github.io/web-explore-demo)  
+# 已包含104条内容 [预览地址👉](https://vannvan.github.io/web-explore-demo)  
  ---- 
 <details> 
 <summary>案例内容⬇️</summary>
@@ -83,6 +83,7 @@
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/机器人样子变化css特效/index.html">机器人样子变化css特效</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/毛玻璃/index.html">毛玻璃</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/水平居中弹框/index.html">水平居中弹框</a> </li>
+<li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/浏览器指纹/index.html">浏览器指纹</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/渐变实现饼图/index.html">渐变实现饼图</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/点击任意区域气泡/index.html">点击任意区域气泡</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/登录捂眼睛动画/index.html">登录捂眼睛动画</a> </li>
