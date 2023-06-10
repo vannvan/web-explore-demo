@@ -1,4 +1,4 @@
-# 已包含102条内容 [预览地址👉](https://vannvan.github.io/web-explore-demo)  
+# 已包含103条内容 [预览地址👉](https://vannvan.github.io/web-explore-demo)  
  ---- 
 <details> 
 <summary>案例内容⬇️</summary>
@@ -77,6 +77,7 @@
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/数据双向绑定/index.html">数据双向绑定</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/文字弹跳效果1/index.html">文字弹跳效果1</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/文本发光并逐个显示/index.html">文本发光并逐个显示</a> </li>
+<li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/斜表头/index.html">斜表头</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/星系CSS动画/index.html">星系CSS动画</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/最基础的切换主题色的思路/index.html">最基础的切换主题色的思路</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/机器人样子变化css特效/index.html">机器人样子变化css特效</a> </li>
