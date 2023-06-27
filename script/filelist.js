@@ -42,6 +42,7 @@ const linkList = [
 	"jsutify两端对齐",
 	"js数字递增动画",
 	"requestAnimationFrame",
+	"requestIdleCallback",
 	"tips提示很优秀",
 	"一个简洁的圆形波纹动画",
 	"下划线跟随导航栏",
