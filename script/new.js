@@ -4,12 +4,13 @@
  * Author: van
  * Email : adoerww@gamil.com
  * -----
- * Last Modified: 2023-06-07 17:15:57
+ * Last Modified: 2023-06-27 18:28:13
  * Modified By: van
  * -----
  * Copyright (c) 2023 https://github.com/vannvan
  */
 
+const { exec } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
@@ -20,9 +21,9 @@ if (!name) {
 } else {
   ;(async () => {
     fs.mkdirSync(path.resolve(`./source/${name}`))
-
+    const targetFile = path.resolve(`./source/${name}/index.html`)
     fs.writeFileSync(
-      path.resolve(`./source/${name}/index.html`),
+      targetFile,
       `
     <!DOCTYPE html>
     <html lang="en">
@@ -38,6 +39,8 @@ if (!name) {
     </html>
     `
     )
+
+    exec(`npx prettier ${targetFile}`)
   })()
 }
 

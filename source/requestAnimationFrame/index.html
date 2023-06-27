@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>requestAnimationFrame动画</title>
+  </head>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background: #f00;
+    }
+  </style>
+  <body>
+    <div class="box"></div>
+    <script>
+      const dom = document.querySelector('.box')
+      let startOffsetLeft = 0
+      const rightBound = 500
+      let loop = true
+      function animation() {
+        if (startOffsetLeft < rightBound && loop) {
+          loop = true
+          // console.log('正向')
+          dom.style.transform = `translateX(${startOffsetLeft++}px)`
+        } else {
+          loop = false
+          // console.log('反向', startOffsetLeft--, loop)
+          startOffsetLeft--
+          if (startOffsetLeft < 0) {
+            loop = true
+            startOffsetLeft = 0
+          }
+          dom.style.transform = `translateX(${startOffsetLeft--}px)`
+        }
+        window.requestAnimationFrame(animation)
+      }
+
+      window.requestAnimationFrame(animation)
+    </script>
+  </body>
+</html>

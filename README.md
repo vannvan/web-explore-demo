@@ -1,4 +1,4 @@
-# 已包含104条内容 [预览地址👉](https://vannvan.github.io/web-explore-demo)  
+# 已包含105条内容 [预览地址👉](https://vannvan.github.io/web-explore-demo)  
  ---- 
 <details> 
 <summary>案例内容⬇️</summary>
@@ -44,6 +44,7 @@
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/jq自动生成文章标题索引/index.html">jq自动生成文章标题索引</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/jsutify两端对齐/index.html">jsutify两端对齐</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/js数字递增动画/index.html">js数字递增动画</a> </li>
+<li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/requestAnimationFrame/index.html">requestAnimationFrame</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/tips提示很优秀/index.html">tips提示很优秀</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/一个简洁的圆形波纹动画/index.html">一个简洁的圆形波纹动画</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/下划线跟随导航栏/index.html">下划线跟随导航栏</a> </li>

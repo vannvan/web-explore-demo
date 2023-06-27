@@ -41,6 +41,7 @@ const linkList = [
 	"jq自动生成文章标题索引",
 	"jsutify两端对齐",
 	"js数字递增动画",
+	"requestAnimationFrame",
 	"tips提示很优秀",
 	"一个简洁的圆形波纹动画",
 	"下划线跟随导航栏",
