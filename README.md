@@ -1,4 +1,4 @@
-# 已包含106条内容 [预览地址👉](https://vannvan.github.io/web-explore-demo)  
+# 已包含108条内容 [预览地址👉](https://vannvan.github.io/web-explore-demo)  
  ---- 
 <details> 
 <summary>案例内容⬇️</summary>
@@ -27,6 +27,7 @@
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/JS绘制任意图形/index.html">JS绘制任意图形</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/JS跟随鼠标粒子效果/index.html">JS跟随鼠标粒子效果</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/JS鼠标经过光影效果/index.html">JS鼠标经过光影效果</a> </li>
+<li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/Network-Infomation/index.html">Network-Infomation</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/Pio-demo/index.html">Pio-demo</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/ajax拦截器解决方案/index.html">ajax拦截器解决方案</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/bootsnav/index.html">bootsnav</a> </li>
@@ -46,6 +47,7 @@
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/js数字递增动画/index.html">js数字递增动画</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/requestAnimationFrame/index.html">requestAnimationFrame</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/requestIdleCallback/index.html">requestIdleCallback</a> </li>
+<li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/requestIdleCallback-explore/index.html">requestIdleCallback-explore</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/tips提示很优秀/index.html">tips提示很优秀</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/一个简洁的圆形波纹动画/index.html">一个简洁的圆形波纹动画</a> </li>
 <li> <a href="https://github.com/vannvan/web-explore-demo/blob/master/source/下划线跟随导航栏/index.html">下划线跟随导航栏</a> </li>

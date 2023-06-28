@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>requestIdleCallback-explore</title>
+  </head>
+  <body>
+    hello world
+    <script>
+      function sleep(delay) {
+        let start = Date.now()
+        for (let start = Date.now(); Date.now() - start <= delay; ) {
+          //
+        }
+      }
+
+      const tasks = [
+        () => {
+          console.log('第一个任务开始')
+          // for (let i = 0; i < 10000; i++) {
+          //   document.body.append(i)
+          // }
+          sleep(70)
+          console.log('第一个任务结束')
+        },
+        () => {
+          console.log('第二个任务开始')
+          sleep(20)
+          console.log('第二个任务结束')
+        },
+        () => {
+          console.log('第三个任务开始')
+          sleep(20)
+          console.log('第三个任务结束')
+        },
+        () => {
+          console.log('第四个任务开始')
+          sleep(20)
+          console.log('第四个任务结束')
+        },
+        () => {
+          console.log('第五个任务开始')
+          sleep(20)
+          console.log('第五个任务结束')
+        },
+      ]
+
+      function performUnitTask() {
+        if (tasks.length) {
+          tasks.shift()()
+        }
+      }
+
+      function callback(deadline) {
+        console.log('deadline', deadline)
+        console.log('本帧剩余时间为', deadline.timeRemaining())
+        // 如果此帧还有剩余时间 或者 此时已经超时了
+        while (deadline.timeRemaining() > 0 || deadline.didTimeout) {
+          deadline.didTimeout && console.warn('当前帧超时了')
+          performUnitTask()
+        }
+
+        if (tasks.length) {
+          window.requestIdleCallback(callback, { timeout: 1000 })
+        }
+      }
+
+      window.requestIdleCallback(callback, { timeout: 1000 })
+    </script>
+  </body>
+</html>
