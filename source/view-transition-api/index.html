@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Transition</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <header>
+      <div>
+        <h1>View Transition example</h1>
+
+        <nav>
+          <ul>
+            <li><a href="#article1">Article 1</a></li>
+            <li><a href="#article2">Article 2</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div id="articleroot">
+        <article id="article1">
+          <h2>Article 1 content</h2>
+
+          <figure>
+            <img
+              src="https://cdn.pixabay.com/photo/2023/05/15/09/18/iceberg-7994536_1280.jpg"
+              width="800"
+              height="500"
+              alt="random"
+            />
+            <figcaption>photo credit: https://pixabay.com/</figcaption>
+          </figure>
+
+          <p>图片与内容无关，图片与内容无关，图片与内容无关，图片与内容无关，图片与内容无关，图片与内容无关，图片与内容无关</p>
+        </article>
+
+        <article id="article2">
+          <h2>Article 2 content</h2>
+
+          <figure>
+            <img
+              src="https://cdn.pixabay.com/photo/2023/04/30/11/44/spring-7960360_1280.jpg"
+              width="800"
+              height="500"
+              alt="random"
+            />
+            <figcaption>photo credit: https://pixabay.com/</figcaption>
+          </figure>
+
+          <p>图片与内容无关，图片与内容无关，图片与内容无关，图片与内容无关，图片与内容无关，图片与内容无关，图片与内容无关</p>
+        </article>
+      </div>
+    </main>
+
+    <script>
+      const article = document.getElementsByTagName('article')
+
+      document.body.addEventListener('click', (e) => {
+        if (!e?.target?.hash) return
+
+        if (document.startViewTransition) {
+          document.startViewTransition(() => switchArticle(e))
+        } else {
+          switchArticle(e)
+        }
+      })
+      switchArticle()
+
+      function switchArticle(e) {
+        const hash = e?.target?.hash?.slice(1) || location?.hash?.slice(1)
+
+        Array.from(article).forEach((a, i) => {
+          if (a.id === hash || (!hash && !i)) {
+            a.removeAttribute('hidden')
+          } else {
+            a.setAttribute('hidden', '')
+          }
+        })
+      }
+    </script>
+  </body>
+</html>

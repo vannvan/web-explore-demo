@@ -1,0 +1,109 @@
+:root {
+  --color-fore: #333;
+  --color-back: #fff;
+  --color-head: #ccc;
+  --color-link: #33f;
+}
+
+html {
+  color: var(--color-fore);
+  background-color: var(--color-back);
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: clamp(1rem, calc(1rem + 0.5vw), 2.5rem);
+  line-height: 1.5;
+}
+
+header {
+  background-color: var(--color-head);
+  padding-block: 0 0.5em;
+  view-transition-name: header;
+}
+
+header > div, main > div {
+  max-width: 52rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 0 1em;
+  list-style-type: none;
+  user-select: none;
+}
+
+main > div {
+  margin-block-end: 2em;
+}
+
+article {
+  scroll-margin-top: 10em;
+}
+
+figure {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-fore);
+}
+
+figcaption {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+h2, p {
+  margin-block-start: 1em;
+}
+
+a:link, a:visited {
+  color: var(--color-link);
+}
+
+::view-transition-old(root) {
+  animation: 1s transition-out 0s ease;
+}
+
+::view-transition-new(root) {
+  animation: 1s transition-in 0s ease;
+}
+
+@keyframes transition-out {
+  from {
+    opacity: 1;
+    translate: 0;
+    rotate: 0;
+  }
+  to {
+    opacity: 0;
+    translate: -3rem -5rem;
+    rotate: -10deg;
+  }
+}
+
+@keyframes transition-in {
+  from {
+    opacity: 0;
+    translate: 3rem 5rem;
+    rotate: -10deg;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+    rotate: 0;
+  }
+}

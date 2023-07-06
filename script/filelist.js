@@ -46,6 +46,7 @@ const linkList = [
 	"requestIdleCallback",
 	"requestIdleCallback-explore",
 	"tips提示很优秀",
+	"view-transition-api",
 	"一个简洁的圆形波纹动画",
 	"下划线跟随导航栏",
 	"下拉刷新上拉加载更多",
